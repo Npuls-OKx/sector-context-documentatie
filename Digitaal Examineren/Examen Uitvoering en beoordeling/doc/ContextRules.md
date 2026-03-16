@@ -7,6 +7,17 @@ Dit document legt de context, regels en werkwijze vast voor het opstellen van MO
 - Doelgroep is architecten.
 - De scope wordt expliciet begrensd tot het procesdeelgebied en de MORA referentiecomponenten die in de platen zijn opgenomen.
 - Alleen terminologie uit MORA en de koppelvlakplaten is toegestaan; geen OOAPI/OKE-terminologie of API-termen in de kerntekst.
+- Eenduidig taalgebruik en semantiek zijn vereist: één term per begrip; alleen MORA/datamodel-terminologie in de kerntekst.
+
+## Twee documenttypen
+- **Template**: generiek, herhaalbaar, richtinggevend document. Bevat placeholders en instructies per sectie (wat invullen, welke modeltaal, welk niveau). Geen domeinspecifieke invulling. Doel: bieden van een template ter invulling en richting voor het beschrijven van sectorkoppelvlakken (waar ook instellingen gebruik van kunnen maken). Onderaan referentie naar een voorbeelduitwerking.
+- **Voorbeelduitwerking (invulling)**: concrete instantie van het template voor één koppelvlak of deelproces. Vult alle secties in met domeinspecifieke inhoud. Doel: koppelvlak beschrijven volgens de MOKA-template voor strategische duiding of adaptie/implementatie van logische/technische implementaties. Eenduidige terminologie uit MORA en de platen; geen view en viewpoint door elkaar halen.
+
+## View, viewpoint en viewpointbeschrijving
+- **View** = een concreet diagram of plaat (een "product"); de figuur of diagramnaam.
+- **Viewpoint** = het kader waarmee een view wordt beschreven: doel, concerns, scope, modeltaal, objecttypen/relaties, verantwoording; vaak aangeduid met type (bijv. "ArchiMate Application Cooperation view").
+- **Viewpointbeschrijving** = de tekst die bij een view hoort en het viewpoint expliciet invult (doel, concerns, scope, gebruikte modeltaal, relevante objecttypen/relaties, verantwoording).
+- Regel: bij elke view hoort één viewpointbeschrijving. Gebruik de term "view" alleen voor het diagram/plaat en "viewpoint" voor het kader; niet door elkaar halen bij verschillende diagrammen.
 
 ## Terminologie en ArchiMate objecten
 - Gebruik ArchiMate-objecten en -relaties waar mogelijk, en label deze expliciet in captions/legend.
@@ -22,10 +33,6 @@ Dit document legt de context, regels en werkwijze vast voor het opstellen van MO
 - Placeholders zijn korte, inhoudelijke tekst (max 2-3 regels).
 - Inleiding bevat het documentdoel en het viewpoint (koppelvlak referentiearchitectuur).
 - Leeswijzer alleen opnemen indien expliciet gevraagd.
-
-## Viewpoint-beschrijving
-- Beschrijf per view kort: doel, concerns, scope, gekozen modeltaal en betrokken objecttypen/relaties.
-- Gebruik bij voorkeur een vaste mini-structuur: Viewpoint, Legenda (ArchiMate/UML/ERD), en een korte toelichting.
 
 ## AMIGO modellenmatrix en modeltalen
 - Hanteer de scheidslijn tussen conceptuele modellen en logische/inrichtingsmodellen.
@@ -72,4 +79,24 @@ Dit document legt de context, regels en werkwijze vast voor het opstellen van MO
 - Geen technische API-uitwerking opnemen in de kerntekst.
 - Externe documenten alleen in een apart "Gerelateerde implementaties" stuk, zonder termen over te nemen in de hoofdtekst.
 
+---
+
+## Informatiemodel en referentie klassendiagram (1-op-1 semantiek)
+
+- **Bron van waarheid:** Het machine-leesbare overzicht (bijv. `InformatiemodelOverzicht.json`) en de informatiemodel view (plaat) zijn leidend. Het referentie klassendiagram moet **100% semantisch overeenkomen** met dit informatiemodel.
+- **Gegevensgroeptypes in het diagram:** Geen aparte klassen voor gegevensgroeptypes; wel als **interne subcontainers** binnen het betreffende object. Gebruik de **exacte gegevensgroeptype-namen** uit het informatiemodel (zelfde benaming als in de view). Onder elk gegevensgroeptype staan de **referentie-attributen** (zoals in het bijlagevoorbeeld bij Zittingsverslag: `VerslagTotStandkoming` gevolgd door toelichting, onregelmatigheden; `RelatieTotOpsteller` door medewerkerId; enz.).
+- **Geen aantallen:** Geen tabel of tekst die "aantal gegevensgroeptypes" benoemt in het hoofddocument. De koppeling tot het informatiemodel wordt getoond door de exacte namen en attributen, niet door tellingen.
+- **Relatielabels:** Relaties in het klassendiagram worden waar van toepassing gelabeld met de **naam van het gegevensgroeptype** (bijv. `RelatieTotExamenAfname`, `RelatieTotOpsteller`, `RelatieTotSummatiefResultaat`, `OnderwijsresultaatRegistratie`).
+- **Volledigheid:** Elk in het informatiemodel benoemd informatieobject en elke gegevensgroep/gegevensgroeptype moet in het diagram terugkomen (inclusief bv. Examen deelname, Beoordelaar). Document (OKE-object) mag gebruikt worden voor koppeling documenten bij Zittingsverslag en SummatieveBeoordeling.
+
+## OKE en externe specificaties
+
+- **OKE-terminologie in kerntekst:** Niet gebruiken; alleen MORA/datamodel-terminologie in de kerntekst.
+- **OKE als referentie:** OKE MBO-toetsafname (en vergelijkbare specs) mogen als **bron** dienen voor referentie-attributen. Nederlandse vertaling van OKE-attributen in een **apart overzicht** (bijv. `OKE_Gegevensgroeptypes_Overzicht.md`); in het hoofddocument alleen een korte verwijzing naar dit overzicht (bij informatiemodel en bij het klassendiagram).
+- **OKE vs. informatiemodel analyse:** Een vergelijking "OKE-specificatie vs. informatiemodel" (potentiële gemiste gegevensgroeptypes, processcope) hoort in een **apart analyse-document** (bijv. `OKE_Informatiemodel_Analyse.md`). Dit is een losse analyse voor een volgende iteratie; niet in de kerntekst van de koppelvlak specificatie.
+
+## Procesplaatsing (MORA)
+
+- **Diplomeren en certificeren:** Als overkoepelende processtap met sub-stappen weergeven (bepalen diploma/certificaat recht, besluiten diplomeren/certificeren, diplomeren/certificeren). Bij voorkeur in een Mermaid-subgraph.
+- **Buiten scope:** Expliciet vermelden wat buiten scope valt (bijv. "Afgeven mbo-verklaring").
 
