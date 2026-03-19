@@ -6,7 +6,7 @@ Dit document staat **in deze repository** (onder `doc/`), zodat het mee versione
 
 Neem ook [`Privacy-meetings-en-transcriptie.md`](Privacy-meetings-en-transcriptie.md) door als je **deelneemt aan OKx-meetings** waarvan inhoud in deze repo kan terugkomen (opname, AI-transcriptie, publiek karakter).
 
-**Leeswijzer**: eerst **Git & GitHub** (samenwerking in de repo), daarna **agent-artifacten** en **Cursor/agents**, tot slot **principes** en **referenties**.
+**Leeswijzer**: eerst **Git & GitHub** (samenwerking in de repo), daarna **Cursor/agents**, vervolgens **agent-artifacten** (waar plannen en ontwerpdocumenten landen), tot slot **principes** en **referenties**.
 
 ---
 
@@ -29,14 +29,76 @@ Neem ook [`Privacy-meetings-en-transcriptie.md`](Privacy-meetings-en-transcripti
 
 # Deel A — Git en GitHub
 
-## 2. OKx-projectaanpak en collaborative design
+## 2. OKx-projectaanpak, collaborative design en GitHub (ook als je nieuw bent)
 
-In [`OKx_Projectoverzicht.md`](OKx_Projectoverzicht.md) staat de **projectaanpak**: **begrijpen** → **ontwerpen** → **realiseren**, met samenwerking tussen **sector** en **leveranciers** en **MOKA-koppelvlakspecificaties** als kader.
+**Geen ervaring met Git of GitHub?** Geen probleem. Je hoeft niet meteen alle techniek te snappen: **bijdragen begint vaak met een vraag of een voorstel** in GitHub (**issue** of **Discussion**). Verderop in dit document leggen we Git, branches en pull requests stap voor stap uit. Hieronder staat vooral **waarom** we zo werken en **hoe** dat samenhangt met ontwerp en planning.
 
-**Collaborative design** in OKx:
+### Projectaanpak (kort)
 
-- Vragen en ideeën in **issues**; uitwerkingen in **branches** + **pull requests**.
-- Belangrijke besluiten als **ADR’s** in `architecture/dr/` waar dat past.
+In [`OKx_Projectoverzicht.md`](OKx_Projectoverzicht.md) staat de lijn **begrijpen** → **ontwerpen** → **realiseren**: samenhang tussen **sector** (instellingen), **leveranciers** en ketenpartijen, met **MOKA-koppelvlakspecificaties** als gemeenschappelijk kader. Zo werken we toe naar **flexibele koppelvlakken** die de **Nederlandse onderwijssector** verder helpen — niet als een afgesloten document, maar als **gedeeld** en **iteratief** verbeterd gedachtegoed.
+
+### Wat is collaborative design?
+
+**Collaborative design** betekent: **ontwerp is geen truc van één discipline**, maar een **gedeeld** proces. Designers, ontwikkelaars, productmanagers en **stakeholders** (bij ons: o.a. instellingen en leveranciers) denken **vroeg en vaak** mee — via **workshops** (live of online), **feedback** en **iteratieve** uitwerking (schets, tekst, prototype, specificatie). Zo ontstaan **meerdere perspectieven** op hetzelfde vraagstuk en blijft kennis niet hangen in silo’s.
+
+Atlassian beschrijft deze aanpak in de context van agile teams (o.a. hele team bij het ontwerp betrekken, design in de agile flow, klantinzichten voor testen en ideatie). Zie: [Collaborative design in agile teams (Atlassian)](https://www.atlassian.com/agile/design/collaborative-design-in-agile-teams-video). Elementen die ook voor OKx herkenbaar zijn:
+
+- **Iedereen relevant betrekken** — niet alleen “de techneut” of “de architect”; wie een ander perspectief heeft, kan waarde toevoegen.
+- **Werken met zichtbare tussenresultaten** — schetsen, diagrammen, markdown, issues: genoeg om **gedeelde begripsvorming** te krijgen (geen perfecte plaat nodig om te starten).
+- **Documentatie en samenwerking op één plek** — bij ons is dat primair **deze GitHub-repository** (tekst, besluiten, notulen) in plaats van alleen e-mail of losse documenten.
+- **Open communicatie en eigenaarschap** — wie iets inbrengt, kan **volgen** wat ermee gebeurt (issues, PR’s, borden).
+
+OKx vertaalt dat naar **open kennis**: iedereen mag **vragen, problemen en ideeën** melden; **kernteam OKx** en een **dedicated kerngroep techniek** zorgen samen voor **prioritering, uitwerking en realisatie** — in afstemming met de sector.
+
+### Asynchroon werken
+
+We werken **federatief en asynchroon**: je hoeft niet alle besluiten in dezelfde vergadering te nemen. **Issues en PR’s** zijn het **geheugen** van het project: daar staat *wat* besproken is, *wat* de vervolgstap is en *wie* wat heeft voorgesteld. **Meetings** vullen dat aan (notulen/transcripten in `architecture/meetings/`), maar de **doorloop** gaat verder op GitHub.
+
+Voordelen voor beginners en drukke deelnemers:
+
+- Je kunt **in je eigen tijd** reageren of een issue aanmaken.
+- Anderen kunnen **later** meelezen en inhaken zonder de hele chatgeschiedenis te missen.
+- **Transparantie**: de backlog en besluiten zijn voor contributors zichtbaar (rekening houdend met [privacy bij meetings](Privacy-meetings-en-transcriptie.md)).
+
+### GitHub in deze flow (agile-achtige artefacten)
+
+We hanteren **geen strikt Scrum-handboek**, maar de **beelden** helpen om te zien waar GitHub bij hoort:
+
+| Agile-achtig idee | Hoe dat in OKx-meta op GitHub terugkomt |
+|-------------------|------------------------------------------|
+| **Backlog** | Open **issues** (vragen, bugs, voorstellen) + eventueel **projectbord** / labels / milestones — alles wat nog gedaan of beslist moet worden. |
+| **Prioriteren / plannen** | **Kernteam OKx** en **kerngroep techniek** kiezen waar focus ligt; issues kunnen aan epics/milestones gekoppeld worden. |
+| **Sprint / werkrithme** | **Sprintachtige periodes** met **variabele duur** (zie §4): focus op een set issues, zonder starre Scrum-verplichting. |
+| **Werk uitvoeren** | **Branches** + **pull requests** met review — concrete wijzigingen in docs en specificaties. |
+| **Opleveren / vastleggen** | **Merge** naar `dev` / `main`, **tags** bij releases, **ADR’s** voor belangrijke architectuurkeuzes (`architecture/dr/`). |
+
+**Iedereen kan bijdragen** door **problemen en vragen** (en oplossingsrichtingen) in GitHub te zetten. Zo komen ze in **onze projectaanpak** en planning terecht. De **realisatie** — uitwerken, scherpstellen, reviewen — gebeurt in samenwerking met **kernteam OKx** en **kerngroep techniek**, zodat de kennisbasis **betrouwbaar** en **samenhangend** blijft.
+
+```mermaid
+flowchart LR
+  subgraph inbound [Iedereen_kan_bijdragen]
+    signal[Vragen_problemen_ideeen]
+  end
+  subgraph github [GitHub]
+    backlog[Issues_backlog]
+    plan[Prioriteren_epics_milestones]
+    work[Sprints_ritme]
+    deliver[PRs_review_merge]
+  end
+  subgraph team [OKx]
+    kern[Kernteam_OKx]
+    tech[Kerngroep_techniek]
+  end
+
+  signal --> backlog
+  backlog --> plan
+  kern --> plan
+  tech --> plan
+  plan --> work
+  work --> deliver
+```
+
+Zie ook **§3** (governance), **§4** (epics/issues/sprints) en **§5** (issues in GitHub en templates).
 
 ---
 
@@ -63,15 +125,183 @@ Zie [`CONTRIBUTING.md`](../CONTRIBUTING.md). In het kort:
 
 ---
 
-## 5. Issues: wanneer wat?
+## 5. Issues aanmaken in GitHub (de website waar je nu op zit)
 
-- **Issue eerst** bij inhoud/richting/afstemming.
-- **Issue templates**: `.github/ISSUE_TEMPLATE/`.
-- **Discussions** = breed; **issues** = concrete vervolgstappen.
+Lees je dit document **op GitHub**? Dan zit je al in de **webinterface** van de repository: hier staan de tabbladen **Code**, **Issues**, **Pull requests**, enzovoort. GitHub hoeft niet “eng” te zijn: **alleen al een issue aanmaken** is een waardevolle bijdrage — je levert gestructureerde input aan zonder meteen aan code of Git te hoeven.
+
+### Stappen (kort)
+
+1. Open de repository op GitHub (de pagina met code en tabbladen bovenaan).
+2. Klik op het tabblad **Issues**.
+3. Klik op **New issue** (of de vergelijkbare knop).
+
+
+![Issue Web Interface van Github](../img/bijdragen_voor_beginners_issue_webinterface.jpg)
+
+Wanneer je geen Github account hebt ingelogd, wordt je nu gevraagd in te loggen. Heb je geen Github account? Maak er dan een aan.
+
+GitHub opent dan meestal **geen leeg tekstveld**, maar een **keuzescherm met sjablonen** (*issue templates*). Dat is expres zo ingesteld.
+
+![Issue Web Interface template keuzemenu van Github](../img/bijdragen_voor_beginners_issue_webinterface_issuetemplate.jpg)
+
+
+### Hoe werken issue templates?
+
+- Elk **sjabloon** hoort bij een **type melding** (bijvoorbeeld documentatie corrigeren, een specificatievoorstel, vervolg op een meeting).
+- Je ziet **vaste kopjes en vragen** in het formulier; daar vul jij je antwoorden in.
+- Zo vergeet je minder snel belangrijke informatie en kan het OKx-team **hetzelfde overzicht** bij elke melding.
+- In deze repo staat `blank_issues_enabled: false` in [`.github/ISSUE_TEMPLATE/config.yml`](../.github/ISSUE_TEMPLATE/config.yml): er is dus **bewust geen “leeg issue”** — je **kiest een passend template**. In hetzelfde scherm kan ook een **contactlink** staan (e-mail) als dat beter past dan een issue.
+
+**Templates in OKx-meta** (map [.github/ISSUE_TEMPLATE/](../.github/ISSUE_TEMPLATE/)), onder andere:
+
+| Sjabloon (zoals in GitHub) | Wanneer denkbaar |
+|----------------------------|------------------|
+| **Correctie documentatie** | Tikfout, verouderde zin, kapotte link in `doc/` of README. |
+| **OKx specificatie wijziging** | Inhoudelijk voorstel voor specificatie of koppelvlak. |
+| **ADR voorstel** | Een architectuurkeuze vastleggen of wijzigen (`architecture/dr/`). |
+| **Meeting follow up** | Concreet vervolg op een besproken punt (koppel aan meeting of notulen). |
+| **Vraag / verduidelijking** | Iets is onduidelijk; je wilt uitleg of richting voordat je een PR maakt. |
+
+### Wanneer issue, wanneer iets anders?
+
+- **Issue eerst** bij inhoud, richting of afstemming — en wanneer je **alleen** wilt signaleren of bespreken zonder direct bestanden te wijzigen.
+- **Discussions** (als die aan staan) zijn **breder**; **issues** zijn bedoeld voor **concrete vervolgstappen** en zijn goed te koppelen aan PR’s en milestones.
+- Ga je zelf wijzigingen in de repo voorstellen? Koppel je PR later aan het issue (`Fixes #…` / `See also #…`). Zie ook [`CONTRIBUTING.md`](../CONTRIBUTING.md).
+
+Vul nu je Issue, wijziging of vraag naar wens in. Hoe meer detail, hoe beter! De templates dienen ter referentie.
+
+![Issue Web Interface issue invullen van Github](../img/bijdragen_voor_beginners_issue_webinterface_issue_invullen_view.jpg)
 
 ---
 
-## 6. Branchstrategie: `main`, `dev`, feature branches, tags
+## 6. Vanaf hier: actief bijdragen (iets technischer — maak je geen zorgen)
+
+Tot **§5** kon je alles in de **browser** doen. **Vanaf dit deel** gaan we ervan uit dat je misschien ook **bestanden** wilt wijzigen of **concrete tekstvoorstellen** wilt aanleveren. Dat klinkt soms als “veel techniek”, maar het valt mee: **je raakt de stabiele hoofdlijn niet zomaar kapot**. Jouw wijzigingen komen op een **eigen branch** en worden pas **na review** (via een **pull request**) onderdeel van de officiële lijn — zie **§9** (branchstrategie) en **§10** (PR).
+
+### Twee manieren (kies wat bij je past)
+
+| Manier | Wat je doet |
+|--------|-------------|
+| **A. Git op je computer** | Je installeert **Git**, **klon**t de repository naar je pc en werkt met een editor (bijvoorbeeld VS Code of Cursor). Handig voor langere teksten en veel bestanden. |
+| **B. Alleen GitHub in je browser** | Je opent een bestand op GitHub, klikt op **bewerken** (potlood), of voegt een bestand toe. GitHub vraagt om een **commit op een nieuwe branch** — handig voor kleine wijzigingen **zonder** Git op je laptop. |
+
+**Git installeren (manier A)** — download voor jouw besturingssysteem op [git-scm.com](https://git-scm.com). Controleer daarna in een terminal met `git --version` of het werkt.
+
+**Repository klonen (manier A)** — op de repo-pagina: groene knop **Code** → kopieer de **HTTPS**-URL. In een terminal:
+
+```bash
+git clone <plak-hier-de-HTTPS-URL-van-de-repo>.git
+cd OKx-meta
+```
+
+(De mapnaam volgt de repo-naam; `OKx-meta` is gebruikelijk voor deze kennisrepo.)
+
+### Use cases om rustig mee te oefenen (jij maakt er screenshots bij)
+
+*Je hoeft niet bang te zijn dat je het OKx-team “kapot maakt”: wijzigingen op een **eigen branch** worden pas echt onderdeel van de repo **na merge** door het team.*
+
+1. **Typfout of kleine tekstfix** — Open `README.md` of een bestand onder `doc/` op GitHub → **Edit** (potlood) → kies **Create a new branch for this commit** → kleine aanpassing → commit. *Screenshot-idee: potlood-icoon + optie voor nieuwe branch.*
+2. **Nieuw markdown-bestand** — Tab **Code**, map `doc/` → **Add file** → *Create new file* → inhoud typen → commit op een **nieuwe branch**. *Screenshot-idee: “Add file” en het pad naar het nieuwe bestand.*
+3. **Iets uitproberen** — Werk in een concept-branch aan een paragraaf; open een PR als je feedback wilt. *Screenshot-idee: “Compare & pull request” of het branch-dropdown na je commit.*
+
+Lees verder in **§7** en **§8** voor **dezelfde flow met Git op de commandoregel** en voor **wat een branch precies is**.
+
+---
+
+## 7. Git lokaal: clone, werken, remote, commit en push
+
+**In Jip- en Jannetaal:** jouw **laptop** heeft een **map** met bestanden. **Git** onthoudt daar **versies** van. **GitHub** is de **kopie in de cloud**. **`origin`** is de naam voor “die cloud-kopie” waarnaar jij meestal **pusht**. Zo kunnen anderen (en jijzelf op een andere pc) dezelfde geschiedenis zien.
+
+```mermaid
+flowchart LR
+  wt[Working_tree]
+  st[Staging_git_add]
+  lc[Lokale_history_git_commit]
+  rm[Remote_origin]
+  gh[GitHub_branch]
+
+  wt -->|git_add| st
+  st -->|git_commit| lc
+  lc -->|git_push| rm
+  rm --> gh
+```
+
+### Eenmalig: repo binnenhalen
+
+```bash
+git clone <HTTPS-URL-van-de-repo>.git
+cd OKx-meta
+```
+
+### Dagelijks: actuele `dev` ophalen en eigen branch
+
+```bash
+git checkout dev
+git pull origin dev
+git checkout -b feature/jouw-onderwerp
+```
+
+Bewerk bestanden in je editor. Controleer wat er gewijzigd is:
+
+```bash
+git status
+git diff
+```
+
+### Opslaan en naar GitHub sturen
+
+```bash
+git add .
+git commit -m "Korte duidelijke boodschap"
+git push -u origin feature/jouw-onderwerp
+```
+
+- **`git add`** — “deze wijzigingen wil ik in de volgende commit”.
+- **`git commit`** — legt een momentopname vast **op jouw computer**.
+- **`git push`** — stuurt die commits naar **GitHub** (`origin`), naar de branch met dezelfde naam.
+
+### Hoe komen jouw verbeteringen bij OKx terecht?
+
+**Alleen pushen is niet genoeg** om iets “officieel” te maken: daarna maak je een **pull request** (**§10**) naar het team. Het team **reviewt** en **merget** (meestal naar **`dev`**, zie **§9**). Zo blijft de kennisbasis **beheersbaar** en **traceerbaar**.
+
+Handige commando’s: `git status` · `git diff` · `git log --oneline -10`.
+
+**Fork?** Als je **geen** push-recht op de canonieke repo hebt, clone je vaak een **fork**; dan is `origin` jouw fork en voeg je `upstream` toe — volledig stappenplan in **§11**.
+
+---
+
+## 8. Branches: wat is dat, en hoe maak je er een?
+
+Een **branch** is een **naam** voor een lijn van commits naast andere lijnen. Zo kun je experimenteren terwijl **`main`** (of **`dev`**) rustig blijft staan. Later voeg je lijnen samen via een **merge** (vaak via een **PR**).
+
+### Op de command line (na §7)
+
+Vanaf bijgewerkte `dev`:
+
+```bash
+git checkout dev
+git pull origin dev
+git checkout -b feature/mijn-voorstel
+# ... wijzigingen, git add, git commit ...
+git push -u origin feature/mijn-voorstel
+```
+
+Gebruik een **duidelijke branche naam** (`feature/…`, `fix/…`) — sluit aan bij **§9**.
+
+### In de GitHub-webinterface
+
+1. Bovenin de bestandsweergave: dropdown met **branch** (vaak `main` of `dev`).
+2. Tik een **nieuwe naam** (bijvoorbeeld `feature/doc-readme-typos`) en bevestig **Create branch** — of gebruik het branch-menu vanuit een bestand.
+3. Open een bestand → **Edit** (potlood) → onderaan: kies **Create a new branch for this commit** → commit.
+4. GitHub biedt daarna vaak **Compare & pull request** aan (**§10**).
+
+Zo kun je **spelen en aanpassen in de browser** zonder Git op je pc — wél altijd op een **eigen branch**, niet rechtstreeks op de beschermde hoofdlijn.
+
+---
+
+## 9. Branchstrategie: `main`, `dev`, feature branches, tags
+
+Dit is de **teamsafspraak** over **welke branch waarvoor** dient. **§8** legde uit **hoe** je praktisch een branch maakt; hieronder **waar** je op wilt bouwen en **waarheen** pull requests gaan.
 
 | Branch / ref | Rol |
 |--------------|-----|
@@ -140,36 +370,37 @@ flowchart TD
 
 ---
 
-## 7. Pull requests (GitHub)
+## 10. Pull requests (GitHub): jouw wijzigingen terug naar het OKx-team
 
-1. Wijzigingen op een **branch** (niet op `main`).
-2. **Push**.
-3. **Pull request** → base **`dev`** (tenzij hotfix → `main`).
+**In Jip- en Jannetaal:** een **pull request** (PR) is een **verzoek** aan het OKx-team: “Willen jullie **mijn branch** bekijken en — als het goed is — **samenvoegen** met de officiële lijn?” Jouw werk staat dan **apart** tot iemand het **reviewt** en **merget**. Pas daarna hoort het bij de **echte** versie van de kennisrepo (via **`dev`** en uiteindelijk releases op **`main`**, zie **§9**).
+
+**Waarom doen we dit zo?** Zo kan iedereen **voorstellen** doen, terwijl de **kwaliteit en samenhang** bewaakt blijven. Je “breekt” niets: zonder merge blijft jouw idee een **voorstel** op een branch.
+
+### In de webinterface (na push of na browser-commit)
+
+1. Ga naar de repository op GitHub. Vaak verschijnt een banner **Compare & pull request** — klik daarop.
+2. Zo niet: tab **Pull requests** → **New pull request**. Kies **base** (meestal **`dev`**) en **compare** (jouw `feature/…`-branch).
+3. Vul **titel** en **beschrijving** in. GitHub kan [`.github/PULL_REQUEST_TEMPLATE.md`](../.github/PULL_REQUEST_TEMPLATE.md) tonen als startpunt — volg de vragen waar dat helpt.
+4. Koppel issues: `Fixes #123` of `See also #45` in de beschrijving.
+5. **Create pull request**. Het team **reviewt**; jij verwerkt eventuele feedback met nieuwe commits op dezelfde branch.
+6. Na **merge** kun je je branch opruimen (lokaal en/of op GitHub).
+
+### Checklist (kort)
+
+1. Wijzigingen op een **branch** (niet rechtstreeks op `main`).
+2. **Push** naar GitHub (of commit in de browser op een nieuwe branch — zie **§6** en **§8**).
+3. **Pull request** openen → base **`dev`** (tenzij **hotfix** → `main`, zie **§9**).
 4. Beschrijving + **issues** linken.
 5. **Review** + feedback verwerken.
-6. Na **merge**: branch opruimen.
+6. Na **merge**: branch opruimen (optioneel maar netjes).
 
 **Grote impact**: ook **SI-team** (Teams) — zie [`CONTRIBUTING.md`](../CONTRIBUTING.md).
 
 ---
 
-## 8. Git lokaal: werkmap, commit, push, remote
+## 11. Fork (geen schrijfrecht op upstream)
 
-```mermaid
-flowchart LR
-  wt[Working_tree]
-  st[Staging_git_add]
-  lc[Lokale_history_git_commit]
-  rm[Remote_origin]
-  gh[GitHub_branch]
-
-  wt -->|git_add| st
-  st -->|git_commit| lc
-  lc -->|git_push| rm
-  rm --> gh
-```
-
-**Fork**: **`origin`** = jouw fork; **`upstream`** = canonieke repo. PR: fork → upstream `dev`.
+Als je **geen direct push-recht** hebt op de canonieke repo, **fork** je die op GitHub naar **jouw eigen kopie**. Dan is **`origin`** in Git meestal **jouw fork**; je voegt **`upstream`** toe voor de officiële repo. Je PR gaat van **jouw fork** naar **upstream `dev`** (of `main` bij hotfix).
 
 ```mermaid
 flowchart TD
@@ -185,58 +416,24 @@ flowchart TD
   clone -->|git_fetch_pull_upstream| upstreamRemote
 ```
 
-```bash
-git checkout dev && git pull && git checkout -b feature/jouw-naam
-# ... wijzigingen ...
-git add . && git commit -m "Onderwerp" && git push -u origin feature/jouw-naam
-```
+1. **Fork** op GitHub → clone **jouw fork** (`git clone` van **jouw** fork-URL).
+2. **`upstream`** toevoegen (eenmalig), bijvoorbeeld:
 
-`git status` · `git diff` · `git log --oneline -10` → daarna PR naar **`dev`**.
+   ```bash
+   git remote add upstream <HTTPS-URL-van-de-canonieke-repo>.git
+   git fetch upstream
+   ```
 
----
-
-## 9. Fork (geen schrijfrecht op upstream)
-
-1. Fork op GitHub → clone **jouw fork**.
-2. **`upstream`** toevoegen (eenmalig).
-3. Branch, commit, push naar **jouw fork**.
-4. PR naar **upstream `dev`** (of `main` bij hotfix).
+3. Branch vanaf bijgewerkte `dev` (of `main` na overleg), commit, **push naar `origin`** (jouw fork).
+4. Op GitHub: **Pull request** van jouw fork-branch naar **upstream `dev`** (of `main` bij hotfix).
 
 [GitHub — Working with forks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks)
 
 ---
 
-# Deel B — Agent-artifacten (traceerbaarheid)
+# Deel B — Cursor en agents
 
-## 10. Waar landen plannen en ontwerpdocumenten?
-
-Output van de slash-commands voor **project → plan → design** wordt opgeslagen onder [`architecture/agent-artifacts/`](../architecture/agent-artifacts/):
-
-| Map | Command |
-|-----|---------|
-| `project-requests/` | `/project-aanvraag` |
-| `feature-plans/` | `/maak-plan` |
-| `design-docs/` | `/ontwerp-document` |
-
-Zie [`architecture/agent-artifacts/README.md`](../architecture/agent-artifacts/README.md) voor **bestandsnamen** (`YYYYMMDD_HHmm_slug.md`) en **verplichte YAML frontmatter**: `created`, `updated`, **`human_authors`** (mensen die verantwoordelijk zijn — geen “de AI”), `agent_command`, optioneel `related_issues` en `source_paths`.
-
-**Asynchroon**: na elke sessie **`updated`** bijwerken; optioneel een korte **sessiestatus** onderaan zodat een volgende mens/agent verder kan.
-
-```mermaid
-flowchart LR
-  pr[project_requests_map]
-  fp[feature_plans]
-  dd[design_docs_map]
-
-  pr -->|maak_plan_leest| fp
-  fp -->|ontwerp_document_leest| dd
-```
-
----
-
-# Deel C — Cursor en agents
-
-## 11. IDE, Cursor en AI-agents (basis)
+## 12. IDE, Cursor en AI-agents (basis)
 
 ### Wat is een IDE?
 
@@ -285,11 +482,11 @@ flowchart LR
   agentNode -->|leest_schrijft_voorstelt| files
 ```
 
-**Volgende secties**: **rules**, **`/`** en **`@`** in detail, daarna de **aanbevolen keten** (`/prep-repo-context` → …).
+**Volgende secties**: **rules**, **`/`** en **`@`** in detail, daarna de **aanbevolen keten** (`/prep-repo-context` → …), **Cursor-praktijk** en tot slot **waar de output landt** (**§16** — agent-artifacten).
 
 ---
 
-## 12. Cursor: rules, `/` commands, `@` context
+## 13. Cursor: rules, `/` commands, `@` context
 
 | Bron | Rol |
 |------|-----|
@@ -315,12 +512,14 @@ flowchart LR
 
 ---
 
-## 13. Agent workflows (aanbevolen keten)
+## 14. Agent workflows (aanbevolen keten)
 
 1. **`/prep-repo-context`** — eerst de repo begrijpen: [`.cursor/commands/prep-repo-context.md`](../.cursor/commands/prep-repo-context.md) (bestand mag je ook **`@`**-en).
 2. **`/project-aanvraag`** — iteratieve projectaanvraag → **`architecture/agent-artifacts/project-requests/`** (frontmatter + human authors). Zie [`.cursor/commands/project-aanvraag.md`](../.cursor/commands/project-aanvraag.md).
 3. **`/maak-plan`** — featureplan uit dat document → **`architecture/agent-artifacts/feature-plans/`** (`$ARGUMENTS`: pad bronbestand).
 4. **`/ontwerp-document`** — ontwerp per feature → **`architecture/agent-artifacts/design-docs/`** (`$ARGUMENTS`: welke feature / welk plan). Zie [`.cursor/commands/ontwerp-document.md`](../.cursor/commands/ontwerp-document.md).
+
+**Details** over mappen, bestandsnamen, YAML-frontmatter en asynchroon verder werken: **§16**.
 
 ```mermaid
 flowchart LR
@@ -338,35 +537,64 @@ flowchart LR
 
 ---
 
-## 14. Cursor IDE praktisch (Git, terminal, bestanden)
+## 15. Cursor IDE praktisch (Git, terminal, bestanden)
 
-- **Source Control** (tak-icoon links): dezelfde **commit / push**-flow als in [§8](#8-git-lokaal-werkmap-commit-push-remote) — visueel naast de terminal.
-- **Terminal**: dezelfde `git`-commando’s als in [§8](#8-git-lokaal-werkmap-commit-push-remote).
-- **Bestanden**: nieuwe of gewijzigde files in de **juiste map** (o.a. `architecture/agent-artifacts/`, `doc/`), daarna stagen en committen.
+- **Source Control** (tak-icoon links): dezelfde **commit / push**-flow als in [§7](#7-git-lokaal-clone-werken-remote-commit-en-push) — visueel naast de terminal.
+- **Terminal**: dezelfde `git`-commando’s als in [§7](#7-git-lokaal-clone-werken-remote-commit-en-push).
+- **Bestanden**: nieuwe of gewijzigde files in de **juiste map** (o.a. `architecture/agent-artifacts/`, `doc/`), daarna stagen en committen. Zie **§16** voor conventies rond agent-artifacten.
 - **Grote binaries**: eerst **afstemmen** met het team (LFS of andere afspraak).
 - **Kennis-repo**: AI-suggesties **inhoudelijk controleren** (juistheid, privacy, geen vertrouwelijke data).
 - **PlantUML**: kan naast **Mermaid**; op **GitHub** renderen we **Mermaid** in markdown betrouwbaar.
 
 ---
 
+# Deel C — Agent-artifacten (traceerbaarheid)
+
+## 16. Waar landen plannen en ontwerpdocumenten?
+
+Output van de slash-commands voor **project → plan → design** wordt opgeslagen onder [`architecture/agent-artifacts/`](../architecture/agent-artifacts/):
+
+| Map | Command |
+|-----|---------|
+| `project-requests/` | `/project-aanvraag` |
+| `feature-plans/` | `/maak-plan` |
+| `design-docs/` | `/ontwerp-document` |
+
+Zie [`architecture/agent-artifacts/README.md`](../architecture/agent-artifacts/README.md) voor **bestandsnamen** (`YYYYMMDD_HHmm_slug.md`) en **verplichte YAML frontmatter**: `created`, `updated`, **`human_authors`** (mensen die verantwoordelijk zijn — geen “de AI”), `agent_command`, optioneel `related_issues` en `source_paths`.
+
+**Asynchroon**: na elke sessie **`updated`** bijwerken; optioneel een korte **sessiestatus** onderaan zodat een volgende mens/agent verder kan.
+
+```mermaid
+flowchart LR
+  pr[project_requests_map]
+  fp[feature_plans]
+  dd[design_docs_map]
+
+  pr -->|maak_plan_leest| fp
+  fp -->|ontwerp_document_leest| dd
+```
+
+---
+
 # Deel D — Verdieping en contact
 
-## 15. Ontwerp- en standaardprincipes
+## 17. Ontwerp- en standaardprincipes
 
 **Design first**, **OEAPI**, **machine-interpreteerbare formaten**, **show don't tell / diagram-first**: [`architecture/docs/principes.md`](../architecture/docs/principes.md).
 
 ---
 
-## 16. Referenties
+## 18. Referenties
 
 - **Git**: [Pro Git](https://git-scm.com/book/en/v2) — [NL (deels)](https://git-scm.com/book/nl/v2)
 - **GitHub**: [Getting started](https://docs.github.com/en/get-started)
 - **Branches / PR / Issues**: [Branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches) · [PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) · [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
 - **OEAPI**: [openonderwijsapi.nl](https://openonderwijsapi.nl/) — [v6.0](https://openonderwijsapi.nl/v6.0/)
 - **Cursor**: [docs.cursor.com](https://docs.cursor.com/)
+- **Collaborative design (Agile, achtergrond)**: [Atlassian — collaborative design in agile teams](https://www.atlassian.com/agile/design/collaborative-design-in-agile-teams-video)
 
 ---
 
-## 17. Contact
+## 19. Contact
 
 **niek.derksen@surf.nl** — zie ook [`CONTRIBUTING.md`](../CONTRIBUTING.md).
