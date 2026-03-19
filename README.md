@@ -1,46 +1,54 @@
-# Wat is OKx?
+# OKx-meta
 
-**OKx** staat voor het realiseren van **uniforme, gestandaardiseerde koppelvlakken** voor onderwijslogistiek. Het BOPSI-implementatiepad is het uitgangspunt; de scope start bij **MBO** en wordt later uitgebreid naar **HO** (hoger onderwijs). Door koppelvlakken eenduidig te specificeren ontstaat interoperabiliteit tussen systemen en partijen in de onderwijsketen.
+Deze repository is de **publieke knowledge base** van **OKx**: hier verzamelen en ontwikkelen we gedeelde kennis, afspraken en (concept-)uitwerkingen rond **gestandaardiseerde koppelvlakken voor onderwijslogistiek**.
 
-## Doel van deze repository: knowledge base
+## Wat is OKx?
 
-Deze repository is een **knowledge base** die **team OKx maintaint**. Leveranciers, instellingen en geinteresseerden kunnen 24/7 **federatief en asynchroon** bijdragen via **issues** en **pull requests**.
+**OKx** werkt aan **uniforme, gestandaardiseerde koppelvlakken** zodat systemen in de onderwijsketen beter met elkaar kunnen samenwerken. Het **BOPSI-implementatiepad** is het uitgangspunt; de scope start bij **MBO** en wordt later uitgebreid naar **HO**.
 
-- **Issues**: voorstellen, vragen, meeting follow-ups, ADR-voorstellen
-- **Pull requests (PR's)**: concrete wijzigingen in docs, ArchiMate model, ADR's, meeting-notulen
-- **Projectmanagement**: boards/epics en (optioneel) milestones (handmatig beheerd)
+Meer context en de huidige stand van zaken: [`doc/OKx_Projectoverzicht.md`](doc/OKx_Projectoverzicht.md).
 
-Het domein is complex. We leggen meetings vast, transcriberen ze en vatten ze samen in deze repo, zodat kennis niet in gesprekken blijft hangen maar via issues/PR's doorontwikkelt.
+## Wat proberen we te doen?
 
-## Deliverables en inputs
+- **Eenduidige afspraken** mogelijk maken tussen instellingen, leveranciers en andere ketenpartijen.
+- Zorgen dat kennis niet versnipperd raakt: besluiten, open vragen en uitwerkingen landen **in deze repo** (en groeien door via issues en pull requests).
 
-- **Deliverables** (paars in bijlage 1): de concrete producten die OKx oplevert - MOKA-koppelvlakspecificaties, informatiemodellen en waar mogelijk OEAPI-gebaseerde standaarden. Zie [OKx/doc/OKx_Projectoverzicht.md](OKx/doc/OKx_Projectoverzicht.md). Figuur: beheerketen voor tot standkoming koppelvlak specificaties:
+## Waar lopen we tegenaan?
 
-  ![Beheerketen voor tot standkoming koppelvlak specificaties](OKx/img/OKx_bijlage2_OKx_project_scope_en_afhankelijkheden.jpg)
+- **Veel partijen, veel afhankelijkheden**: onderwijslogistiek raakt processen, beleid en techniek tegelijk.
+- **Fasering en prioritering**: we starten in MBO en bouwen stapsgewijs uit.
+- **Nog in aanbouw**: delen van het geheel zijn al uitgewerkt, andere onderdelen zijn nog onderwerp van verkenning, ontwerp en besluitvorming.
 
-- **Inputs** (groen in bijlage 1): de bronnen en eisen die als invoer voor de specificaties gelden (ketenafspraken, MORA/MOKA, BOPSI).
+## Meer lezen en meepraten (GitHub)
 
-## Repo-inhoud
+- **Wiki**: achtergrond, uitleg en langere how-to’s: `https://github.com/Npuls-OKx/meta/wiki`
+- **Discussions**: vragen, ideeën en open gesprekken: `https://github.com/Npuls-OKx/meta/discussions`
 
-| Onderdeel | Beschrijving |
-|-----------|--------------|
-| **OKx projectcontext** | [OKx/doc/](OKx/doc/) en [OKx/img/](OKx/img/): visie, besluitboom, historie, ketenplaten, informatiestromen en bijlagen. |
-| **Deliverables** | Onder [OKx/OKE/](OKx/OKE/) staat het subdomein *Examen – uitvoering en beoordeling* met de bijbehorende **MOKA-koppelvlakspecificaties** (doc, img, scripts). |
-| **Generiek template** | [OKx/moka-koppelvlakspecificaties/Template/](OKx/moka-koppelvlakspecificaties/Template/): MOKA koppelvlak specificatie template en generieke instructies. |
-| **Machine-interpreteerbaar** | Informatiemodellen (JSON), ContextRules en gestructureerde documenten onder de genoemde paden. |
+Voor concrete wijzigingen werken we via **issues** en **pull requests**. Zie [`CONTRIBUTING.md`](CONTRIBUTING.md) en de beginnershandleiding [`doc/Bijdragen-voor-beginners.md`](doc/Bijdragen-voor-beginners.md).
 
-## Architectuur, ADR's en meeting-notulen
+## Wat staat er in deze repository?
 
-- **ArchiMate model**: `architecture/model/model.archimate`
-- **ADR's (decision records)**: `architecture/dr/`
-- **Meetings (notulen + optioneel transcript)**: `architecture/meetings/`
-
-Voor de werkafspraken, governance en hoe je bijdraagt, zie `CONTRIBUTING.md`. Gebruik de issue templates in `.github/ISSUE_TEMPLATE/` voor nieuwe wijzigingsinitiatieven.
+| Onderdeel | Locatie | Inhoud |
+|-----------|---------|--------|
+| **Projectcontext** | [`doc/`](doc/) en [`img/`](img/) | Overzichten, ketenplaten, bijlagen en contextdocumenten |
+| **OKE uitwerking** | [`OKE/`](OKE/) | Eerste subdomein-uitwerking (o.a. examen: uitvoering en beoordeling) |
+| **MOKA templates** | [`moka-koppelvlakspecificaties/`](moka-koppelvlakspecificaties/) | Templates en generieke instructies voor koppelvlakspecificaties |
+| **Architectuur & besluiten** | [`architecture/`](architecture/) | ArchiMate-model, ADR’s, meeting-notulen en [`architecture/docs/principes.md`](architecture/docs/principes.md) |
+| **Agent-artifacten** | [`architecture/agent-artifacts/`](architecture/agent-artifacts/) | Projectaanvragen, featureplannen en ontwerpdocumenten (Cursor slash commands); zie [`architecture/agent-artifacts/README.md`](architecture/agent-artifacts/README.md) |
+| **Cursor (AI)** | [`.cursor/commands/`](.cursor/commands/) en [`.cursor/rules/`](.cursor/rules/) | Slash commands (`/…`) en rules; uitleg in [`doc/Bijdragen-voor-beginners.md`](doc/Bijdragen-voor-beginners.md) |
 
 ## Relatie met OEAPI
 
-De informatiestromen die binnen OKx worden uitgewerkt resulteren in technische specificaties en, waar mogelijk, in **OEAPI-gebaseerde standaarden** en consumers. Zie [OEAPI v6.0](https://openonderwijsapi.nl/v6.0/) voor de Open Onderwijs API.
+Waar passend sluiten uitwerkingen aan op **OEAPI**. Zie [OEAPI v6.0](https://openonderwijsapi.nl/v6.0/).
 
-## Status en samenwerking
+## Privacy, meetings en publieke kennis
 
-Deze repository is **in aanbouw**. Wijzigingen gaan bij voorkeur via **tickets** en **pull requests**. Voor toegang en afstemming: **niek.derksen@surf.nl**.
+OKx-sessies die deze knowledge base voeden kunnen **opgenomen en met AI getranscribeerd** worden; de facilitator **kondigt dat vooraf** aan. Bij bezwaar: **anonimisering in het transcript** of **deelneming beëindigen**. Tools worden gekozen met **AVG/privacy** in het oog; zie o.a. [Jamie — data handling](https://docs.meetjamie.ai/pages/faqs_troubleshooting/data). **Deel geen niet-publieke informatie** — deze repo is bedoeld als **publiek** gedachtegoed.
+
+Volledige toelichting: [`doc/Privacy-meetings-en-transcriptie.md`](doc/Privacy-meetings-en-transcriptie.md).
+
+## Status
+
+Deze repository is **in aanbouw**. Contact voor afstemming: **niek.derksen@surf.nl**.
+
+

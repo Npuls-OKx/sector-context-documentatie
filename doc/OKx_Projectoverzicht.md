@@ -70,8 +70,8 @@ Het functionele en technische ontwerp wordt ondersteund door een **tweede reposi
 
 | Onderdeel | Locatie | Inhoud |
 |-----------|---------|--------|
-| OKx context | `OKx/doc/`, `OKx/img/` | Projectoverzicht, besluitboom/historie, informatiestromen, bijlagen |
-| OKE deliverables | `OKx/OKE/moka-koppelvlakspecificaties/Examen Uitvoering en beoordeling/` | Koppelvlakspecificatie, informatiemodel, ContextRules, scripts |
-| Generiek template | `OKx/moka-koppelvlakspecificaties/Template/` | MOKA-template en generieke instructies |
+| OKx context | `doc/`, `img/` | Projectoverzicht, besluitboom/historie, informatiestromen, bijlagen |
+| OKE uitwerking | `OKE/` | Eerste subdomein-uitwerking (o.a. examen: uitvoering en beoordeling) |
+| Generiek template | `moka-koppelvlakspecificaties/Template/` | MOKA-template en generieke instructies |
 
-Zie ook de [root README](../../README.md) voor deliverables (paars), inputs (groen) en relatie met OEAPI.
+Zie ook de [root README](../README.md) voor de generieke intro, repo-indeling en de verwijzingen naar Wiki/Discussions, en [Bijdragen voor beginners](Bijdragen-voor-beginners.md) voor git/GitHub, branches en PR’s.
