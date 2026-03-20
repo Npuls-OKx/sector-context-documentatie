@@ -1,6 +1,7 @@
 # OKx Projectoverzicht
 
 ## Doelbinding
+Project OKx is een onderdeel van het [groeifonds programma NPuls](https://npuls.nl/project-onderwijskoppelingen), zoals bekrachtigd door het Nederlandse ministerie van Onderwijs, Cultuur en Wetenschap. De repository dient als een knowledge base voor het inhoudelijke component van dit project.
 
 OKx heeft als doel **uniforme en gestandaardiseerde koppelvlakken** voor onderwijslogistiek te realiseren, met het BOPSI-implementatiepad als uitgangspunt. De scope start bij **MBO**; **HO** (hoger onderwijs) volgt in een later stadium. Door koppelvlakken eenduidig te specificeren ontstaat interoperabiliteit tussen systemen en partijen in de onderwijsketen.
 
@@ -70,8 +71,8 @@ Het functionele en technische ontwerp wordt ondersteund door een **tweede reposi
 
 | Onderdeel | Locatie | Inhoud |
 |-----------|---------|--------|
-| OKx context | `OKx/doc/`, `OKx/img/` | Projectoverzicht, besluitboom/historie, informatiestromen, bijlagen |
-| OKE deliverables | `OKx/OKE/moka-koppelvlakspecificaties/Examen Uitvoering en beoordeling/` | Koppelvlakspecificatie, informatiemodel, ContextRules, scripts |
-| Generiek template | `OKx/moka-koppelvlakspecificaties/Template/` | MOKA-template en generieke instructies |
+| OKx context | `doc/`, `img/` | Projectoverzicht, besluitboom/historie, informatiestromen, bijlagen |
+| OKE uitwerking | `OKE/` | Eerste subdomein-uitwerking (o.a. examen: uitvoering en beoordeling) |
+| Generiek template | `moka-koppelvlakspecificaties/Template/` | MOKA-template en generieke instructies |
 
-Zie ook de [root README](../../README.md) voor deliverables (paars), inputs (groen) en relatie met OEAPI.
+Zie ook de [root README](../README.md) voor de generieke intro, repo-indeling en de verwijzingen naar Wiki/Discussions, en [Bijdragen voor beginners](Bijdragen-voor-beginners.md) voor git/GitHub, branches en PR’s.
