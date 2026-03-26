@@ -5,7 +5,7 @@ Hier is de beknopte samenvatting van de vergadering:
 
 - **Strategische visie op de **_**Student Ontwikkelings Wallet**_** (EDU-wallet) gepresenteerd**, waarbij Mark Hoogenboom drie basisprincipes vaststelt: de wallet is eigendom van het individu, instellingen vragen toestemming voor inzage, en de context (leer- zorg- of werkgeschiedenis) wordt via _EduID_ en publieke standaarden ontsloten.
 - **Kritieke noodzaak voor een **_**Student Kiest Systeem**_** (SKS) en een modulaire onderwijsovereenkomst**, omdat het huidige systeem vastloopt op LLO-trajecten (Leven Lang Ontwikkelen) waarbij studenten losse modules en certificaten stapelen in plaats van volledige meerjarige opleidingen volgen.
-- **Besluit: **Scott** start direct met het uitrollen van **_**Student Journeys**_** bij pilot-instellingen** (waaronder Amsterdam en Rijnland) om eigenaarschap te creëren en de abstracte procesarchitectuur visueel en tastbaar te maken voor onderwijsprofessionals.
+- **Besluit: **Alda** start direct met het uitrollen van **_**Student Journeys**_** bij pilot-instellingen** (waaronder Amsterdam en Rijnland) om eigenaarschap te creëren en de abstracte procesarchitectuur visueel en tastbaar te maken voor onderwijsprofessionals.
 - **Projectrisico geïdentificeerd wat betreft de interne adoptie en voortgang**, waarbij Mark Hoogenboom aangeeft dat de complexiteit leidt tot weerstand in het team; de focus verschuift nu naar het leveren van concrete koppelvlak-specificaties en _mockups_ om de fundering te bewijzen.
 - **Volgende mijlpalen:** Leveranciersupdates op maandag en woensdag in week 14, gevolgd door de kick-off van de _Werkgroep Techniek_ op **7 april 2026**, waar de architectuurplaten in ArchiMate en de GitHub-omgeving centraal staan.
 
