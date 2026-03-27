@@ -6,7 +6,7 @@ Niek
 Oke, dus we hebben hier eh die die ik. Ik heb even de notulen aangezet. Ik heb hier de de de mockup van de steden of zenden en daarin een validering. Omdat hier dus een harvisten route hebt die binnenkomt heb je dus validering niet nodig omdat je eigenlijk al een diploma hebt die dat afvangt. Namelijk deze persoon heeft havo gewoon afgerond en gaat nu beginnen met het hbo. Ja. En daarna komen we hier dus op de Het studieplan is eigenlijk het studieplan wat deze persoon bij elkaar gaat klikken. En hier zie je natuurlijk al meteen het sausje van de van het HBO. Ze praten hier in in EC's. Dat zijn de strategische studiepunten. En wel grappig, ze hebben hier dus indicatoren. Indicatoren van bepaalde leeruitkomsten. Dus je hebt hier wat is dit? Strategic management? Je kunt op basis van brononderzoek de belangrijkste trends in de externe omgeving van een organisatie beschrijven en deze verbinden aan strategische doelen van een organisatie binnen bredere maatschappelijke context. Dan hebben ze dus indicatoren die aangeven. Volgens mij zijn dit hun leeruitkomsten zoals ik ze voor me zie. Wat je hier in ieder geval ziet is dat ze die leeruitkomsten in max twee drie zinnen beschrijven. Dus ik heb het gevoel dat daar meer achter zou kunnen zitten. Op informatie die jij ons gaf aldaar hoe jij zo'n zo'n leeruitkomst zou ontleden. Maar hier gebruiken ze dus even voor de pure functionaliteit om te laten zien wat je hier dus mee kunt, hebben ze hier zo neergezet En dan heb je.
 
 
-Scott
+Niels
 
 
 ###### 01:19 - 01:36
@@ -22,7 +22,7 @@ Niek
 Oké, goeie. Uhm. Nou ja, dan heb je daar dus ook bewijslast voor die daaronder zit. Dus suggesties voor bewijs. Dus dan kun je dus ook eigenlijk. Dit is eigenlijk volgens mij je je toetsvorm. Zeg ik het goed? Je examenvorm, stakeholderanalyse, externe analyse, bedrijfsbezoeken, bedrijfsverkenning. Omschrijving van wat ervan inhoudt. Je mag je eigen bewijs toevoegen om je leerproces te ondersteunen. Dit bewijs komt uit persoonlijke ervaringen, reflecties, projecten en andere relevante materialen. Uhm. Daarna hebben we dus het kopje leeractiviteiten en die heb ik niet meer als als screenshot meegekregen. Niels.
 
 
-Scott
+Niels
 
 
 ###### 02:17 - 02:20
@@ -38,7 +38,7 @@ Niek
 Als jij die nog hebt.
 
 
-Scott
+Niels
 
 
 ###### 02:21 - 02:28
@@ -54,7 +54,7 @@ Niek
 Daar komen we zo op. Dit is even de standaard. Er moet straks dus ook de.
 
 
-Scott
+Niels
 
 
 ###### 02:34 - 02:35
@@ -94,7 +94,7 @@ Niek
 Snap ik. Alleen dit zijn dus mock ups en je ziet hier al dit is die Emma van der Wijst en dat is dus een LLO geïnspireerd persoon. Dat is iemand die al veel werkervaring heeft en die vanaf de zijinstroom komt. En die heeft natuurlijk een ander profiel zeg maar. En die kan dus ook haar eigen toetsvorm kiezen. En dan heb je hier dus he vroeger leeruitkomsten toe aan een. Ze noemt het. Ze noemen dit hoofdstuk. Daar zie je het strategic management. Inderdaad, is dus inderdaad 111 leeruitkomst die ze toevoegen aan het studieplan. En dan kun je hier in het studieplan dus zien wat je bij elkaar geklikt hebt. Eigenlijk de volgordelijkheid die daar in zit. En je kunt een bewijs selecteren die je dan gaat meenemen naar je toetsvorm of je examenvorm denk ik. En dan. Hier kwamen ze dus op het stukje de leeractiviteiten bij elkaar klikken. En hier ik, Ik snap het. Het laat het idee zien van wat er moet gebeuren. Alleen je ziet hier dus dat je een een blok hebt van vijf studiepunten. Volgens mij is vijf studiepunten uh, dat is 1/6 van je. Nee, 1/10 van je jaar. Dus een tiende van een jaar zou nou volgens mij wel wat meer dan één les zijn. Laat ik het zo zeggen drie lessen of drie colleges zijn. Dus hier klikken ze dan gewoon he, van ik klik gewoon dit collegeblok aan op maandag twintig. Dit zijn de opties die ik heb en die selecteer ik.
 
 
-Scott
+Niels
 
 
 ###### 04:34 - 06:12
@@ -110,7 +110,7 @@ Niek
 Ja. Ja, eigenlijk zou je daar een soort integratie met bestaande kalender types willen, hè? Dat je letterlijk gewoon iemands agenda kan uitdelen. Dat is het allermakkelijkste om die te verenigen. Maar ja, in ieder geval hier dus een toetsvorm die ze kunnen selecteren. Daarna kom je dus op het moment dat je dus je studieplan hebt gemaakt. Eigenlijk zet je je studieplan om in een soort ja resultaten structuur voor je portfolio ook. En daarin ga je dus resultaat halen. Dus je hebt bijvoorbeeld weet ik veel wat hebben we geselecteerd? De belastingadvies voor de klant als toetsvorm. Nou, dan moet je dus die rapporten toe gaan voegen. En die zitten dus geïntegreerd in hetgeen wat je aan de voorkant hebt geselecteerd. En dit is dus eigenlijk een lokale variant waar wij dus ook binnen onze scope op uitkwamen van ja, die die student wallet, het portfolio wat opgebouwd wordt door de school en die levert dat bijvoorbeeld uit aan die persoonlijke educatie wallet van die van die studenten. Om te laten zien nou hij heeft deze resultaten gehaald, dan geven we micro credential af en die slaan we bijvoorbeeld op in de in de student wallet. Maar het portfolio van de student, dat blijft bijvoorbeeld bij de school. Of er kan de de, de, de, eh. Ik kan me ook voorstellen dat dat het misschien een, een wens is voor een student om daar ook een centraal punt voor te hebben, dat je dat gewoon kunt inzien. Nou ja, daar zijn keuzes in te maken. Maar in ieder geval, er moet ook een lokaal punt zijn waar de instelling zelf naar toe wegschrijft. En dat dat dan vanuit dat portfolio weer uitdeelt aan de landelijke sector voorziening om te laten zien wat je hebt gehaald Je moet toch ergens je bewijslast opslaan voor wil je een credential uitgeven dat je dat je zeg maar de credential hebt en dat zegt dat je wel wat, maar het feit dat je waarmee je dat bewezen hebt zou je kunnen zeggen van nou, dat zit eigenlijk meer aan de kant van de school die heeft hem uitgegeven, die is verantwoordelijk voor de bewijslast.
 
 
-Scott
+Niels
 
 
 ###### 08:07 - 08:08
@@ -126,7 +126,7 @@ Niek
 Eigenlijk heb je alleen de Ik denk dat, dat zou mijn voorkeur zijn om dat gewoon alleen als credential op te slaan of micro credential. Dat je iets gehaald hebt en dat de school dat accrediteert. En als je daar bewijs van wil zien, dan moet je de school vragen. Ja, maar dit was even het stuk hiervoor. Dus die dit, wat hier dus beschrijven, dat is dus allemaal mockup. En wat ze ook aangaven, dit is hoe wij het voor ons zien hoe het zou kunnen werken. Maar er is dus geen leverancier die het op deze manier ziet of aanbiedt of in productie heeft. Dus dat laat even zien wat voor een uitdaging daar zit. Maar wel aldus dat de visie op is die wij die die voor 95% in lijn ligt met de hoofdzaak die wij omschrijven. Dus daarom heb ik ook meteen contact met ze opgenomen om te kijken of we daar in ieder geval samenwerking of in ieder geval een sparsessie uit kunnen halen. Mijn doel zal er wel in zijn dat we op een of andere manier gebruik kunnen maken van die visie. Omdat dus bij ons de volgende stap zou zijn geweest, ook voor ons, of in ieder geval voor mij, om dus dit soort mockups te gaan maken van hey, dit is wat we dus straks allemaal zou kunnen. En daarna kregen we nog een een showcase waarin ze dus uitlegden, we hebben dus eigenlijk al een applicatie bij ons draaien die heet Your own Space Jos en daarin hebben we Blackboard Schedule Office 365 en Progress aan elkaar gekoppeld. En daar was eigenlijk gewoon een behoefte om de voortgang van de student te kunnen volgen tijdens zijn studietijd. Geef dus ook aan dat ze daar geen oplossing voor hebben gevonden in het hbo nog. Dus dat ze dat zelf hebben geïmplementeerd of zelf hebben opgezet. En ja, daarin dus ook. Ze willen. Ze zien dus een integratie tussen het bestaande Jos platform en wat ze net aan mockups lieten zien voor die flexibele leer routes. Dus dat dat eigenlijk een uitgebreide functionaliteit van Jos wordt.
 
 
-Scott
+Niels
 
 
 ###### 09:53 - 10:03
@@ -142,7 +142,7 @@ Niek
 Ja, goeie.
 
 
-Scott
+Niels
 
 
 ###### 10:06 - 10:31
@@ -158,7 +158,7 @@ Niek
 Nou, ze gaven wel aan dat de triggers in het systeem praten. Oké, iemand heeft bepaalde dingen geselecteerd. Hij heeft al een lange tijd niks geselecteerd of hij heeft heel veel geselecteerd. Of nou ja, van al dat soort triggers kan het systeem dan gaan afgeven. Ankoortschot. Hé, ik ga eens even contact zoeken. Dat zijn allemaal inzichtelijke onderdelen om ook weer hier de uitleg. Dit zijn dus. Dit is voor hun een roadmap en dit zouden ze graag in de toekomst zien, maar daar zijn ze nog niet. Wel de studiecoach app bestaat volgens mij al wel. Eh, dus die biedt overzicht in de voortgang van de studenten. En er is een duidelijke scheiding tussen privacygevoelige informatie. Dus ik lees hierin dus die die, die dit soort dossier, de context en de educatieve context. En wat biedt hij voor functionaliteiten? Je kunt studenten dus coachen, je voortgang zien, studietempo. Dus gaan ze sneller dan verwacht of langzamer dan verwacht. Of iets daar tussenin, denk ik dan. Beoordelingen tijdsloten beschikbaar stellen voor de student om te sparren met de coach. Onderwijsintekening. Dus hier heb ik behoefte aan. Toetsintekening Inschrijving in Blackboard en andere meldingen. Dus dit is echt een soort integrale. Het is eigenlijk de student de Voortgang is de student ervoor Zou dit nu nog een beetje scharen onder wat ik als een SVS zou beleven? Zit er een voortgang systeem? Zo zou ik dat voor me zien. Dus eigenlijk die hub die wij dus ook in die plaat bij ons zien waarop al die informatie samen komt. Even kijken hier. Dus dat je eigenlijk veel informatie die naar het SVS gaat en de SVS die dashboard dat netjesEn dat hebben we ook mede dank aan horen voor de begeleider.
 
 
-Scott
+Niels
 
 
 ###### 12:19 - 12:26
@@ -174,7 +174,7 @@ Niek
 Eh. Dat denk ik niet. Nee, nee, nee.
 
 
-Scott
+Niels
 
 
 ###### 12:29 - 12:55
@@ -190,7 +190,7 @@ Niek
 Maar goed, ik.
 
 
-Scott
+Niels
 
 
 ###### 12:58 - 13:09
@@ -702,7 +702,7 @@ Alda Kroneman
 Maar ik denk dat we gewoon heel goed bezig zijn. En volgens mij moeten deze vier regels begrijpen van wat betekent dit dat over de lijn heen gaat? Gaan SBU is over de lijn bijvoorbeeld. Nou ja.
 
 
-Scott
+Niels
 
 
 ###### 32:40 - 32:45
@@ -718,7 +718,7 @@ Alda Kroneman
 Ja klopt, maar dat is dan gewoon dat. Dat zou ik willen weten. Ik zou willen weten van wat zijn dan de componenten die tussen de ene leverancier en de andere leverancier. Aan uitwisseling plaatsvindt.
 
 
-Scott
+Niels
 
 
 ###### 33:01 - 33:08
@@ -734,7 +734,7 @@ Speaker -1
 Uh.
 
 
-Scott
+Niels
 
 
 ###### 33:09 - 33:42
@@ -750,7 +750,7 @@ Alda Kroneman
 Ja, eens.
 
 
-Scott
+Niels
 
 
 ###### 33:44 - 34:18
@@ -782,7 +782,7 @@ Niek
 Ik zit even te kijken, sorry hoor, even, ik ben even mijn stick, mijn stick, mijn plaat kwijt. Oh yeah. Waar we dus een klein beetje over uitkwamen is dat we dus bij wij bij die. Het model van OAPI is Wat ze eigenlijk zeggen is dat wat moeten we beschrijven? Dat is die leeruitkomst. Daar zeggen ze wel oké, die koppelen we dus aan een programma, een course of learning component. Alleen waar we op een gegeven moment op uitkwamen is. Je kunt eigenlijk niet zo makkelijk zeggen in het in het moment dat je dus bijvoorbeeld in de voorkant van die keten zit hier van oké, wat zijn we nu aan het ontwerpen? Is dit een een totaal programma? Is dit heel groot en systeemtechnisch? Misschien waar ga ik dit in vastleggen? Want die keuzes die je al maakt hier als je bijvoorbeeld zegt nou, ik ga hier een programma inleggen, maar misschien komen er nog wel meer leer routes uit voort of wat dan ook. Dus je bent eigenlijk alleen maar beschrijven wat het wat je wil gaan leren en al aap die force je eigenlijk meteen om te kiezen wat voor glazen structuren je in zetten. Wordt het een toets? Wordt het een learning component? Wordt het course, wordt het programma? En wanneer ga ik dat dan vastleggen? Die learning outcomes, die hebben nog veel meer informatie achter zich. Zeg maar. Gaan we dat vastleggen in de learning outcome? Want dat moet ook op een gegeven moment uitgewisseld worden in die standaard. Je wil dat gaan gaan doorsturen naar het SVS, namelijk de leervorm, de de, de wat dan ook waar je uit moet kiezen. En daar wordt nu in het hele OAPI model geen enkele vorm van houvast aangeboden, zeg maar. Er is geen onderwijskundige beschrijving, alleen die logistieke beschrijving en dat is vind ik nog een spannende fase. Zo van oké, hoe kunnen we dit? Past dit in OAPI? Is de OAPI hiervoor bedoeld of komt OAPI pas veel later om de hoek kijken op het moment dat je dit allemaal gedaan hebt En dat je dus zegt nou, we hebben dit allemaal in onze kennis, in onze onderwijs catalogus zitten en dan gaan we het pas over de lijn sturen En dan zeggen we we passen dit in een programma, een course of component. Dus daar is het ook nog een soort van reuzetrajectJa, maar je kunt eigenlijk aan de voor.
 
 
-Scott
+Niels
 
 
 ###### 36:36 - 37:03
@@ -798,7 +798,7 @@ Niek
 Ja, dat je die learning outcome, die moet nog niet aan dat wat verbonden worden op termijn in de vorm van een ja dit volgens mij noemen ze dit onderwijs application V5 en die hebben ze er zes uit gesloopt want die werd eigenlijk niet gebruikt. Maar misschien komen we nu wel de situatie uit dat dat dus later eh ja wel nodig gaat zijn. Dus. Dus daarin zit al 111 kleine vraag of 1111 sparsessie van wat gaan we hiermee doen Ja, maar als je zegt dat je het gewoon in de onderwijscatalogus zit en die logica wel koppelt aan een model, maar dat je die niet uitwisselt maar wel kunt opvragen.
 
 
-Scott
+Niels
 
 
 ###### 37:41 - 37:55
@@ -846,7 +846,7 @@ Speaker -1
 De technische.
 
 
-Scott
+Niels
 
 
 ###### 39:35 - 39:39
@@ -862,7 +862,7 @@ Alda Kroneman
 Wat ik dan bijna in mijn hoofd nu zeg, dat is bijna. Heel waarschijnlijk dat iedere koploper school de komende tijd een architectuur platen op gaat leveren op basis van wat wij net lieten zien. Waardoor je dan kan zien van wat zijn nou variabelen tussen die scholen en wat van die technische werken dan niet? Dat is dan input.
 
 
-Scott
+Niels
 
 
 ###### 40:04 - 40:10
@@ -886,7 +886,7 @@ Alda Kroneman
 In de input naar die school school tool. Dat je ook die vraag gewoon bij de scholen stelt. Van ja jullie hebben architectuur platen op basis van dit stuk plaat van die onderwijs catalogus. En dan dat je die vraag ook bij die school neerlegt aan die architecten. Want iedere school heeft een eigen Enterprise Architect.
 
 
-Scott
+Niels
 
 
 ###### 40:37 - 40:44
@@ -902,7 +902,7 @@ Alda Kroneman
 En dan heb je de informatiemanager. Die kan dan toch die invulling geven? Wat wat dat moet doen?
 
 
-Scott
+Niels
 
 
 ###### 40:50 - 40:55
@@ -918,7 +918,7 @@ Alda Kroneman
 Ja, allemaal.
 
 
-Scott
+Niels
 
 
 ###### 40:58 - 41:31
@@ -934,7 +934,7 @@ Alda Kroneman
 Snijvlak dan ook van IM. Want elke instelling heeft een im'er.
 
 
-Scott
+Niels
 
 
 ###### 41:36 - 41:53
@@ -950,7 +950,7 @@ Alda Kroneman
 Vraag moeten we dus stellen.
 
 
-Scott
+Niels
 
 
 ###### 41:54 - 42:30
@@ -966,7 +966,7 @@ Alda Kroneman
 Maar dan als we dit zeggen dan hebben die acht koplopers nu als de wiedeweideopdracht te.Uh eigenlijk nodig hè om geïnformeerd te worden vanuit vanuit dit stukje wat we nu inderdaad zien. En dan de opdracht aan hun is eigenlijk van teken dit en dit in beeld uh zoals je het wil en misschien ook al in het kader van de API dat gaan mappen hoe zij dat zien.
 
 
-Scott
+Niels
 
 
 ###### 42:54 - 42:55
@@ -982,7 +982,7 @@ Niek
 Is dat kloppend Niels?
 
 
-Scott
+Niels
 
 
 ###### 43:01 - 43:12
@@ -998,7 +998,7 @@ Niek
 Ik zie hier nog best wat dingen losstaan maar.
 
 
-Scott
+Niels
 
 
 ###### 43:20 - 43:21
@@ -1014,7 +1014,7 @@ Alda Kroneman
 Maar dan zijn dit toch gewoon vragen voor de technische werkgroep?
 
 
-Scott
+Niels
 
 
 ###### 43:27 - 43:34
@@ -1030,7 +1030,7 @@ Niek
 Er is nog niet echt stap voor stap. Even kijken business side. Ja ja. Ja ja ja. Top! Ja, maakt niet zoveel uit.
 
 
-Scott
+Niels
 
 
 ###### 43:46 - 43:51
@@ -1046,7 +1046,7 @@ Niek
 Je kunt zelf gewoon op die branche doorwerken en dan zet hij ze gewoon hieronder en dan neemt ie ze gewoon mee.
 
 
-Scott
+Niels
 
 
 ###### 43:57 - 44:03
@@ -1070,7 +1070,7 @@ Alda Kroneman
 Dingen die we missen En volgens mij zijn er op de agenda staan dat we een perspersoon uitlegt en dat het helder wordt wat er aan koppelingen daar dan over de lijnen moet. Daar waren we nog niet mee klaar. Een stuk is.
 
 
-Scott
+Niels
 
 
 ###### 44:57 - 45:06
@@ -1086,7 +1086,7 @@ Alda Kroneman
 Dat dat.
 
 
-Scott
+Niels
 
 
 ###### 45:07 - 45:31
@@ -1102,7 +1102,7 @@ Niek
 Maar goed.
 
 
-Scott
+Niels
 
 
 ###### 45:32 - 45:39
@@ -1126,7 +1126,7 @@ Alda Kroneman
 Dat is nogal. Zo meteen moeten we die dus wel even nog doorheen lopen, toch?
 
 
-Scott
+Niels
 
 
 ###### 45:48 - 45:57
@@ -1150,7 +1150,7 @@ Niek
 Ja, en dan denk ik ook weer heel graag hier.
 
 
-Scott
+Niels
 
 
 ###### 46:00 - 46:04
@@ -1190,7 +1190,7 @@ Niek
 Ja, dan ga je kun kunnen we even kort stilstaan bij wat er dan zijn. Nou hebben we het reguliere stuk, dat is gewoon iemand komt binnen aan de voorkant en die gaat na drie jaar met een diploma naar huis en die maakt een beetje keuzes. Maar je hebt ook iemand die binnen verschillende instellingen binnen de sector keuzes maakt. Dus ik studeer aan universiteit A of aan het mbo A en ik wil vakken doen bij mbo B en dat samen leidt tot een, een ronde of passende diploma voor mij. En dan hebben we nog vrije keuze scenario's waarin iemand een nieuwe functie gaat vervullen bij een werkgever en daar dus eigenlijk wat bijscholing nodig heeft. Die komt op school en daar keuzes in wil maken. En tegelijkertijd hebben we ook nog iemand die vanaf het begin af aan zijn hele eigen leer route bij elkaar wil plakken en knippen en daarmee eigenlijk de, de, de, de punt las en de hypotheekadviseur clini clown die ja eigenlijk elk onderdeel kan kan samenklikken wat hij wil volgen om een passend opleidingstraject voor zichzelf te pakken binnen ons onderwijsonder binnen onze onderwijssector. En dan komt er aan het einde een waardepapier uit met betekenis. En wat is dan die amigo scenario analyse? We hebben dus eigenlijk die scenarios die boven zijn kort beschreven, maar de amigo vraagt dus eigenlijk dat we stilstaan bij welk proces geven we dan dus eigenlijk vorm met die uitwisselingen die we hier proberen te beschrijven? Welke systemen zijn erbij betrokken? Wie zijn de gebruikers bij de uitwisseling en wat is de reikwijdte van die gegevensuitwisseling? Daar hebben wij dus in de, in de aanloop van ook geprobeerd antwoord op te geven. En dat hebben we als volgt gedaan. En dan wijs ik heel vriendelijk naar Niels om even uit te leggen wat we allemaal gedaan hebben. En jouw of jouw plaat hier. Eh, braaf. Ja, je hebt helemaal gelijk Niels, ik zal hem er meteen in zetten. Niet schieten, niet mijn gezicht. Ehm.
 
 
-Scott
+Niels
 
 
 ###### 52:27 - 52:31
@@ -1222,7 +1222,7 @@ Alda Kroneman
 Dit is leesbaar voor de mensen.
 
 
-Scott
+Niels
 
 
 ###### 52:43 - 52:52
@@ -1238,7 +1238,7 @@ Niek
 En dat Allemaal vanuit het oog. Ja. Ja, allemaal vanuit dat oogpunt en ook vanuit die, vanuit die aanpak van Amigo om tot een standaard te komen, wat we in gewoon verhoog doen, hebben we deze stappen ondernomen. En daar kwam dus eigenlijk als conclusie uit dat je student moet kunnen kiezen en je moet het nog iets netter doen. Met een van de, de, de kern omschrijving die Mark mee gaf. Het koppelen is dus niet zozeer ingewikkeld als het verwerken van die flexibiliteit. De scenario's die we daarboven zien, dat maakt het moeilijk. Dat heeft heel veel impact op de informatie die we gaan uitwisselen op dat punt. En daar hebben we nu eigenlijk nog weinig inzicht op. En dat hebben we dus geprobeerd duidelijker te krijgen met de scenario analyse. Nou, dan wil ik hier dus nog even stilstaan bij welk proces geven we dan vorm? Ik denk dat ik hier even wat meer aan neerzet, maar dan ook meteen daar de conclusie aan wil koppelen met jongens. Leuk die Mora, maar wat beschrijft het nou eigenlijk? Die leveranciers gaan dat denk ik herkennen. Ik had dat ook met wel eens met met Kees van Ginkel gesproken en die zei ook van ja, de Mora geeft wel een soort van hokje, een soort postcode waarin je ongeveer moet zijn. Maar waar willen die post? Ik moet, ik moet. Ik moet specifiek de brievenbus hebben. Dat idee ehm, dus dat wil ik dan hier naar voren laten komen. En dan welke systemen wisselen dan die gegevens uit? En dan komen we eigenlijk dus bij onze hoofdplaats. We hebben een overzicht van die systemen gemaakt en de informatiestromen die we daarin hebben gezien. Om dan 11111 beeld mee te geven hoeveel informatiestromen dat zijn. Wij hebben er in ieder geval al pakweg 22 geïdentificeerd, namelijk 22. Student kiest recht. Die moet nog. Eigenlijk moeten we die misschien nog lostrekken. Ik weet niet of we nog een iteratie kunnen maken met deze plaat.
 
 
-Scott
+Niels
 
 
 ###### 54:29 - 54:34
@@ -1294,7 +1294,7 @@ Alda Kroneman
 Ja dat plaatje van die scenario met die cirkels. Eh, weet je wel van aanbod naar vraag stuurt dus heel veel scholen hebben gewoon de opdracht om massa maatwerk te gaan organiseren.
 
 
-Scott
+Niels
 
 
 ###### 56:44 - 56:54
@@ -1390,7 +1390,7 @@ Niek
 Het zal wel hoofd. Leveranciers die er op zich mee gewerkt hebben en zelfs al niet bekend mee zijn. Dat idee, die kunnen ook gewoon naar de discussie pagina. En dit is dan een letterlijke chat kanaal van letterlijk en.
 
 
-Scott
+Niels
 
 
 ###### 01:04:32 - 01:04:33
@@ -1422,7 +1422,7 @@ Niek
 Ja weet je, ik. Ik wil eigenlijk zeggen ik wil niet een apart kanaal opzetten, want dan moet dat ook weer gemanaged en gemonitord worden. Ik wil eigenlijk gewoon zeggen joh, dit is waarop we werken. We hebben verschillen. Heel veel verschillende manieren van communicatie voor als je vragen hebt, bel me of stuur me een mail. Ik ga desnoods naast je zitten, maar ik ga niet nog een apart slack kanaal opzetten om daar in met jou te gaan chatten. Omdat jij. Dat toevallig makkelijker is.
 
 
-Scott
+Niels
 
 
 ###### 01:05:19 - 01:05:25
@@ -1486,7 +1486,7 @@ Alda Kroneman
 Ja dus deze bekijken en de modulaire werkwijze. En die is wie is? SKS is VS.
 
 
-Scott
+Niels
 
 
 ###### 01:06:46 - 01:07:29
@@ -1534,7 +1534,7 @@ Niek
 Een beetje dit stuk denk ik.
 
 
-Scott
+Niels
 
 
 ###### 01:08:30 - 01:08:40
@@ -1550,7 +1550,7 @@ Niek
 Nou ja, ja, dat is waar. Maar ik heb student begeleidend systeem. Heb ik nog nergens in deze plaat gezet.
 
 
-Scott
+Niels
 
 
 ###### 01:08:50 - 01:09:43
@@ -1566,7 +1566,7 @@ Alda Kroneman
 Maar wel dat je hem hebt. Ja, want dan ga ik recht op in mijn stoel zitten.
 
 
-Scott
+Niels
 
 
 ###### 01:09:49 - 01:10:13
@@ -1582,7 +1582,7 @@ Niek
 Dank je Wel. Even kijken wat voor kopmodellen of wat voor informatiestromen beschrijven we hier. We hebben in ieder geval die paarse, die zijn redelijk compleet. En die grijze, die hebben we beschreven. We zijn we eigenlijk van de van de van de 22? Hebben we er, laten we zeggen even acht aangeraakt of zo? Ja, alles beschreven.
 
 
-Scott
+Niels
 
 
 ###### 01:10:43 - 01:10:45
@@ -1598,7 +1598,7 @@ Alda Kroneman
 Gemodelleerde die die technische werkwijze moeten we nog gaan beschrijven, toch?
 
 
-Scott
+Niels
 
 
 ###### 01:10:55 - 01:10:55
@@ -1622,7 +1622,7 @@ Alda Kroneman
 EPM, PPM.
 
 
-Scott
+Niels
 
 
 ###### 01:11:06 - 01:11:08
@@ -1686,7 +1686,7 @@ Alda Kroneman
 Is je verhaal sterk en je hebt zoveel dia's dat je eigenlijk misschien jou het wel houvast geeft.
 
 
-Scott
+Niels
 
 
 ###### 01:12:14 - 01:12:14
@@ -1886,7 +1886,7 @@ Mark Hoogenboom
 Dus dat is eigenlijk een beetje ja, ik weet nog niet zo goed hoe ik dat moet beschrijven Uitgangspunt en werkwijze leeruitkomsten voor alles wat een vorm heeft van naar boven met modulen en courses enzovoort. Maar alleen omdat definiëren dus dat de ene course het andere modules zijn, dat vindt han reuze jammer. Hebben ontdekt dat dat een enorme uitdaging wordt. Formgeven volgens één modelleeraanpak? Nou, dat ziet er wel een beetje kansloos uit om dat niet.
 
 
-Scott
+Niels
 
 
 ###### 01:19:31 - 01:19:32
@@ -1902,7 +1902,7 @@ Mark Hoogenboom
 En dan zou ik zeker die Archimedea plaat laten zien. Om aan zo'n ingewikkeld proces.
 
 
-Scott
+Niels
 
 
 ###### 01:19:38 - 01:19:39
@@ -1926,7 +1926,7 @@ Mark Hoogenboom
 Maar je kunt gewoon zeggen dat we dat wel.
 
 
-Scott
+Niels
 
 
 ###### 01:19:47 - 01:19:52
@@ -1950,7 +1950,7 @@ Mark Hoogenboom
 Alles wat er is. En dan heb je dus een beperkt vermogen. Om dat er achter te krijgen. Maar dat willen we niet eerder.
 
 
-Scott
+Niels
 
 
 ###### 01:20:03 - 01:20:05
@@ -1974,7 +1974,7 @@ Niek
 Je brengt het nu heel casual markt. Alleen ik zou niet weten hoe ik dat nu in de tijd die ik nog heb moet uitwerken, zodat het ook begrijpelijk is voor mensen die hier niet zes jaar in zitten.
 
 
-Scott
+Niels
 
 
 ###### 01:20:20 - 01:20:21
@@ -1990,7 +1990,7 @@ Alda Kroneman
 En leeruitkomsten zien we niet.
 
 
-Scott
+Niels
 
 
 ###### 01:20:24 - 01:20:51
@@ -2014,7 +2014,7 @@ Niek
 Punt. Ja, dat is het gewoon.
 
 
-Scott
+Niels
 
 
 ###### 01:21:05 - 01:21:09
@@ -2030,7 +2030,7 @@ Alda Kroneman
 Ja, flexibel onderwijs is gewoon leeruitkomsten. Werken met leeruitkomsten van leereenheden naar leeruitkomsten. Dat is 111 verandering. Zeg maar die een onderwijskundige berekening onderwijs in gang gezet.
 
 
-Scott
+Niels
 
 
 ###### 01:21:22 - 01:21:24
@@ -2070,7 +2070,7 @@ Niek
 Ja.
 
 
-Scott
+Niels
 
 
 ###### 01:21:46 - 01:21:48
@@ -2094,7 +2094,7 @@ Niek
 Want oma gaat de komende drie jaar voor gram maken, dan gaat het er gewoon met een stok in de handen of.
 
 
-Scott
+Niels
 
 
 ###### 01:22:00 - 01:22:03
@@ -2110,7 +2110,7 @@ Alda Kroneman
 Ik merk dat ik gewoon echt wel razzig wil. Nu heb ik nog drie scholen erbij gekregen gisteren. Waar ik meer dat ik echt denk gooi dat van mijn bord af en dan kan ik gewoon nu gaan typen wat leeruitkomsten zijn en is dat ook al een punt. Ik wil gewoon niet meer dat het mensen gewoon wat is het, hoe formuleer je en dat is de verklaring. Dat heb ik toch echt wel heel straf. Dan is het ook gewoon klaar. En leeruitkomsten gaan we dan uitwisselen tussen de scholen. Dat is eigenlijk alles.
 
 
-Scott
+Niels
 
 
 ###### 01:22:43 - 01:22:43
@@ -2126,7 +2126,7 @@ Alda Kroneman
 In de instelling, tussen de sectoren, tussen de.
 
 
-Scott
+Niels
 
 
 ###### 01:22:49 - 01:22:50
@@ -2142,7 +2142,7 @@ Mark Hoogenboom
 De taak zou ik willen beweren.
 
 
-Scott
+Niels
 
 
 ###### 01:22:59 - 01:23:00
@@ -2166,7 +2166,7 @@ Niek
 Ja. Ik weet nog niet zo goed hoe ik dit moet uitleggen.
 
 
-Scott
+Niels
 
 
 ###### 01:23:22 - 01:23:44
@@ -2190,7 +2190,7 @@ Niek
 Ja, eigenlijk zou je kunnen zeggen en dat is een beetje wat ik met deze plaat bedoelde. Die program, die cores en die component worden eigenlijk. Het wordt allemaal weer een component. Alleen je kunt bepalen of iets een cores of een program is, afhankelijk van de grootte van de leeruitkomsten. Ja. Als die selectie echt zes jaar is, dan heb je een programma in een programma. Maar als het letterlijk één les is van 30 minuten, iets wat je in 30 minuten kunt afvinken, dan is het gewoon een les. Punt. Snap je? En dat is dus de sleutel van alles. Ja, ik weet nog niet. Ik moet hier even iets op verzinnen. Ik zou nog niet weten hoe ik dat voor elkaar kon krijgen.
 
 
-Scott
+Niels
 
 
 ###### 01:24:24 - 01:24:37
@@ -2214,7 +2214,7 @@ Mark Hoogenboom
 Aan de wat betreft groepen ook wat beter, want die hadden we toen nog niet.
 
 
-Scott
+Niels
 
 
 ###### 01:25:02 - 01:25:07
@@ -2230,7 +2230,7 @@ Alda Kroneman
 Weer uitkomst en dat het meer dan.
 
 
-Scott
+Niels
 
 
 ###### 01:25:10 - 01:25:11
@@ -2262,7 +2262,7 @@ Alda Kroneman
 Ja dus dat je zeg maar kan aangeven. Dat die bol BBL.
 
 
-Scott
+Niels
 
 
 ###### 01:25:33 - 01:25:34
@@ -2302,7 +2302,7 @@ Niek
 Nou, we hebben zelfs SBU. We hadden Bot en we hadden zelfs onbegeleide onderwijs tijd.
 
 
-Scott
+Niels
 
 
 ###### 01:26:09 - 01:26:11
@@ -2342,7 +2342,7 @@ Mark Hoogenboom
 EC. Nee, nee, nee.
 
 
-Scott
+Niels
 
 
 ###### 01:26:21 - 01:26:22
@@ -2422,7 +2422,7 @@ Alda Kroneman
 Die zestig is dus die kan je onderscheiden in kleine blokjes. Dan zou je daar zou je standaarden natuurlijk kunnen op dat moment, omdat men het niet begrijpt. Zou je dat mee kunnen berekenen in periodes? Weet je wat dan waar ik op een SBU richtlijn.
 
 
-Scott
+Niels
 
 
 ###### 01:27:50 - 01:27:52
@@ -2542,7 +2542,7 @@ Alda Kroneman
 Aan het eind van de dia. Zo nu en dan helemaal aan het eind een afronding, maar niet echt.
 
 
-Scott
+Niels
 
 
 ###### 01:29:30 - 01:29:33
@@ -2614,7 +2614,7 @@ Mark Hoogenboom
 Oké. Beter in plaats van stiekem praten. Ja.
 
 
-Scott
+Niels
 
 
 ###### 01:30:21 - 01:30:23
@@ -2830,7 +2830,7 @@ Niek
 Ja. Eigenlijk dus ook voor iedereen even onderdeel worden van deze repo. Want dan kan ik dus ook gewoon hier jullie toewijzen. En in dit geval zal ik Ruud kunnen toewijzen van hey, kijk even hier, want dit is wat we nog moeten uitwerken. Want ik heb het vermoeden dat we dit als basis gaan gebruiken voor eigenlijk al die de inhoudelijke uitwerking van de van de specificatie of straks alles. Want we krijgen nu. Je wil eigenlijk dus die die vraag van wat moeten we nu eigenlijk gaan doen direct kunnen koppelen aan hetgeen wat je maakt en ook kunnen plannen. Dus ik ga straks ook even met Ruud om te gaan kijken. Je hebt hier bijvoorbeeld dus ook. In deze planning omgeving kun je gewoon tickets neerzetten. Wat zijn we nu aan het doen? En dan kun je dus gaan plannen, net als ons. Dat hoe heet dat? Dat dat GitHub issue board wat we hebben. Je ziet hier dus bijvoorbeeld. Niels die heeft zijn ticket opgeschoven omdat ArchiMat model heeft hij dus niet in progress gezet en daar heeft hij pull request op aangemaakt. Dus ik zou hier als projectleider precies kunnen zien. Er wordt hier aan gewerkt. Waar staan we nu? Ik kan even kijken. Ik kan precies zien dat Niels en Paul wachten. Heeft het. Hij heeft het al gedaan. Hij heeft een pull request aangemaakt en de wijzigingen zoeken. Ik ben hier klaar mee en hij is hier nu mee bezig. En ik kan zelfs op het moment dat ik dit zal afsluiten dan gaat dat ticket. Gaat dus ook gewoon in. Eigenlijk zou deze dus op een review moeten staan nu. Kun je gewoon aanpassen. Staat nu op status progress maar dan kun je dus gewoon in review zetten en dan kan Ruud gewoon heel duidelijk in overzichtelijk zien van waar we op dit moment in de komende weken mee bezig zijn.
 
 
-Scott
+Niels
 
 
 ###### 01:35:21 - 01:35:25
@@ -2982,7 +2982,7 @@ Mark Hoogenboom
 Ik vind het wel goed. Oké.
 
 
-Scott
+Niels
 
 
 ###### 01:38:08 - 01:38:09
@@ -3006,7 +3006,7 @@ Alda Kroneman
 Dus we kunnen gewoon niet werken.
 
 
-Scott
+Niels
 
 
 ###### 01:38:14 - 01:38:35
@@ -3022,7 +3022,7 @@ Alda Kroneman
 En dat zie je dan straks in die in die details welke koplopers daar wat in hebben gedaan en hoeveel sessies er zijn en wat we in die sessies doen. Ja, dat detail dus. In mijn beleving is dat plan bord gewoon puur voortgang van hoe het in het project gaat en wat je uitgeeft. En de ander is gewoon je werkomgeving waar je laat zien wat je aan het doen bent. Ja.
 
 
-Scott
+Niels
 
 
 ###### 01:38:56 - 01:39:00
@@ -3046,7 +3046,7 @@ Mark Hoogenboom
 Ja, functioneel, heel simpel. Interessant.
 
 
-Scott
+Niels
 
 
 ###### 01:39:11 - 01:39:31
@@ -3166,7 +3166,7 @@ Niek
 Nou. Ik heb heel veel platen nodig om dingen te laten zien, omdat er zoveel complex materie in zit. En dit is allemaal uitleg en verdieping en ik skip alles wat niet nodig is. Ik voel me altijd een beetje, probeer altijd een beetje de ruimte aan te voelen en dat is wel moeilijker met een teams meeting.
 
 
-Scott
+Niels
 
 
 ###### 01:42:10 - 01:42:52
@@ -3278,7 +3278,7 @@ Niek
 Je bent al verder en dan zijn we nu daar. Ja, daar. Ja, vind je dit? Is dit passend nieuws wat ik eigenlijk kan doen?
 
 
-Scott
+Niels
 
 
 ###### 01:44:39 - 01:44:41
@@ -3310,7 +3310,7 @@ Alda Kroneman
 Ik zou gewoon zeggen zijn er vragen? En tijdens de presentatie geen vragen stellen.
 
 
-Scott
+Niels
 
 
 ###### 01:45:19 - 01:45:28
@@ -3366,7 +3366,7 @@ Niek
 Ik denk dat dat wel fijn is.
 
 
-Scott
+Niels
 
 
 ###### 01:46:28 - 01:46:35
@@ -3382,7 +3382,7 @@ Alda Kroneman
 Nou huppetee, ga maar lekker dan. Laten we dan gewoon afronden. Dat is misschien ook beter. En Mark heeft het allemaal afgerond en dan gaan we volgende week met een nieuwe lijer verder. En dat is volgens mij dinsdag toch? Even checken.
 
 
-Scott
+Niels
 
 
 ###### 01:46:51 - 01:46:55
@@ -3398,7 +3398,7 @@ Alda Kroneman
 Juist juist en doen we het hartstikke goed toch? En ik heb we hebben. Wacht even, we hebben. We hebben dinsdag nog en we hebben woensdag niet met elkaar nog staan. Hebben we die nog nodig voor de 7 april? Want eigenlijk vind ik vind ik wel dat we het netjes moeten hebben dat we 7 april ook alles goed hebben voorbereid.
 
 
-Scott
+Niels
 
 
 ###### 01:47:19 - 01:47:31
@@ -3414,7 +3414,7 @@ Alda Kroneman
 Donderdag he? Ja, dan ga ik die even erin gooien. Vanaf 10.30u kan ik. Past dat bij jou ook? Niels?
 
 
-Scott
+Niels
 
 
 ###### 01:47:45 - 01:47:52
@@ -3430,7 +3430,7 @@ Niek
 Ik moet even kijken of er iets gaat verschuiven met de moka jongens, want die hebben hier ook overleg met Ruud en Hans. Dat ga ik vanmiddag horen. Maar anders laat ik wel even weten of er bij kan zijn. Plan hem maar gewoon in. Ik heb ook vrijdag nog open.
 
 
-Scott
+Niels
 
 
 ###### 01:48:07 - 01:48:13
@@ -3486,7 +3486,7 @@ Niek
 Wat moet er gebeuren voor die werkgroep jongens, Dat weet ik überhaupt niet. Ik heb nu hiervoor die leverancierssessies.
 
 
-Scott
+Niels
 
 
 ###### 01:48:48 - 01:48:50
@@ -3502,7 +3502,7 @@ Alda Kroneman
 We moeten ze informeren wat we hebben staan.
 
 
-Scott
+Niels
 
 
 ###### 01:48:52 - 01:48:54
@@ -3518,7 +3518,7 @@ Alda Kroneman
 Ik zou dat gewoon doen. Exact dezelfde. Gaan we niet weer. Het lijkt gewoon. Alleen maar ja vertellen. Dit is de gietert. Dit is wat we hebben uitgewerkt. En zo zit de koppeling. En tot nu toe uit beginnen wij de eerste acht.
 
 
-Scott
+Niels
 
 
 ###### 01:49:07 - 01:49:10
@@ -3534,7 +3534,7 @@ Alda Kroneman
 Werkzaamheden kunnen blijven.
 
 
-Scott
+Niels
 
 
 ###### 01:49:14 - 01:49:18
@@ -3550,7 +3550,7 @@ Alda Kroneman
 Dat we op geen manier verdeeld. Volgens mij niet. Vandaar dat ik al aansprak jullie vraag wat is mijn probleem? Maar ja, dat kan. Laat het me aanspreken en wie weet beter dan. Ik dacht dat Ruud dat zou doen. Maar dat was ik van hem gewend. Dat deed hij. Dat deed hij met mij ook altijd. Ja, nee, nee, nee.
 
 
-Scott
+Niels
 
 
 ###### 01:49:41 - 01:49:52
@@ -3566,7 +3566,7 @@ Alda Kroneman
 Een leverancier.
 
 
-Scott
+Niels
 
 
 ###### 01:49:54 - 01:49:55
@@ -3582,7 +3582,7 @@ Alda Kroneman
 Precies ja. Klopt. En de adviesgroep? Ja, want.
 
 
-Scott
+Niels
 
 
 ###### 01:50:00 - 01:50:02
@@ -3598,7 +3598,7 @@ Alda Kroneman
 Ja, en daar komt dan Ronald. En hoe heet dat de Henk nog af en toe bij. En daar ik moest die adviesgroep een beetje aanjagen althans. Nou ja, goed, een beetje de structuur erbij houden en dan vervolgens volgens mij die werkgroep. Heb ik niet geïnterpreteerd, maar ik wil het met alle liefde doen.Laat ik het maar doen.
 
 
-Scott
+Niels
 
 
 ###### 01:50:23 - 01:50:27
@@ -3614,7 +3614,7 @@ Alda Kroneman
 Wel iets te zeggen. We moeten ontzorgen elkaar.
 
 
-Scott
+Niels
 
 
 ###### 01:50:30 - 01:50:37
@@ -3630,7 +3630,7 @@ Alda Kroneman
 Die doelgroep gewoon. Dat zijn natuurlijk mijn scholen. Dus ik wil gewoon aangeven dat we dus koplopers zijn. Welke stappen willen gaan lopen? Weet je wat, Ik ga die presentatie van Niek. Die ga ik even willen ombouwen als een soort agenda voor de 7e april. Laat mij dat maar even doen. Dan ga ik tot 2 april met jullie delen. Gaan we dat niet samen maken? Ik ga gewoon aan de bak. Dan leg ik het aan jullie voor. En dan zeg ik joh, missen we nog wat? Doe ik hetzelfde als Niek doet? Vinden we dit zo voldoende? Nou klaar. En ik ras die. Zet die er doorheen. Ik zie dat wel zitten. Het is gewoon informeren, meenemen, betrekken. En ik moet er nog wat in mijn hoofd hebben zodat ik het idee heb met die. Weet je wat die koplopers, wat ik met ze wil bereiken?
 
 
-Scott
+Niels
 
 
 ###### 01:51:23 - 01:51:23
@@ -3662,7 +3662,7 @@ Alda Kroneman
 Nee. Nee. Ik vind niet, want die CvB zijn niet nog geconfirmeerd eraan dat ze of nou ja, sorry die die die hoofden dat ze zeggen het is wel goed dat jullie dit willen.
 
 
-Scott
+Niels
 
 
 ###### 01:51:54 - 01:51:55
@@ -3678,7 +3678,7 @@ Alda Kroneman
 Ik roep ze wel, maar dan zitten die. Eigenlijk is dat een voorwaarde voor 7 april. Dat die scholen gecommitteerd zijn aan het feit dat dit. Dat we dit zo gaan doen. Want anders ga ik iets vertellen waarvan ze zeggen wie heeft gezorgd dat wij er hier op staan?
 
 
-Scott
+Niels
 
 
 ###### 01:52:12 - 01:52:21
@@ -3694,7 +3694,7 @@ Alda Kroneman
 Nee, maar ik wil wel een paar technische plaatjes wel zien. Dus ik kan het me goed voorstellen dat we wel even Niek en jouw nieuws wel even kort het woord geven bij die ding en dan laat je gewoon twee sheets zien over die koppen vlakken. Dat ga ik dan niet vertellen, dat vertellen jullie. En zo houden we die rol scheiding gewoon goed. In dat stukje ben ik natuurlijk een stuk slecht, dus dan krijg je wel een goede aanvulling. Maar dan hoef je niet die hele groep te trekken. Dat is eigenlijk de kern. Ja, ik, ik durf dat wel te trekken. Maar dan moet ik wel even goed afstemmen met Ruud of hij dat goed. Of ik dat goed geïnterpreteerd heb.
 
 
-Scott
+Niels
 
 
 ###### 01:52:52 - 01:53:00
@@ -3710,7 +3710,7 @@ Alda Kroneman
 Ik weet het ook niet helemaal zeker. Ik twijfel er een beetje aan, maar ik durf het ook wel naar me toe te trekken. Als jullie zeggen ja joh, ga dat doen, dan zeg ik gewoon tegen Ruud van joh, spring achterop.
 
 
-Scott
+Niels
 
 
 ###### 01:53:10 - 01:53:14
@@ -3726,7 +3726,7 @@ Alda Kroneman
 Ja, ja, ik kan hem ook even bellen. Wat natuurlijk ook kan is dat hij het aftrapt in zijn rol als projectleider. Snap je? Dan positioneer je en dan daarna neem ik het inhoudelijk over en dan rond je het bijvoorbeeld af.
 
 
-Scott
+Niels
 
 
 ###### 01:53:24 - 01:53:29
@@ -3742,7 +3742,7 @@ Alda Kroneman
 Ehm, die had ik niet ingecalculeerd. Volgens mij was dat niet de bedoeling.
 
 
-Scott
+Niels
 
 
 ###### 01:53:36 - 01:53:40
@@ -3758,7 +3758,7 @@ Alda Kroneman
 Ja, ja, ja, nee, volgens mij volgens mij. Maar volgens mij is het ook helemaal niet slim dat Hans zeg maar op dit level dan meedoet. Ik denk dat dat Hans wel even misschien kan aftrappen, maar niet verder niet verder moet gaan zwemmen en niet verder. En dat is niet op werkgroep niveau. Hans zit een level hoger.
 
 
-Scott
+Niels
 
 
 ###### 01:53:59 - 01:54:00
@@ -3790,7 +3790,7 @@ Alda Kroneman
 Ja aan het begin even vragen zelf even deze vraag en eventjes met dat hij de presentatie ziet en dan kom ik gewoon met een voorstel en dan is het gewoon volg mij en doe mee. Ja, ja. Ongeveer 2 april in de agenda afstemmen en doen. We gaan het afstemmen. Zullen we gewoon? Tussen de overleg zien? Zullen we gewoon overleggen?
 
 
-Scott
+Niels
 
 
 ###### 01:54:34 - 01:54:36
