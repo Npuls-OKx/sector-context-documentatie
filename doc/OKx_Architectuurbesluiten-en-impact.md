@@ -14,6 +14,7 @@ Dit document **vat samen** welke architectuurrichting uit **Architecture Decisio
 | [0002 – Prioriteitsketen en drielagen-fundament](../architecture/dr/0002-prioriteitsketen-catalogus-drielagen-fundament.md) | Keten curriculumontwerp–onderwijscatalogus; MORA/MOKA-fundament |
 | [0003 – Student kiest en leeruitkomsten](../architecture/dr/0003-student-kiest-leeruitkomsten-domeinprincipes.md) | Domeinprincipes flexibilisering |
 | [0004 – Leeruitkomsten en SBU/EC](../architecture/dr/0004-leeruitkomsten-sbu-ec-logistieke-containergrootte.md) | Inhoud (LO) + studielast als logistieke maat |
+| [0005 – SKS als referentiecomponent](../architecture/dr/0005-student-keuze-systeem-zelfstandige-referentiecomponent.md) | Student Keuze Systeem los op de plaat en in het model |
 
 ### Meetings (context en onderbouwing)
 
@@ -55,6 +56,12 @@ Dit document **vat samen** welke architectuurrichting uit **Architecture Decisio
 
 **Impact:** het informatiemodel en API-profielen moeten **studielast per sector** en **koppeling aan leeruitkomsten** kunnen dragen.
 
+### 5. Student Keuze Systeem (SKS) als eigen component
+
+- Het **SKS** is een **eigen** referentiecomponent op de **hoofdplaat** en in het **ArchiMate-model** — niet stilzwijgend opgenomen in alleen catalogus, LMS of portaal.
+- OKx levert **MVP-fundament** en **minimuminformatie** voor leveranciers; volledige productspecificatie van het SKS valt **buiten** de volledige OKx-scope (zie [0005](../architecture/dr/0005-student-keuze-systeem-zelfstandige-referentiecomponent.md)).
+- **SVS** blijft een **aparte** bouwsteen waaraan het SKS **gekoppeld** wordt; ketenstromen blijven **expliciet**.
+
 ## Impact op `architecture/model/model.archimate`
 
 Samengevat (detail per ADR):
@@ -63,6 +70,7 @@ Samengevat (detail per ADR):
 - **0002:** **views** en elementen voor de **prioriteitsketen** en **MOKA-koppelvlaklijn**; traceerbaarheid naar specificaties.
 - **0003:** **domeinconcepten** (rollen, leeruitkomsten, keuze) zichtbaar of traceerbaar in relevante views.
 - **0004:** **studielast** (SBU/EC) en **relatie leeruitkomst ↔ aanbodsonderdeel** in relevante informatie- en ketenviews.
+- **0005:** **SKS** als **apart** element; relaties voor stromen met **Student Kiest** in de hoofdplaattabel.
 
 **Let op:** het bestand `model.archimate` wordt **alleen** gewijzigd via het afgesproken repo-proces (geen directe ongecontroleerde edits).
 
