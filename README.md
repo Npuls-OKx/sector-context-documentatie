@@ -13,6 +13,8 @@ Als je hier voor het eerst binnenkomt: we leggen **keteninzicht** en **koppelvla
 
 Niet alles is al uitgewerkt — dat hoort erbij. Deze repo is **geen directe wijziging van MORA**; goed gedragen uitwerkingen kunnen later als **onderbouwd voorstel** richting sectorprocessen dienen.
 
+Niet elk koppelvlak hoeft via de OKx-kernroute te lopen: **kleinere sectorinitiatieven** kunnen via **MOKA** starten (op basis van **AMIGO** en “**OEAPI, tenzij**”). Zie `doc/OKx_Projectoverzicht.md` voor de actuele positionering en verwijzingen (incl. OKx guidelines).
+
 Wil je meer houvast als nieuwe bijdrager? Lees de sectie *Waar draait deze repository om?* in [`doc/Bijdragen-voor-beginners.md`](doc/Bijdragen-voor-beginners.md) — vriendelijk uitgelegd, met dezelfde lijn.
 
 ## Wat is OKx?

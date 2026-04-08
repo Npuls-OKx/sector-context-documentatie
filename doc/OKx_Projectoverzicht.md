@@ -8,14 +8,29 @@ OKx heeft als doel **uniforme en gestandaardiseerde koppelvlakken** voor onderwi
 ## Scope: OKx vs OKE
 
 - **OKx** is de overkoepelende projectcontext: visie, besluitvorming, ketenplaten, fasering en informatiestromen. Alles wat de *waarom* en *waarbinnen* van de koppelvlakken beschrijft, hoort bij OKx.
-- **OKE** (Onderwijslogistiek Keten Examen) is een **subdomein** binnen OKx. Onder OKE vallen de concrete MOKA-koppelvlakspecificaties voor het domein *Examen Uitvoering en beoordeling* (en eventuele andere OKE-subdomeinen later). OKE is een eerdere uitwerking van een sector initiatief om digitaal examineren te realiseren binnen het mbo. De OKx aanpak is gebaseerd op eerdere ervaring van OKE.
-- De deliverables (MOKA koppelvlakspecificaties, informatiemodellen, templates) staan dus onder OKx, met OKE als eerste uitwerking.
+- **OKE** (Onderwijs Koppeling Examinering) is een **subdomein** binnen OKx. Binnen deze repository hebben we voor OKE een concrete MOKA-koppelvlakspecificatie als voorbeeld uitwerking gemaakt. Met als doel te testen of de modeleringsaanpak van het MOKA koppelvlak ook echt werkt, om koppelvlakken te beschrijven namens de onderwijssector. De voorbeeld uitwerking richt zich op het een deel van de gehele procesketen [Examineren en Diplomering en certificeren](https://mora.mbodigitaal.nl/index.php/Procesketen_Examineren) binnen de MORA. Namelijk de processtappen *Examen uitvoeren* tot en met *diplomeren/certificeren*  (en eventuele andere MORA en OKE gerelateerde procesketen delen later). OKE is een eerdere uitwerking van een sector initiatief om digitaal examineren te realiseren binnen het mbo. De OKx aanpak is gebaseerd op eerdere ervaring van OKE.
+- De deliverables (MOKA koppelvlakspecificaties, informatiemodellen, templates) staan dus onder OKx, met een deel van OKE als voorbeeld uitwerking om te testen of de aanpakt werkt.
 
 ## Projectaanpak
 
 De projectaanpak van het OKx-kernteam volgt een vaste lijn van **begrijpen** naar **ontwerpen** naar **realiseren**. Het project bevindt zich **nu** in de fase **begrijpen**, met een lichte start in de **ontwerpfase** (onder meer door de MOKA-koppelvlakspecificatie voor OKE, en de initiatieven om de OKx uitwerking te realiseren).
 
 ![OKx kernteam projectaanpak](../img/OKx_kernteam_project_aanpak_v20260317.jpg)
+
+### Standaardiseren met AMIGO (status)
+
+OKx volgt de **AMIGO-aanpak** voor het komen tot (sectorale) standaardafspraken: `https://www.edustandaard.nl/amigo/aanpak/`.
+
+- **Nu bezig met**: **scenario-analyse**, **gegevensanalyse** en **interactie-analyse** (AMIGO stappen 1–3), zodat we gezamenlijk helder krijgen *wat* er moet gebeuren in de keten vóór we de technische specificaties en interfaces uitwerken.
+- **Technologiekeuze (OEAPI, tenzij)**: in de AMIGO stap *technologiekeuze* is onze voorkeur **OEAPI**, tenzij OEAPI aangeeft dat de wensen niet passend zijn.
+
+### Kleinere initiatieven via MOKA (naast OKx-kern)
+
+Niet alle koppelvlakken hoeven te wachten op de volledige OKx-projectaanpak. Voor **kleinere of vroege initiatieven** (bijv. start met minimaal 2 instellingen en 2 verschillende leveranciers) is er een route via de **werkgroep MOKA** (Middelbaar Onderwijs Koppelvlakken Architectuur; subdomein onder **MORA**). Een voorbeeld is **OKD** (Onderwijskoppeling Documentmanagement): `https://github.com/Onderwijs-Koppelingen-OKx/OKD-Document-Management`. Dit initiatief is echter nadrukkelijk nog *geen* sector standaard. Tot dat de sector architectuur gremia hierop akkoord geven en de specificaties volgens Edustandaard standaarden zijn beschreven en aangemeld bij dit orgaan.
+
+De AMIGO-aanpak is ook daar de basis; voor praktische richtlijnen en werkwijze verwijzen we naar de (gereleasde) **OKx guidelines**: [`moka-koppelvlakspecificaties/guidelines/OKx-guidelines-v01-09-25.md`](../moka-koppelvlakspecificaties/guidelines/OKx-guidelines-v01-09-25.md).
+
+Voor vragen neem contact op met de MOKA. Tijdelijk via doorverwijzing via niek.derksen@surf.nl.
 
 ## Hoofdplaat OKx informatiestromen
 
@@ -28,6 +43,8 @@ Het projectteam OKx wil de vraagstelling van de **sector** (van de instellingen)
 **In de plaat: rood = eerste prioriteit.**
 
 ![Hoofdplaat OKx informatiestromen](../img/Hoofdplaat%20OKx%20informatiestromen%20v20260317.png)
+
+Deze hoofdplaat is in aanbouw, het bron bestand kan worden gevonden in het OKx [architectuur model](../architecture/model/model.archimate), door het te openen binnen [Archi](https://www.archimatetool.com/). Onder *MORA (OKx Knowledgebase) > Views > Koppelvlakken > OKx hoofdplaat*. 
 
 ### Interpretatie van de informatiestromen (uit de hoofdplaat)
 
