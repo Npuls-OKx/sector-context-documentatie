@@ -13,6 +13,12 @@ Voordat je een issue of PR opent, is het nuttig te weten **waar** deze repo voor
 
 Uitgebreider en voor nieuwe bijdragers: sectie *Waar draait deze repository om?* in [`doc/Bijdragen-voor-beginners.md`](doc/Bijdragen-voor-beginners.md).
 
+### Waar meld je wat? (kort)
+
+- **OKx-kern** (ketenfundament, informatiestromen, ArchiMate/MOKA-views): open een issue/PR in deze repo.
+- **Klein/vroeg koppelvlakinitiatief** (bijv. start met minimaal 2 instellingen + 2 leveranciers): neem contact op met **MOKA** en werk volgens **AMIGO** (`https://www.edustandaard.nl/amigo/aanpak/`) met “**OEAPI, tenzij**”. Voor richtlijnen: [`moka-koppelvlakspecificaties/guidelines/OKx-guidelines-v01-09-25.md`](moka-koppelvlakspecificaties/guidelines/OKx-guidelines-v01-09-25.md).
+- **Naar standaard/afsprakenstelsel (OKx/MOKA)**: om te komen tot een (sector)standaard en afsprakenstelsel volgens de **OKx guidelines**, moet een initiatief aantoonbaar **breder gedragen** zijn: **meer dan 1 instelling én meer dan 1 leverancier** moeten aangehaakt zijn (minimaal 2+2).
+
 ### Governance
 
 - Iedereen mag issues openen en PR's indienen.
