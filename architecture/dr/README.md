@@ -50,4 +50,6 @@ Template:
 | 0016 | [`0016-ontwikkelingswallet-edu-wallet-eigenaarschap-toestemming-en-ontsluiting.md`](0016-ontwikkelingswallet-edu-wallet-eigenaarschap-toestemming-en-ontsluiting.md) | Ontwikkelingswallet (EDU-wallet): eigenaarschap, toestemming en EduID-ontsluiting |
 | 0017 | [`0017-hierarchisch-datamodel-aanbodstructuur-leeruitkomsten-en-sbuec-aggregatie.md`](0017-hierarchisch-datamodel-aanbodstructuur-leeruitkomsten-en-sbuec-aggregatie.md) | Hiërarchisch aanboddatamodel: leeruitkomsten en SBU/EC-aggregatie |
 | 0018 | [`0018-enterprise-messaging-patronen-voor-betrouwbare-koppelvlakken.md`](0018-enterprise-messaging-patronen-voor-betrouwbare-koppelvlakken.md) | Enterprise messaging patronen: delivery, idempotentie, dead-letter, ordering |
+| 0019 | [`0019-conceptuele-gelaagdheid-kwalificatie-specificatie-aanbod-rosa-kooi.md`](0019-conceptuele-gelaagdheid-kwalificatie-specificatie-aanbod-rosa-kooi.md) | Kwalificatiekader vs specificatie vs aanbod; ROSA/KOOI; LO-plaatsing en DAG *(concept)* |
+| 0020 | [`0020-curriculumontwerp-onderwijscatalogus-happy-flow-synchronisatie-en-federatie-adopt-klonen.md`](0020-curriculumontwerp-onderwijscatalogus-happy-flow-synchronisatie-en-federatie-adopt-klonen.md) | CO–OC happy flow, UUID/RfSpec, pub/sub, adopt vs klonen *(concept)* |
 

@@ -8,3 +8,5 @@ Eisen:
 
 Template staat in: architecture/dr/template.md
 
+Vergelijk de nieuwe ADR('s) op het gebied van overlap met bestaande ADR's in /architecture/dr, en benoem de overlap in de nieuwe ADR's met bronverwijzing.
+
