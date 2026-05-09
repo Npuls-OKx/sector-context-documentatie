@@ -98,7 +98,123 @@ Maar naast de bestaande groene route maken we in het vervolgonderwijs meer mogel
 
 Die leerroutes zijn divers en kwalitatief van aard, waarbij de lerende een drempelvrij traject heeft. Dat kan op eigen tempo, gepersonaliseerd (binnen de instelling, buiten de instelling of over de sectoren heen) en modulair - een leven lang.
 
-### 3.2 Scenario analyse
+### 3.2 Begrippenkader — hoe beschrijven we onderwijs?
+
+Voordat we scenario's induiken, lijnen we eerst de **taal** uit. De leerroutes zijn pas vergelijkbaar (en uitwisselbaar tussen instellingen) als alle ketenpartijen — ontwerper, ontwikkelaar, planner, roosteraar, SLB'er, student, docent, en hun systemen — dezelfde begrippen op dezelfde manier hanteren. Dit begrippenkader is daarom **leidend voor §3.3 (kaderstellende scenario's), §3.4 (uitgewerkte scenario's) en de volledige rest van het document**. Detailtabellen die in eerdere versies in §12 stonden, zijn naar deze paragraaf verhuisd; §12 verwijst er naar terug.
+
+#### 3.2.1 Zes informatie-objectfamilies — wat zien we per stap?
+
+Onderwijs is van *idee* tot *resultaat* een keten van zes informatie-objectfamilies. Lees ze als opvolgende vragen die in de keten beantwoord worden:
+
+| Familie (kolom)              | Stelt de vraag                                       | Wie levert dit                          | Voorbeeld (Apothekersassistent)                                |
+| ---------------------------- | ---------------------------------------------------- | --------------------------------------- | -------------------------------------------------------------- |
+| **1. Kader**                 | Wat is *normatief* geldig?                           | SBB, CROHO, examencommissie             | Crebo-dossier 23450, kwalificatie 27141, werkproces B1-K1-W1   |
+| **2. Beoogde leeruitkomst**  | Wat moet de student *kennen en kunnen*?              | Onderwijsontwerper                      | "Neemt de zorg-/adviesvraag in behandeling"                    |
+| **3. Onderwijsspecificatie** | Wat gaan we *organiseren* (sjabloon, herbruikbaar)?  | Onderwijsontwerper + onderwijsontwikkelaar | Course "Balie: zorg-/adviesvraag", LearningComponent simulatie |
+| **4. Onderwijsaanbod**       | *Wanneer / met hoeveel / met wie* gaan we het doen?  | Planner (planbaar) + roosteraar (geroosterd) | "Periode 1, max. 24 studenten, lokaal X, docent Y"             |
+| **5. Onderwijsverbintenis**  | *Welke student* heeft welke relatie met dit aanbod?  | SLB'er + aanmeldsysteem + SVS           | Jochem is `enrolled` op CourseOffering "Balie 2026-P1"         |
+| **6. Onderwijsresultaat**    | Wat heeft die student *behaald* (state + bewijs)?    | Docent + examencommissie                | `state = completed`, microcredential, evidence per LO          |
+
+> **Mentaal model.** *Kolom 1–2 = wat moet?* — *Kolom 3 = wat gaan we doen?* — *Kolom 4 = wanneer doen we het?* — *Kolom 5 = wie doet mee?* — *Kolom 6 = wat is de uitkomst?*
+
+#### 3.2.2 Zes niveaus — van diploma tot lesopdracht
+
+Dezelfde zes families komen op meerdere **niveaus** terug. Het kwalificatiekader (SBB) bepaalt de niveaus, OKx volgt diezelfde rij-discipline:
+
+| Niveau (rij)                       | Wat het betekent                                                       | OEAPI-haak                              |
+| ---------------------------------- | ---------------------------------------------------------------------- | --------------------------------------- |
+| **Kwalificatiedossier**            | Geheel van een mbo-beroepsdomein                                       | `Programme` (root)                      |
+| **Kwalificatie**                   | Diplomeerbare opleiding binnen het dossier                             | `Programme` (root of track)             |
+| **Kerntaak**                       | Samenhangend cluster van werkprocessen                                 | `Course`                                |
+| **Werkproces**                     | Concreet uitvoerbaar onderdeel van het beroep                          | `LearningComponent` (`learning_activity`) |
+| **Lesuitkomst-laag**               | Wat een student in één les leert (formatief)                           | `LearningComponent` (`lesson_assignment`) |
+| **Toetsrij** (cross-cutting)       | Welk LO-/lesuitkomst-cluster wordt summatief beoordeeld                | `TestComponent`                         |
+
+Het OEAPI-recursieve datamodel laat de hiërarchie meegroeien: een kerntaak heeft meerdere werkprocessen, een werkproces meerdere leeruitkomsten, en een leeruitkomst kan over meerdere lessen worden gespreid (DAG). Zie §5 voor de volledige mapping.
+
+#### 3.2.3 Stadia van onderwijsaanbod — specificatie → planbaar → geroosterd
+
+Aanbod ontstaat in stappen. Dit onderscheid is **cruciaal** voor de scenario's, omdat een student aan het begin van het schooljaar typisch *niet* voor alle drie de jaren tegelijk geroosterd is — sommige eenheden zijn al geroosterd, andere alleen planbaar, en weer andere staan nog alleen als specificatie:
+
+```mermaid
+stateDiagram-v2
+    [*] --> Specificatie : ontwerper publiceert in OC
+    Specificatie --> PlanbaarAanbod : planning maakt periode + capaciteit, ZONDER concrete resources
+    PlanbaarAanbod --> GeroosterdAanbod : roostering wijst lokaal/docent/groep toe in tijdsloten
+    PlanbaarAanbod --> NietPlanbaar : capaciteit/resources tekort (bottleneck)
+    GeroosterdAanbod --> AfgelastAanbod : minNumberStudents niet gehaald of conflict
+    Specificatie --> Specificatie : nieuwe versie (componentState)
+    PlanbaarAanbod --> PlanbaarAanbod : capaciteitsupdate
+    GeroosterdAanbod --> GeroosterdAanbod : roosterwijziging
+```
+
+- **Specificatie** = ontwerp/sjabloon. Stabiel, herbruikbaar, versieerbaar. Bevat *wat* geleerd wordt en *hoe organiseerbaar* (`educationSpecification`: deliveryForm, BOT/OOT, roomType, expertiseProfiles, …).
+- **Planbaar aanbod (stadium 2a)** = specificatie ingepast in **perioden** + **capaciteit** (`maxNumberStudents`). **Geen** concrete resource-instanties. Hoort bij de planner.
+- **Geroosterd aanbod (stadium 2b)** = planbaar aanbod met **concrete tijdsloten** + **resource-instanties** (lokaal-instantie, personeelsnummer). Hoort bij de roosteraar.
+
+#### 3.2.4 Stadia van onderwijsverbintenis — aangemeld → ingeschreven → bezig → afgerond
+
+Een student loopt parallel een eigen state-machine: van eerste belangstelling tot afronding. Verbintenissen bestaan op elk niveau (programma, eenheid, leergelegenheid, toets) en ze hebben elk hun eigen state:
+
+```mermaid
+stateDiagram-v2
+    [*] --> Aangemeld : student dient verzoek in (SVS/aanmeldsysteem)
+    Aangemeld --> Ingeschreven : SLB'er/SVS plaatst student op programma
+    Ingeschreven --> Deelnemend : start van uitvoering (Association.state = participating)
+    Deelnemend --> Afgerond : Association.state = completed (+ resultaat)
+    Deelnemend --> Onderbroken : pauze, ziekte, time-out
+    Onderbroken --> Deelnemend : hervat
+    Aangemeld --> Geannuleerd : verzoek ingetrokken
+    Ingeschreven --> Geannuleerd : uitschrijving voor uitvoering
+    Deelnemend --> Geannuleerd : voortijdig stoppen
+```
+
+In OEAPI wordt dit gedragen door `Association.state` op het bijbehorende offering-type. Het **minimum-resultaat** is dus `Association.state`. Rijkere bewijsvoering op leeruitkomstniveau (evidence, judgement) zit niet in OEAPI-kern — daarvoor is een aanvullend resultaat-koppelvlak nodig (zie §9 signaleringen).
+
+#### 3.2.5 MORA cross-walk — aansluiten op mbo-architectuurtaal
+
+Deze begrippen zijn niet nieuw uitgevonden. Ze sluiten aan op de **MORA** (mbo-referentiearchitectuur). Wanneer mensen in het mbo praten over *Onderwijscatalogus*, *Onderwijseenheid*, *Onderwijsaanbod* of *Leerresultaat*, mappen we dat als volgt op het OKx-/OEAPI-begrippenkader:
+
+| MORA-begrip                     | OKx/OEAPI-equivalent                                              | Toelichting                                                       |
+| ------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **Onderwijscatalogus (OC)**     | Distributiepunt voor specificaties/aanbod/verbintenissen          | OEAPI-implementatie binnen instelling; centraal in OKx (zie §4)   |
+| **Onderwijsproduct**            | `Onderwijsspecificatie` (kolom 3) op niveau Kwalificatie/Kerntaak | Stabiel sjabloon, herbruikbaar over cohorten                      |
+| **Onderwijseenheid**            | `Onderwijseenheid-specificatie` (rij Kerntaak, kolom 3)           | OEAPI: `Course`                                                   |
+| **Leeractiviteit**              | `Leeronderdeel-specificatie` (rij Werkproces, kolom 3)            | OEAPI: `LearningComponent` met `hierarchyLevel = learning_activity` |
+| **Onderwijsaanbod / cursusaanbod** | `Onderwijsaanbod` (kolom 4), in stadium planbaar of geroosterd | OEAPI: `*Offering`-objecten met OKx-`OfferingProperties`          |
+| **Leergelegenheid**             | `LearningComponentOffering` (kolom 4, rij Werkproces)             | Concrete realisatie van een leeractiviteit in tijd/groep          |
+| **Inschrijving / deelname**     | `Onderwijsverbintenis` (kolom 5) — `Association.state`            | Roltype `student`, state-machine §3.2.4                           |
+| **Leerresultaat / studieresultaat** | `Onderwijsresultaat` (kolom 6)                                | Minimaal in `Association.state`; rijker buiten OEAPI-kern         |
+| **Onderwijsteam / docent**      | `expertiseProfile` (in `educationSpecification`)                  | Profiel-match, geen instantie-toewijzing in specificatie          |
+| **Lokaalcluster / vlek**        | `roomType` + `roomRequirements`                                   | Profiel-match; instantie pas in stadium 2b                        |
+
+Voor de bredere context (ROSA als knooppunt; HORA-mbo-aliasering) verwijzen we naar §2.2 (waar de architectuurkaders zijn ingeleid) en de uitlijning met "klus 53 — Alignment MORA <> HORA" in het MBO-digitaal Architectuurberaad.
+
+#### 3.2.6 Het vlaks-model als ankertabel — 6 niveaus × 6 families
+
+De volgende tabel is de **canonieke verankering** van §3.2.1 (kolommen) en §3.2.2 (rijen). Lees als: "*per kwalificatiekader-niveau (rij) hebben we kader, beoogde uitkomsten, een specificatie, een aanbod, een verbintenis en een resultaat*". De tabel is in eerdere versies §12.0.2 geweest; dit is nu de definitieve plek.
+
+| Niveau (rij) ↓ \ Familie (kolom) →                                                           | **1. Kader**                                                                  | **2. Beoogde leeruitkomst**                                                                   | **3. Onderwijsspecificatie**       | **4. Onderwijsaanbod**                                                                                                         | **5. Onderwijsverbintenis**                  | **6. Onderwijsresultaat**                            |
+| -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------------------------------------------------- |
+| `Kwalificatiedossier`                                                                        | SBB-dossier                                                                   | *n.v.t. op dit niveau*                                                                        | `Opleidingsspecificatie`           | `Opleidingsaanbod`                                                                                                             | `Opleidingsverbintenis`                      | `Opleidingsresultaat`                                |
+| `Kwalificatie`                                                                               | SBB-kwalificatie                                                              | *n.v.t. op dit niveau*                                                                        | `Opleidingsprogramma-specificatie` | `Opleidingsprogramma-aanbod`                                                                                                   | `Opleidingsprogramma-verbintenis`            | `Opleidingsprogramma-resultaat`                      |
+| `Kerntaak`                                                                                   | SBB-kerntaak                                                                  | **Collectie van LO-collecties** (kerntaak heeft meerdere werkprocessen, elk met eigen LO-set) | `Onderwijseenheid-specificatie`    | `Onderwijseenheid-aanbod`                                                                                                      | `Onderwijseenheid-verbintenis`               | `Onderwijseenheid-resultaat`                         |
+| `Werkproces`                                                                                 | SBB-werkproces                                                                | **Collectie leeruitkomsten** (summatief)                                                      | `Leeronderdeel-specificatie`       | **Leergelegenheid** = `LearningComponentOffering` waar `LearningComponent.consumer.okx.hierarchyLevel = learning_activity`     | `Association` op `LearningComponentOffering` | `Association.state` (+ evt. resultaat-koppelvlak)    |
+| *n.v.t. kwalificatiekader*                                                                   | (instelling-eigen)                                                            | `Lesdoel / Lesuitkomst`                                                                       | `Lesspecificatie`                  | **Lesgelegenheid** = `LearningComponentOffering` waar `LearningComponent.consumer.okx.hierarchyLevel = lesson_assignment`      | `Association` op `LearningComponentOffering` | `Association.state` (+ evt. aanwezigheid/resultaat)  |
+| Summatief: vaststelling Examencommissie t.o.v. leeruitkomsten / formatief: instellingsbeleid | Examencie-besluit (summatief) of instellingsbeleid (formatief)                | `Lesuitkomst`/set, `Leeruitkomst`/set, `Werkproces`/set, … (scope van toetsing)               | `Toetsonderdeel-specificatie`      | `Toetsgelegenheid`                                                                                                             | `Toetsgelegenheid-verbintenis`               | `Toetsresultaat / Aanwezigheid`                      |
+
+**Cardinaliteit (normatief voor dit profiel):**
+
+- `Kerntaak (1..*) Werkproces`
+- `Werkproces (1..*) Leeruitkomst` (summatief)
+- `Leeruitkomst (0..*) Onderwijseenheid` / `Leeronderdeel` / `Toetsonderdeel` (dezelfde LO kan over meerdere onderdelen verdeeld zijn; onderdelen kunnen meerdere LO's dekken)
+- `Leeruitkomst (0..*) Lesuitkomst` (formatief; DAG/boom-structuur)
+
+**Voetnoot.** OKx richt zich in dit profiel primair op het beschrijven van de **werkproceslaag**. De entiteit *leergelegenheid* (groep van lessen) leidt uiteindelijk tot individueel geroosterde lessen. Binnen geroosterde lessen kunnen op hun beurt geneste lessen voorkomen; in toekomstige iteraties moeten ook deze recursief volgens dit datamodel gemodelleerd kunnen worden. Dit geldt eveneens voor diepere sublagen zoals een *lessenreeks* of specifieke leeractiviteiten binnen een les. Dit erkent expliciet dat onder een *leergelegenheid* of *lessenreeks* nog een hiërarchie van leeronderdelen kan bestaan, met directe impact op bottom-up en top-down aggregatie.
+
+> **Verdiepende verwijzingen:** uitwerking van de specificatie-objecten op attribuutniveau staat in §12.5; de informatiestromen tussen ketenpartijen (CO ↔ OC ↔ Planning ↔ Roostering ↔ SVS) in §12.2; het volledige ERD in §12.0.3.
+
+### 3.3 Scenario-analyse — kaderstellende scenario's per leerroute
 
 De Npuls-leerroutes (1-9) zijn allemaal expresseerbaar in het OEAPI-datamodel met OKx-extensies. In deze paragraaf werken we de 9 leerroutes uit als **kaderstellende scenario’s**: ze vormen de basis voor de concrete scenario’s en procesbeschrijvingen die we later verder detailleren.
 
@@ -137,7 +253,7 @@ De 9 leerroutes zijn:
 
 *Met sector bedoelen we hier de volgende onderwijssectoren: het mbo, hbo en wo.*
 
-#### 3.2.1 Leerroute 1 — Regulier (standaard route)
+#### 3.3.1 Leerroute 1 — Regulier (standaard route)
 
 **Kern**: de student volgt het **nominale opleidingsprogramma** zoals de instelling dat aanbiedt: voorspelbaar, planbaar en te roosteren.  
 **Keuzedelen (binnen regulier)**: de opleiding bevat **keuzedeelruimte**; de student kiest keuzedelen bij de **intake** en die keuze wordt vastgelegd in het persoonlijke programma, zodat de instelling kan plannen en roosteren. Keuzedelen zijn een **verplicht** onderdeel van mbo-opleidingen en worden afgesloten met een **examen**. **Bron**: [SBB — Keuzedelen](https://www.s-bb.nl/onderwijs/kwalificatiestructuur/keuzedelen/).  
@@ -242,7 +358,7 @@ flowchart TD
   s3 --> resources1
 ```
 
-#### 3.2.2 Leerroute 2 — Temporiseren (standaard route)
+#### 3.3.2 Leerroute 2 — Temporiseren (standaard route)
 
 **Kern**: de student volgt dezelfde opleiding, maar spreidt de belasting in de tijd (bijv. lagere intensiteit, aangepaste volgorde, pauzes).  
 **Implicatie**: meer varianten in persoonlijke leerroute en meer dynamiek in planning/roostering.
@@ -254,7 +370,7 @@ flowchart TD
   planning2 --> bijsturen2[Bijsturen_op_basis_van_voortgang_en_capaciteit]
 ```
 
-#### 3.2.3 Leerroute 3 — Versnellen (standaard route)
+#### 3.3.3 Leerroute 3 — Versnellen (standaard route)
 
 **Kern**: de student rondt sneller af door vrijstellingen/EVC, hogere intensiteit of het overslaan van onderdelen.  
 **Implicatie**: toetsing kan onafhankelijk(er) van deelname nodig zijn; planning moet kleine groepen en afwijkende paden kunnen dragen.
@@ -267,7 +383,7 @@ flowchart TD
   verkortPad --> toets3[Toetsing_en_resultaatvastlegging]
 ```
 
-#### 3.2.4 Leerroute 4 — Binnen de instelling (personaliseren diplomaroute)
+#### 3.3.4 Leerroute 4 — Binnen de instelling (personaliseren diplomaroute)
 
 **Kern**: de student personaliseert binnen één instelling (combineren/overlap tussen opleidingen of trajecten).  
 **Implicatie**: hergebruik van onderdelen en het voorkomen van dubbel volgen; planning/roostering op overlap en conflicten.
@@ -279,7 +395,7 @@ flowchart TD
   aanbod4 --> rooster4[Roosterconflicten_voorkomen]
 ```
 
-#### 3.2.5 Leerroute 5 — Buiten de instelling, binnen de sector (personaliseren diplomaroute)
+#### 3.3.5 Leerroute 5 — Buiten de instelling, binnen de sector (personaliseren diplomaroute)
 
 **Kern**: de student volgt onderdelen bij een andere instelling binnen dezelfde sector.  
 **Implicatie**: interoperabiliteit (begrijpen, matchen, erkennen) en zichtbaarheid van capaciteit/aanbod over instellingen heen.
@@ -292,7 +408,7 @@ flowchart TD
   vindbaar --> capaciteit5[Capaciteit_en_beschikbaarheid_zichtbaar]
 ```
 
-#### 3.2.6 Leerroute 6 — Buiten de instelling, over sectoren heen (personaliseren diplomaroute)
+#### 3.3.6 Leerroute 6 — Buiten de instelling, over sectoren heen (personaliseren diplomaroute)
 
 **Kern**: de student volgt onderdelen over sectoren heen (mbo/hbo/wo).  
 **Implicatie**: extra harmonisatie in begrippen, studielast (SBU/ECTS), en erkenning/waardering.
@@ -304,7 +420,7 @@ flowchart TD
   match6 --> leerroute6[Persoonlijke_leerroute_bij_eigen_instelling]
 ```
 
-#### 3.2.7 Leerroute 7 — Vrije keuze (modulair studeren)
+#### 3.3.7 Leerroute 7 — Vrije keuze (modulair studeren)
 
 **Kern**: de student kiest losse onderdelen voor ontwikkeling/bijscholing; geen vaste diplomaroute nodig.  
 **Implicatie**: aanbod moet fijnmazig en vindbaar zijn; planning/roostering moet omgaan met wisselende vraag.
@@ -316,7 +432,7 @@ flowchart TD
   intekenen7 --> bewijs7[Bewijsvoering_microcredential]
 ```
 
-#### 3.2.8 Leerroute 8 — Bundelen (modulair studeren)
+#### 3.3.8 Leerroute 8 — Bundelen (modulair studeren)
 
 **Kern**: de student bundelt losse onderdelen tot een samenhangend pakket rond een thema/rol.  
 **Implicatie**: bundelregels en samenhang moeten expliciet gemaakt worden; vraag kan cohort-achtig worden.
@@ -328,7 +444,7 @@ flowchart TD
   coherentie8 --> planning8[Planning_en_uitvoering_van_bundel]
 ```
 
-#### 3.2.9 Leerroute 9 — Stapelen (modulair studeren)
+#### 3.3.9 Leerroute 9 — Stapelen (modulair studeren)
 
 **Kern**: de student stapelt onderdelen richting een formeel eindresultaat (bijv. diploma) — eventueel retroactief.  
 **Implicatie**: dekking t.o.v. kwalificatiekader en regels voor “wanneer is het diplomawaardig?”.
@@ -342,6 +458,246 @@ flowchart TD
 ```
 
 <!-- placeholder verwijderd: de tekst hieronder vertaalt direct door naar de scenario’s -->
+
+### 3.4 Scenario-uitwerkingen — leerroute 1 (regulier), 2 (temporiseren by design), 3 (versnellen by design)
+
+In §3.3 hebben we de 9 leerroutes als kaderstellende scenario's neergezet. In deze paragraaf werken we de **eerste kolom** (leerroute 1, 2, 3 — *regulier en design-tempo, **zonder inhoudelijke keuzes***) levendig en concreet uit. Inhoudelijke keuzes (keuzedelen, modulair stapelen, cross-instelling) zijn nadrukkelijk **buiten scope** voor §3.4 en komen in latere paragrafen (LR 4–9).
+
+**Doel.** Externen (leveranciers, instellingen, ketenpartners) moeten in begrijpelijke taal kunnen volgen *wat er allemaal moet gebeuren* om "regulier" mogelijk te maken — vóórdat de student überhaupt een eerste les volgt — en *hoe een verstoring (vertraging/versnelling by accident)* of een *bewuste tempo-keuze (by design)* hierop ingrijpt. De begrippen die we daarvoor gebruiken zijn die van §3.2.
+
+#### 3.4.0 Sjabloon en leeswijzer
+
+We gebruiken voor elk scenario hetzelfde sjabloon. Lees het als een verhaal in zeven blokken (A–G), met steeds één persona (**Jochem**) en één doorlopende casus (**Apothekersassistent**, Crebo dossier 23450, kwalificatie 27141). De BPMN-uitwerking in `bpmn/leerroute-1-scenario-1-regulier-geenkeuze-happyflow.bpmn2` (zie [SVG](../img/leerroute-1-scenario-1-regulier-geenkeuze-happyflow.svg)) is de **basis-procesplaat** voor scenario 1.1; voor de andere scenario's beschrijven we waar het proces afwijkt.
+
+| Blok | Naam                              | Wat staat erin                                                                                                                                  |
+| ---- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A** | Persona en voorvraag              | Eén levendige zin over Jochem + dé vraag die het scenario beantwoordt.                                                                          |
+| **B** | Given — beginstaat                 | Mini-tabel in §3.2-taal: per relevante rij (kwalificatiedossier → toetsrij) welke kolommen al gevuld zijn en welke leeg.                        |
+| **C** | When — trigger                     | Wie zet wat in beweging? Korte verhalende zin met BPMN-aanknopingspunt.                                                                         |
+| **D** | Het verhaal per swimlane           | Per actor (onderwijsontwerper, onderwijsontwikkelaar, planner, roosteraar, SLB'er, student, docent) 2–4 zinnen *wat ontvang ik, wat lever ik op*. |
+| **E** | Then — eindstaat **bij start van onderwijsuitvoering** | De staat van de 6 informatie-objectfamilies op de eerste schooldag — niet over 3 jaar. Aanbod kan in verschillende stadia zijn (sommige eenheden geroosterd, andere alleen planbaar, andere nog specificatie). Verbintenis kan in verschillende stadia zijn (programma ingeschreven, eenheden van P1 deelnemend, eenheden van P2/P3/P4 nog niet aangemaakt). |
+| **F** | Voorwaarden — 9 architectuurlagen | Wat moet per laag (Business/Strategy/Motivation/Beleid/Organisatie/Proces/Informatie/Data/Systeem) geregeld zijn voordat dit scenario kán?     |
+| **G** | Informatiestromen-figuur          | Placeholder/verwijzing naar de architectuurplaat (afgeleid van *Hoofdplaat OKx informatiestromen v20260317*) die expliciet maakt welke OEAPI-stromen bewegen. |
+
+**Werkproces-paneel als concrete inkijk.** We gebruiken doorlopend drie werkprocessen uit het Apothekersassistent-dossier — telkens op de werkproces-rij (kolom 3 = `Leeronderdeel-specificatie`, kolom 4 = `Leergelegenheid`):
+
+| Werkproces                                  | Karakter            | Typische `deliveryForm` |
+| ------------------------------------------- | ------------------- | ----------------------- |
+| **B1-K1-W1** — Neemt de zorg-/adviesvraag in behandeling     | mens-mens-contact   | `simulation`            |
+| **B1-K2-W2** — Houdt de voorraad bij                          | proces + systeem    | `workshop` / practicum  |
+| **B1-K3-W2** — Evalueert werkzaamheden, ontwikkelt zich als professional | reflectie           | `guided_self_study` + portfolio |
+
+Deze drie werkprocessen samen tonen verschillende eisen aan ruimte, expertise en leermiddelen — en daarmee aan planning en roostering.
+
+**Persona.** *Jochem (17). Heeft VMBO-tl afgerond. Heeft via een open dag interesse in farmacie ontwikkeld. Schrijft zich in voor de voltijd mbo-4-opleiding Apothekersassistent (3 jaar) bij ROC Het Voorbeeld. Geen relevante voorkennis, geen vrijstellingen, geen verwachte verstoring.* In §3.4.5 t/m §3.4.12 verschijnt dezelfde Jochem op een andere levensloop — om de scenario's herkenbaar te houden voor lezers, en om expliciet te maken dat **dezelfde persoon** in verschillende cohorten of jaren een ander tempo of een andere route nodig kan hebben.
+
+#### 3.4.1 Scenario 1.1 — Regulier, happyflow (anker)
+
+**Status.** *Happyflow.* Geen tempo-design. Geen verstoring by accident. Geen hybride. Volgens schatting van Npuls-praktijken behaalt circa 10% van de mbo-studenten dit ideaalbeeld zonder enige afwijking.
+
+##### A. Persona en voorvraag
+
+> *Jochem schrijft zich in juni 2026 in voor de voltijd mbo-4-opleiding Apothekersassistent. Op 1 september 2026 begint zijn eerste lesweek. Hij volgt drie jaar lang het nominale opleidingsprogramma, behaalt op tijd alle leeruitkomsten, en ontvangt zijn diploma in juli 2029.*
+
+**De voorvraag**: *wat moet er allemaal — bij ontwerp, ontwikkeling, planning, roostering, intake en LMS-inrichting — geregeld zijn voordat Jochem op 1 september 2026 om 09:00 uur zijn eerste les "Balie: zorg-/adviesvraag (simulatie)" kan binnenlopen?* Dit scenario laat zien hoeveel werk er **vóór** de student plaatsvindt.
+
+##### B. Given — beginstaat (in §3.2-taal)
+
+| Niveau (rij) ↓ \ Familie (kolom) → | 1. Kader | 2. Beoogde LO | 3. Specificatie | 4. Aanbod | 5. Verbintenis | 6. Resultaat |
+| --- | --- | --- | --- | --- | --- | --- |
+| Kwalificatiedossier (23450) | aanwezig (SBB) | n.v.t. | leeg | leeg | leeg | leeg |
+| Kwalificatie (27141) | aanwezig (SBB) | n.v.t. | leeg | leeg | leeg | leeg |
+| Kerntaak (B1-K1, B1-K2, B1-K3) | aanwezig | LO-collecties leeg | leeg | leeg | leeg | leeg |
+| Werkproces (B1-K1-W1, B1-K2-W2, B1-K3-W2) | aanwezig | LO-set leeg | leeg | leeg | leeg | leeg |
+| Lesuitkomst-laag | n.v.t. | leeg | leeg | leeg | leeg | leeg |
+| Toetsrij | examencie-mandaat | scope leeg | leeg | leeg | leeg | leeg |
+
+> **Leeswijzer.** Het kader staat klaar bij SBB. De rest is leeg — **alle kolommen 2 t/m 6 worden in dit scenario stap voor stap gevuld**.
+
+##### C. When — trigger
+
+In maart 2026 vraagt het college van bestuur van ROC Het Voorbeeld om de Apothekersassistent-opleiding klaar te zetten voor cohort 2026. De **onderwijsontwerper** start (BPMN-startevent in de swimlane "Onderwijsontwerper") met de taak `Kwalificatiekader analyseren` — de aftrap van het sub-process *Grofmazig onderwijsontwerp / Onderwijsplan / Onderwijsspecificatie opstellen*.
+
+##### D. Het verhaal per swimlane
+
+```mermaid
+flowchart LR
+  subgraph OO["Onderwijsontwerper"]
+    OO1[Kwalificatiekader analyseren] --> OO2[Opleidingsspecificatie beschrijven]
+    OO2 --> OO3[Opleidingsprogramma-specificatie beschrijven]
+    OO3 --> OO4[Onderwijseenheden beschrijven]
+    OO4 --> OO5[Onderwijsspecificaties publiceren]
+  end
+  subgraph OW["Onderwijsontwikkelaar"]
+    OW1[Leergelegenheid uitwerken] --> OW2[Leermiddelen functioneel inrichten]
+    OW2 --> OW3[Toegang LMS aan student/docent]
+  end
+  subgraph PL["Planner"]
+    PL1[Strategische jaarplanning] --> PL2[Team-inzetplanning]
+  end
+  subgraph RO["Roosteraar"]
+    RO1[Periode-rooster opstellen] --> RO2[Rooster publiceren]
+  end
+  subgraph SLB["SLB'er"]
+    SLB1[Onderwijs-intake] --> SLB2[Plaatsen op opleidingsprogramma] --> SLB3[Aanmelding registreren]
+  end
+  subgraph ST["Student (Jochem)"]
+    ST1[Orienteren] --> ST2[Aanmelden] --> ST3[Wachten op rooster] --> ST4[Onderwijs volgen]
+  end
+  subgraph DO["Docent"]
+    DO1[Onderwijs uitvoeren]
+  end
+  OO5 --> OW1
+  OO5 --> PL1
+  PL2 --> RO1
+  ST2 --> SLB1
+  SLB3 --> RO1
+  RO2 --> ST3
+  RO2 --> DO1
+```
+
+**Onderwijsontwerper.** Zij analyseert eerst het Crebo-dossier 23450 ("Apothekersassistent") en mapt de drie kerntaken (B1-K1, B1-K2, B1-K3) en hun werkprocessen op een set **summatieve leeruitkomsten** per werkproces. Vervolgens beschrijft zij de `Opleidingsspecificatie` (rij Kwalificatiedossier, kolom 3), de `Opleidingsprogramma-specificatie` (rij Kwalificatie — nominaal, voltijd, 3 jaar, 4800 SBU), en de `Onderwijseenheid-specificaties` per kerntaak. Daarna publiceert zij — via de Curriculum-ontwerptool → OC (stadium 1) — het hele pakket. **Levert op:** kolom 2 én kolom 3 op rij Kwalificatiedossier t/m Kerntaak.
+
+**Onderwijsontwikkelaar.** Hij ontvangt het verzoek tot detaillering van de onderwijsspecificatie en werkt voor elk werkproces de `Leeronderdeel-specificatie` uit (rij Werkproces, kolom 3) — inclusief `educationSpecification` met `deliveryForm: simulation` voor B1-K1-W1, `workshop` voor B1-K2-W2, en `guided_self_study` voor B1-K3-W2. Hij richt het LMS in (lesplanning, leermiddelen, toegangsrechten) en werkt waar nodig de lesspecificaties uit. **Levert op:** kolom 3 op rij Werkproces en Lesuitkomst.
+
+**Planner.** Zij ontvangt de gepubliceerde specificaties uit OC en stelt de **strategische jaarplanning** vast: cohortgrootte 120 studenten, 4 perioden van 10 weken, en een team-inzetplanning waarin 8 docenten (`expertiseProfiles: ["pharmaceutical_assistant_coach", "roleplay_training", "pharmacy_logistics", "coach_reflective_practice"]`) en 5 ruimtetypes (`simulation_practice_room`, `workshop`, `lecture_hall`, `online`, `general_classroom`) gematcht zijn op de specificaties. Zij publiceert per `Onderwijseenheid` en per `Leeronderdeel` een **planbaar aanbod** (stadium 2a) — perioden + capaciteit, **zonder** concrete lokaal- of personeelsnummers. **Levert op:** kolom 4 (planbaar) op rij Kerntaak en Werkproces.
+
+**Roosteraar.** Hij neemt het planbare aanbod over en roostert eerst alleen periode 1: concrete tijdsloten ("ma 09:00–11:00, simulatieruimte 2.14, docent personeelsnr 4711"), concrete groepen, concrete lokaal-instanties. Voor periode 2, 3, 4 blijft het **planbaar** (capaciteit gereserveerd, geen concrete tijdsloten). Hij publiceert geroosterd aanbod (stadium 2b) en stelt het ter beschikking aan de student (via SVS/SKS) en de docent (via LMS/rooster). **Levert op:** kolom 4 (geroosterd) op rij Werkproces en Lesuitkomst — *alleen voor periode 1*.
+
+**SLB'er.** Zij ontvangt Jochems aanmelding (april 2026), voert de intake uit (kennismakings- en geschiktheidsgesprek; bevestigt dat er geen vrijstellingen, EVC of zorgafspraken zijn), plaatst hem op het nominale opleidingsprogramma en registreert de aanmelding (`Association.state = enrolled` op `Opleidingsverbintenis` en `Opleidingsprogramma-verbintenis`). Bij start van de uitvoering activeert zij de verbintenissen op de geroosterde leergelegenheden van periode 1. **Levert op:** kolom 5 op rij Kwalificatiedossier en Kwalificatie; kolom 5 op de geroosterde Werkproces-leergelegenheden.
+
+**Student (Jochem).** Jochem oriënteert zich in maart 2026 via de website van het ROC en SBB-info op de opleiding. In april meldt hij zich aan, doet hij intake, en ontvangt hij na enkele weken zijn inschrijvingsbevestiging. Eind augustus krijgt hij toegang tot het LMS en zijn periode-1-rooster. Op 1 september begint hij. **Levert op:** zijn leervraag (impliciet: de hele LO-set van de Apothekersassistent), zijn aanmelding, en straks zijn deelname.
+
+**Docent.** Een rollenspeltrainer met farmaceutische coachingbevoegdheid krijgt op 28 augustus zijn periode-1-rooster en LMS-toegang. Op 1 september voert hij in lokaal 2.14 het eerste simulatie-onderdeel uit. Tijdens de uitvoering zal hij `Association.state` per les muteren (`participating` → `completed`) en eventuele resultaten vastleggen. **Levert op:** kolom 6 op rij Lesuitkomst en — via de toetsrij — straks ook op rij Werkproces.
+
+##### E. Then — eindstaat **bij start van onderwijsuitvoering** (1 september 2026, 08:55)
+
+Dit is het moment waarop Jochem in zijn jas voor lokaal 2.14 staat. De stand van zaken in §3.2-taal:
+
+| Niveau (rij) ↓ \ Familie (kolom) → | 1. Kader | 2. Beoogde LO | 3. Specificatie | 4. Aanbod | 5. Verbintenis | 6. Resultaat |
+| --- | --- | --- | --- | --- | --- | --- |
+| Kwalificatiedossier | ongewijzigd | n.v.t. | **gepubliceerd** | **opleidingsaanbod uitgerold** | **Jochem `enrolled`** | leeg |
+| Kwalificatie | ongewijzigd | n.v.t. | **programma-specificatie gepubliceerd** | **programma-aanbod uitgerold** | **Jochem `enrolled` op nominaal traject** | leeg |
+| Kerntaak | ongewijzigd | LO-collecties gevuld | **eenheid-specificaties gepubliceerd** | **planbaar** voor alle perioden, **geroosterd** alleen voor P1 | **enrolled op P1-eenheden**; P2–P4 nog niet aangemaakt | leeg |
+| Werkproces (W1, W2, W3) | ongewijzigd | LO-set per WP | **leeronderdeel-specificaties gepubliceerd** | **leergelegenheid van P1 geroosterd** (lokaal + docent toegewezen); P2–P4 alleen planbaar | **`Association.state = enrolled`** op P1-leergelegenheden; over enkele uren → `participating` | leeg |
+| Lesuitkomst-laag | n.v.t. | DAG met lesuitkomsten beschreven | **lesspecificaties gepubliceerd** | **lesgelegenheden van eerste week geroosterd**; rest van P1 nog te roosteren binnen periode | **`Association` op eerste les** | leeg |
+| Toetsrij | examencie-besluit voor scope P1 | scope = WP-LO-set P1 | **toetsonderdeel-specificaties gepubliceerd** | **toetsgelegenheid einde P1 planbaar** | nog geen verbintenis | leeg |
+
+**Belangrijk om te zien.** Aanbod en verbintenis zitten op verschillende rijen in **verschillende stadia** tegelijk. Dat is geen fout maar het normale beeld bij start van uitvoering: je roostert niet 3 jaar vooruit. Bij elke periode-overgang muteert de tabel: meer leergelegenheden van planbaar → geroosterd, meer associations van *nog niet aangemaakt* → `enrolled` → `participating` → `completed`.
+
+##### F. Voorwaarden — wat moet vooraf geregeld zijn (9 architectuurlagen)
+
+Dit blok maakt expliciet dat één scenario "regulier-happyflow" mogelijk maken **negen architectuurlagen** raakt. Elke laag draagt eigen verantwoordelijkheid die buiten het OEAPI-koppelvlak ligt maar wel een randvoorwaarde is.
+
+- **Business.** Klant = student + ouders/werkveld. Waarde-propositie = diplomeerbare Apothekersassistent in 3 jaar. Dienst = voltijds opleidingsprogramma. **Implicatie scenario:** de instelling moet deze dienst commercieel + maatschappelijk willen aanbieden in cohort 2026.
+- **Strategy.** Richting van de instelling: bredere flexibilisering volgens Npuls + toegankelijke standaard mbo-route. **Implicatie scenario:** de "regulier"-baseline moet expliciet als eerste lijn op de strategische roadmap staan, anders wordt het overstemd door flex-experimenten.
+- **Motivation (drivers, doelen, principes).** Drivers: maatschappelijke vraag naar apothekersassistenten, OCW-bekostigingseisen, tevredenheidsdoelen. Principes: doceerbaar onderwijs, traceerbare leerresultaten. **Implicatie scenario:** keuzes in ontwerp/planning moeten op deze principes te toetsen zijn.
+- **Beleid.** Examenreglement (scope summatief), instellingsbeleid t.a.v. studielast (BOT/OOT), inschrijvingsvoorwaarden, beleid t.a.v. resource-schaarste. **Implicatie scenario:** examencommissie heeft de toetsrij-scope formeel vastgesteld (kolom 1 op de toetsrij).
+- **Organisatie-inrichting.** Rollen onderwijsontwerper, onderwijsontwikkelaar, planner, roosteraar, SLB'er, docent zijn benoemd, bezet, met mandaat. Onderwijsteam Apothekersassistent is samengesteld; vlekkenplan voor docenten en lokalen is vastgelegd. **Implicatie scenario:** zonder deze rollen kan de BPMN-flow niet starten.
+- **Proces.** De BPMN-flow van scenario 1.1 (zie [SVG](../img/leerroute-1-scenario-1-regulier-geenkeuze-happyflow.svg) en `bpmn/leerroute-1-scenario-1-regulier-geenkeuze-happyflow.bpmn2`) is vastgesteld als referentieproces. Hand-offs tussen actoren zijn ondubbelzinnig.
+- **Informatie.** Begrippenkader §3.2 wordt door alle ketenpartijen gehanteerd. Specifiek: de zes informatie-objectfamilies, de zes niveaus, en de stadia van aanbod (§3.2.3) en verbintenis (§3.2.4). MORA-aliasen (§3.2.5) zijn bekend bij architecten van leveranciers.
+- **Data.** Identifiers/sleutels: Crebo dossier+kwalificatie, OKx `qualificationReference`, `learningOutcomeIds`, OEAPI ID's voor `Programme`/`Course`/`LearningComponent`/`TestComponent`/`*Offering`/`Association`. Bottom-up aggregatie-invariant (SOM van studielast klopt per niveau).
+- **Systeem.** Curriculum-ontwerptool, Onderwijscatalogus (OC), Planningssysteem, Roostersysteem, SVS, SKS/Aanmeldsysteem, LMS — allen aangesloten op OEAPI-koppelvlak met OKx-profiel; OC is centraal distributiepunt (zie §4.1). LMS is gevuld met content vóór 28 augustus.
+
+##### G. Informatiestromen — placeholder voor architectuurplaat
+
+> *Te maken: figuur "Informatiestromen scenario 1.1 — regulier happyflow", afgeleid van `img/Hoofdplaat OKx informatiestromen v20260317.png`.* De plaat moet expliciet maken: (1) Curriculum-ontwerptool → OC publiceert specificaties (stadium 1); (2) Planning → OC publiceert planbaar aanbod (stadium 2a); (3) Roostering → OC publiceert geroosterd aanbod (stadium 2b); (4) SVS/SKS → OC publiceert `Association` (stadium 3); (5) OC → LMS levert onderwijsspecificatie + leermiddelen-referenties; (6) OC → SVS levert resultaatstructuren; (7) OC → SKS levert "passend aanbod op leervraag". De stromen voor scenario 1.1 zijn **alle stromen** die de hoofdplaat kent — er is hier nog geen "vraag-gestuurd" of "cross-instelling"-aanvulling nodig.
+
+#### 3.4.2 Scenario 1.2 — Regulier, vertraging by accident
+
+> **Status.** *By accident, alleen vertraging.* **Pitch.** *Halverwege periode 2 wordt Jochem ziek (lange griep, daarna concentratieproblemen). Hij mist drie weken onderwijs, haalt twee leergelegenheden niet op tijd, en moet in periode 3 of 4 inhalen — waardoor hij voor één werkproces uit ritme raakt en uiteindelijk twee maanden uitloopt op zijn diploma.*
+>
+> **Verschil met 1.1 in §3.2-taal.** Aanbod en specificatie blijven gelijk. De **verbintenis-state** muteert anders: `participating → onderbroken → participating`. Voor minstens één werkproces wordt een **extra** `Association` aangemaakt op een latere `Leergelegenheid`-periode (planbaar werd opnieuw geroosterd voor Jochem). De toetsrij krijgt een tweede `Toetsgelegenheid-verbintenis`.
+>
+> **Wat dit raakt in §3.4.0-sjabloon.** D (verhaal): SLB'er en Planner krijgen een rol als bemiddelaar; Onderwijsontwerper níet. E (Then op startmoment van periode 3): één rij toont `participating` waar de baseline `completed` zou tonen. F (architectuurlagen): Beleid t.a.v. langdurige uitval, Organisatie t.a.v. inhaaltrajecten, Data t.a.v. resultaat-overdracht tussen perioden.
+>
+> *— Volledige uitwerking in een vervolgsessie.*
+
+#### 3.4.3 Scenario 1.3 — Regulier, versnelling by accident
+
+> **Status.** *By accident, alleen versnelling.* **Pitch.** *Jochem blijkt tijdens periode 1 sneller te leren dan verwacht. Hij rondt twee leergelegenheden vroeg af, kan in periode 2 alvast werkprocessen uit periode 3 oppakken en is — zonder dat dit ooit als route ontworpen is — drie maanden vóór op het cohort.*
+>
+> **Verschil met 1.1.** De specificatie verandert niet. **Aanbod-stadium**: Planner moet eerder dan ontworpen leergelegenheden uit P3 ophogen voor P2 (capaciteit + roostering). **Verbintenis**: extra `Association` op niet-cohortgebonden offerings; toetsgelegenheden eerder geactiveerd. **Resultaat**: dezelfde LO-dekking, eerder behaald.
+>
+> **Architectuurlagen-impact.** Beleid t.a.v. afwijken van cohortritme (mag dit zonder formele "versnel-track"?), Proces t.a.v. tussentijds bijplannen, Systeem t.a.v. of OC en planningssysteem mid-period mutaties op `*Offering` toestaan.
+>
+> *— Volledige uitwerking in een vervolgsessie.*
+
+#### 3.4.4 Scenario 1.4 — Regulier, versnellen én vertragen by accident (hybride)
+
+> **Status.** *By accident, hybride.* **Pitch.** *Jochem versnelt op B1-K2-W2 (voorraadbeheer — hij heeft een vakantiebaan in een drogist), maar blijft achter op B1-K3-W2 (reflectie/portfolio — hij vindt het taalkundig ingewikkeld). Voor één werkproces loopt hij voor; voor een ander loopt hij achter. Het netto-effect kan diploma-neutraal zijn, maar de planning is complexer.*
+>
+> **Verschil met 1.1.** Verbintenis- en aanbod-stadia zijn **per werkproces verschillend**. Eén rij toont `completed` waar de baseline `participating` heeft, een andere rij toont `onderbroken` waar de baseline `participating` heeft. Dit is het scenario waarin de **rij-discipline** uit §3.2.2 het meest betaalt: zonder die rij-discipline kun je niet zien dat de student "totaal nog steeds op tempo" is, maar "per werkproces uit ritme".
+>
+> *— Volledige uitwerking in een vervolgsessie.*
+
+#### 3.4.5 Scenario 2.1 — Temporiseren by design (anker LR2)
+
+> **Status.** *By design, baseline voor leerroute 2.* **Pitch.** *Jochem is dit jaar 24, werkt 24 uur per week in een drogisterij en heeft een gezin. Hij wil dezelfde Apothekersassistent-opleiding doen, maar op **lager tempo by design**: 4 jaar in plaats van 3, met 60% van de nominale studiebelasting per periode. Geen vrijstellingen — alleen meer tijd.*
+>
+> **Verschil met 1.1 in §3.2-taal.** Specificatie van de opleiding (kolom 3 op rij Kwalificatiedossier/Kwalificatie) krijgt een **track "Temporiseren"** — `programmeType: "track"`, `consumer.okx.leerrouteType: "getemporiseerd"`. Onderwijseenheid- en leeronderdeel-specificaties blijven dezelfde objecten, maar de **planbaarheid** (stadium 2a) wijzigt: andere `spreadPattern`, andere `timeAllocation` (zelfde BOT, OOT verspreid), andere periodelengte.
+>
+> **Wat dit raakt.** Onderwijsontwerper voegt track toe (kolom 3, rij Kwalificatie). Planner maakt **alternatief planbaar aanbod** parallel aan het reguliere (stadium 2a, andere perioden). SLB'er plaatst Jochem op de track "Temporiseren" (kolom 5, rij Kwalificatie — andere verbintenis-attributen). Roostering en docentinzet kunnen — als de instelling slim ontwerpt — gedeeld worden met regulier (zelfde leergelegenheden, andere route door de leergelegenheden).
+>
+> **9-architectuurlagen-aanvulling t.o.v. 1.1.** Beleid: instelling moet leerroute "Temporiseren" als formele variant erkennen (bekostiging, examenmoment-vrijheid, studieduur-toezicht). Organisatie: SLB'er-capaciteit voor maatwerk-trajecten. Data: `learningRouteType`-attribuut op programma; ABC-relatie tussen track en leergelegenheden expliciet.
+>
+> *— Volledige uitwerking met §B Given, §D verhaal, §E Then op startmoment, §G placeholder in een vervolgsessie.*
+
+#### 3.4.6 Scenario 2.2 — Temporiseren by design + vertraging by accident
+
+> **Pitch.** *Jochem volgt de getemporiseerde route, maar zijn werkgever vraagt halverwege jaar 2 om méér uren. Hij vertraagt verder: van 4 jaar naar 5 jaar uitgesmeerd. De vraag is hoe je twee tempo-afwijkingen (één design, één accident) gecombineerd zichtbaar maakt zonder dubbele track-administratie.*
+>
+> **Verschil met 2.1.** Verbintenis-stadia muteren extra; planbaar aanbod wordt opnieuw uitgesmeerd; één onderwijseenheid komt in conflict met de nominale toetsperiode → toetsgelegenheid moet in een latere periode opnieuw gepland worden.
+>
+> *— Volledige uitwerking in een vervolgsessie.*
+
+#### 3.4.7 Scenario 2.3 — Temporiseren by design + versnelling by accident
+
+> **Pitch.** *Jochem heeft de getemporiseerde route gekozen, maar het lukt hem op één werkproces beter dan verwacht. Voor B1-K1-W1 zit hij ineens op het tempo van het reguliere cohort. Hoe modelleer je dit? Zelfde track, andere leergelegenheid-Association? Of overplaatsing per werkproces?*
+>
+> *— Volledige uitwerking in een vervolgsessie.*
+
+#### 3.4.8 Scenario 2.4 — Temporiseren by design + hybride by accident
+
+> **Pitch.** *Jochem volgt de getemporiseerde route, versnelt op één werkproces (zoals 2.3) en vertraagt op een ander (zoals 2.2). Drie tempo-staten in één studietraject. Vraagt om strikte rij-discipline én een fijnmazige verbintenis-stadia-administratie.*
+>
+> *— Volledige uitwerking in een vervolgsessie.*
+
+#### 3.4.9 Scenario 3.1 — Versnellen by design (anker LR3)
+
+> **Status.** *By design, baseline voor leerroute 3.* **Pitch.** *Jochem (28) heeft 6 jaar als drogist gewerkt en wil als zij-instromer in 2 jaar in plaats van 3 zijn diploma Apothekersassistent halen. Geen formele vrijstellingen (die laten we nadrukkelijk in een latere fase voor LR4-9), wel een hogere intensiteit per periode (130% nominale studielast) en een aangepast spreidingspatroon.*
+>
+> **Verschil met 1.1.** Een tweede track op de programma-specificatie (`leerrouteType: "versneld"`). Planbaar aanbod krijgt een eigen periodisering met hogere wekelijkse belasting; capaciteit kan kleiner zijn (zij-instroom-cohort). Roostering: deelt waar mogelijk leergelegenheden met regulier; aparte tijdsloten voor versneld-specifieke onderdelen (bijv. inhaal-blokken).
+>
+> **Architectuurlagen-aanvulling.** Beleid: examencommissie moet onafhankelijk-toetsmoment toestaan zodra LO's gedekt zijn — zelfs als de versnelde student niet alle leergelegenheden heeft bijgewoond. Organisatie: docenten moeten 130%-intensieve groepen aankunnen. Data: `targetCompletionDate` per track.
+>
+> *— Volledige uitwerking in een vervolgsessie.*
+
+#### 3.4.10 Scenario 3.2 — Versnellen by design + vertraging by accident
+
+> **Pitch.** *Jochem volgt de versnelde 2-jarige route, maar onderschat de combinatie met zijn werk. Hij verliest tempo. Hij vertraagt naar regulier-tempo (3 jaar) of zelfs daarbuiten. Vraagt om route-overgang **zonder dubbele inschrijving**.*
+>
+> *— Volledige uitwerking in een vervolgsessie.*
+
+#### 3.4.11 Scenario 3.3 — Versnellen by design + versnelling by accident
+
+> **Pitch.** *Jochem op de versnelde route blijkt nóg sneller te kunnen — bijvoorbeeld op B1-K2-W2 (voorraadbeheer) waar zijn drogisterij-ervaring volledig aansluit. De vraag is wanneer dit nog binnen "versnellen by design" past en wanneer er een ad-hoc, niet ontworpen, individueel pad ontstaat (raakt LR4-9 territorium).*
+>
+> *— Volledige uitwerking in een vervolgsessie.*
+
+#### 3.4.12 Scenario 3.4 — Versnellen by design + hybride by accident
+
+> **Pitch.** *Jochem op de versnelde route, versnelt op één werkproces én vertraagt op een ander. Toetst de absolute grenzen van de rij-discipline en de stadia-administratie van §3.2 binnen één geheel scenario. Idealiter eindcasus van §3.4.*
+>
+> *— Volledige uitwerking in een vervolgsessie.*
+
+#### 3.4.13 Niet in scope voor §3.4 — flex-flow met meegenomen LO's
+
+> **Buiten scope.** Een student wil op een afwijkend instroommoment instappen óf overstappen vanuit een andere opleiding, en wil **al behaalde leeruitkomsten meenemen** (basisdelen, algemene delen, individuele LO's). Dit raakt LO-erkenning, EVC, bottom-up aggregatie en cross-instelling-interoperabiliteit — die werken we uit als onderdeel van de scenario-uitwerkingen voor leerroutes 4–9 (in een toekomstige paragraaf §3.x).
+
+### 3.5 Eerdere scenario-schetsen (archief — worden geconsolideerd in §3.4)
+
+> **Status.** Deze paragraaf bevat eerdere scenario-schetsen (A–E) uit een vroege iteratie. Ze zijn deels nog bruikbaar als verkenning van leerroute 3, 4, 5 en 7-9 (waarvan 4-9 buiten scope vallen voor §3.4). Bij de volledige uitwerking van §3.4.5–§3.4.12 (LR2/LR3 in detail) en de toekomstige LR4–LR9-paragraaf worden de relevante delen hieruit overgenomen of vervangen. Tot die tijd bewaren we ze hier als context.
 
 #### Scenario A — Regulier (leerroute 1): Jochem wil apothekersassistent worden
 
@@ -1120,7 +1476,7 @@ educationSpecification:
 | `assessmentLevel`        | enum: `formative`, `summative`                               | Summatief = geldend voor diploma, gekoppeld aan werkproces/LO-set.                      |
 | `educationSpecification` | object (subset: roomType, expertiseProfiles, timeAllocation) | Wat nodig is om de toets af te nemen.                                                   |
 | `qualificationReference` | object                                                       | Mapping naar coreTask/workProcess die geëxamineerd wordt.                               |
-| `assessmentScope`        | object                                                       | Scope van toetsing: `learningOutcomeIds` en/of `workProcessCodes` (zie §12.0 toetsrij). |
+| `assessmentScope`        | object                                                       | Scope van toetsing: `learningOutcomeIds` en/of `workProcessCodes` (zie §3.2.6 toetsrij). |
 
 
 **LearningOutcome** (`consumerKey: "okx"`)
@@ -1242,46 +1598,18 @@ Als instelling A een `Course` publiceert met OKx-profiel, moet instelling B deze
 
 ## 12. Informatie- en data-model in OKx-keten
 
-### 12.0 Vlaks-informatiemodel (6 kolommen × 6 rijen + toetsrij)
+### 12.0 Vlaks-informatiemodel — verplaatst naar §3.2
 
-Dit model verduidelijkt de onderliggende **informatiestapeling** die we in OKx overal gebruiken. Je kunt het lezen als: *per kwalificatiekader-niveau (rij) hebben we een beoogde uitkomst, een specificatie, een aanbod-instantie, een verbintenis (association) en uiteindelijk een resultaat*.
-
-#### 12.0.1 Kolommen (objectfamilies)
-
-
-| Kolom                     | Betekenis                                                        | OEAPI-haak                                                                                    |
-| ------------------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| **Kwalificatiekader**     | Normatief kader uit SBB/CROHO dat bepaalt *wat* geldig is        | `qualificationReference` (OKx) + `levelOfQualification`, `fieldsOfStudy`                      |
-| **Beoogde leeruitkomst**  | Inhoudelijke uitkomsten die *gedekt moeten worden* op dit niveau | `LearningOutcome` (OEAPI) + OKx `hierarchyLevel`                                              |
-| **Onderwijsspecificatie** | Ontwerp-/sjabloonvorm: *wat gaan we organiseren*                 | `Programme` / `Course` / `LearningComponent` / `TestComponent` + OKx `educationSpecification` |
-| **Onderwijsaanbod**       | Concrete instantie in tijd/capaciteit                            | `*Offering` + `OfferingProperties`                                                            |
-| **Onderwijsverbintenis**  | Relatie student ↔ aanbod (intekening/inschrijving)               | `Association` + `AssociationProperties`                                                       |
-| **Onderwijsresultaat**    | Resultaat/aanwezigheid/afronding op die verbintenis              | `Association.state` + result-attributen op Offering (OEAPI)                                   |
-
-
-Allignment met klus 53 Alignment MORA <> HORA MBO digitaal Architectuurberaad, en ROSA terminologie.
-
-#### 12.0.2 Informatiemodel en architectuur terminologie
-
-
-| Kwalificatiekader                                                                            | Beoogde leeruitkomst                                                                                                                                                                    | Onderwijsspecificatie              | Onderwijsaanbod                                                                                                            | Onderwijsverbintenis                         | Onderwijsresultaat                                  |
-| -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------- |
-| `Kwalificatiedossier`                                                                        | *n.v.t. op dit niveau*                                                                                                                                                                  | `Opleidingsspecificatie`           | `Opleidingsaanbod`                                                                                                         | `Opleidingsverbintenis`                      | `Opleidingsresultaat`                               |
-| `Kwalificatie`                                                                               | *n.v.t. op dit niveau*                                                                                                                                                                  | `Opleidingsprogramma specificatie` | `Opleidingsprogramma aanbod`                                                                                               | `Opleidingsprogramma verbintenis`            | `Opleidingsprogramma resultaat`                     |
-| `Kerntaak`                                                                                   | **Collectie van collecties van leeruitkomsten** (werkproces heeft meerdere leeruitkomsten, een kerntaak heeft meerdere werkprocessen, dus is een lijst, met lijsten van leeruitkomsten. | `Onderwijseenheid specificatie`    | `Onderwijseenheid aanbod`                                                                                                  | `Onderwijseenheid verbintenis`               | `Onderwijseenheid resultaat`                        |
-| `Werkproces`                                                                                 | **Collectie leeruitkomsten** / collectie van een collectie van lesuitkomsten (bottom up)                                                                                                | `Leeronderdeel specificatie`       | **Leergelegenheid** = `LearningComponentOffering` waar `LearningComponent.consumer.okx.hierarchyLevel = learning_activity` | `Association` op `LearningComponentOffering` | `Association.state` (+ evt. resultaat-koppelvlak)   |
-| *n.v.t. kwalificatiekader*                                                                   | `Lesdoel / Lesuitkomst`                                                                                                                                                                 | `Lesspecificatie`                  | **Lesgelegenheid** = `LearningComponentOffering` waar `LearningComponent.consumer.okx.hierarchyLevel = lesson_assignment`  | `Association` op `LearningComponentOffering` | `Association.state` (+ evt. aanwezigheid/resultaat) |
-| Summatief: vaststelling Examencommissie t.o.v. leeruitkomsten / formatief: Instellingsbeleid | `Lesuitkomst`/set, `Leeruitkomst`/set, `Werkproces`/set, … (scope van toetsing)                                                                                                         | `Toetsonderdeel specificatie`      | `Toetsgelegenheid`                                                                                                         | `Toetsgelegenheid verbintenis`               | `Toetsresultaat / Aanwezigheid`                     |
-
-
-Voetnoot: OKx richt zich in dit profiel primair op het beschrijven van de werkproceslaag. De entiteit ‘leergelegenheid’ (een groep van lessen) leidt uiteindelijk tot individueel geroosterde lessen. Binnen deze geroosterde lessen kunnen op hun beurt weer individuele (of geneste) lessen zitten; in de toekomst moeten ook deze recursief volgens het hierboven beschreven datamodel gemodelleerd kunnen worden. Dit geldt eveneens voor nog diepere sublagen, zoals bijvoorbeeld een ‘lessenreeks’ of specifieke leeractiviteiten binnen een les. Hiermee erkennen we expliciet dat er onder een “leergelegenheid” of “lessenreeks” nog een hiërarchie van leeronderdelen kan bestaan. Dit heeft directe impact op de wijze waarop bottom-up en top-down aggregatie van opleidingen en programma’s moet worden ontworpen en ondersteund in het datamodel.
-
-**Cardinaliteit (normatief voor dit profiel):**
-
-- `Kerntaak (1..*) Werkproces`
-- `Werkrproces (1..*) Leeruitkomst` (summatief)
-- `Leeruitkomst (0..*) Onderwijseenheid` / `Leeronderdeel` / `Toetsonderdeel` (dezelfde LO kan over meerdere onderdelen verdeeld zijn; onderdelen kunnen meerdere LO’s dekken)
-- `Leeruitkomst (0..*) Lesuitkomst` (formatief; DAG/Boom-structuur)
+> **Verhuisd naar §3.2.** De inleidende uitleg van het vlaks-informatiemodel (zes informatie-objectfamilies, zes niveaus, MORA cross-walk en de canonieke verankeringstabel) is verhuisd naar **§3.2 "Begrippenkader — hoe beschrijven we onderwijs?"**. Reden: deze begrippentaal is leidend voor de scenario-uitwerkingen vanaf §3.3 / §3.4 en hoort daarom vóór de scenario's. Specifiek:
+>
+> - **§3.2.1** — Zes informatie-objectfamilies (was §12.0.1).
+> - **§3.2.2** — Zes niveaus en rij-discipline.
+> - **§3.2.3** — Stadia van onderwijsaanbod (specificatie → planbaar → geroosterd) — *nieuw, niet eerder in §12*.
+> - **§3.2.4** — Stadia van onderwijsverbintenis (aangemeld → ingeschreven → bezig → afgerond) — *nieuw*.
+> - **§3.2.5** — MORA cross-walk — *nieuw, vervangt de "alignment-zin" uit oude §12.0.1*.
+> - **§3.2.6** — Canonieke vlaks-tabel met cardinaliteit (was §12.0.2).
+>
+> De **technische ERD** is ongewijzigd hier blijven staan onder §12.0.3 — die hoort thuis in het data-modelhoofdstuk en is een verdiepende technische verankering van wat in §3.2.6 conceptueel staat.
 
 #### 12.0.3 Mermaid ERD — vlaks-informatiemodel
 
@@ -1559,7 +1887,7 @@ OEAPI-kern kent geen `RequestForOffering`; dit is een **signalering** (zie §9 n
 
 ## 12.5 Specificatie-catalogus (attribuutniveau) — *onderwijsontwerp vóór OEAPI*
 
-Doel van deze sectie is om **per onderwijsspecificatie** (zoals benoemd in §12.0.2) te beschrijven **welke informatie erin zit**, op **attribuutniveau**, zónder al in OEAPI-termen te spreken. We gebruiken de benoemde **informatieobjecten uit de praatplaat / ArchiMate-view “Informatiemodel Onderwijsontwerp”** als **gegevensgroepen** (dat is het startpunt), waarbinnen attributen vallen.
+Doel van deze sectie is om **per onderwijsspecificatie** (zoals benoemd in §3.2.6) te beschrijven **welke informatie erin zit**, op **attribuutniveau**, zónder al in OEAPI-termen te spreken. We gebruiken de benoemde **informatieobjecten uit de praatplaat / ArchiMate-view “Informatiemodel Onderwijsontwerp”** als **gegevensgroepen** (dat is het startpunt), waarbinnen attributen vallen.
 
 **Relatie met hoofdstuk 4 (leeruitkomsten):** hoofdstuk 4 definieert de semantiek van `Leeruitkomst` (summatief) en `Lesuitkomst` (formatief) en hun hiërarchie. In deze sectie leggen we vast **hoe** elke onderwijsspecificatie naar die leeruitkomsten verwijst: *targets* (dekt), *assesses* (toetst), of *supports* (didactische ondersteuning).
 
