@@ -278,121 +278,121 @@ Een student schrijft zich in voor een opleiding en volgt de reguliere route die 
 
 ```mermaid
 flowchart TB
-  subgraph O["Onderwijsontwerper (vooraf)"]
-    O0["Analyseren Kwalificatie kader (Kwalificatiedossier/CROHO/CREBO)"]
-    O1["Opleidingsspecificatie beschrijven (Grofmazig ontwerp) (nominaal programma + keuzedeelruimte)"]
-    O2["Onderwijsspecificaties instantiëren en koppelen aan opleidingspecificatie"]
-    O3["Opleidingsspecificatie met onderliggende onderwijsspecificaties publiceren"]
-    O4["Toetsvorm(en) beschrijven"]
+  subgraph onderwijsontwerperVooraf["Onderwijsontwerper (vooraf)"]
+    analyseerKwalificatiekader["Analyseren Kwalificatie kader (Kwalificatiedossier/CROHO/CREBO)"]
+    beschrijfOpleidingsspecificatie["Opleidingsspecificatie beschrijven (Grofmazig ontwerp) (nominaal programma + keuzedeelruimte)"]
+    instantieerOnderwijsspecificaties["Onderwijsspecificaties instantiëren en koppelen aan opleidingspecificatie"]
+    publiceerOpleidingsspecificatie["Opleidingsspecificatie met onderliggende onderwijsspecificaties publiceren"]
+    beschrijfToetsvormen["Toetsvorm(en) beschrijven"]
   end
 
-  subgraph OOW["Onderwijsontwikkelaar"]
-    O5["Onderwijsspecificaties beschrijven en detailleren (fijnmazige onderwijsontwikkeling)"]
-    O6["Leergelegenheid instantiëren,  beschrijven en detailleren"]
-    O7["Toetsspecificatie op basis van toetsvorm beschrijven"]
+  subgraph onderwijsontwikkelaar["Onderwijsontwikkelaar"]
+    detailleerOnderwijsspecificaties["Onderwijsspecificaties beschrijven en detailleren (fijnmazige onderwijsontwikkeling)"]
+    detailleerLeergelegenheid["Leergelegenheid instantiëren,  beschrijven en detailleren"]
+    beschrijfToetsspecificatie["Toetsspecificatie op basis van toetsvorm beschrijven"]
   end
 
-  subgraph PL["Planner (instelling)"]
-    PL1["Haalbaarheid bepalen (mensen en middelen, alle opleidingen)"]
-    PL2["Planbaar aanbod maken (periodes, capaciteit, groepen) (incl. examengelegenheid)"]
+  subgraph plannerInstelling["Planner (instelling)"]
+    bepaalHaalbaarheid["Haalbaarheid bepalen (mensen en middelen, alle opleidingen)"]
+    maakPlanbaarAanbod["Planbaar aanbod maken (periodes, capaciteit, groepen) (incl. examengelegenheid)"]
   end
 
-  subgraph S["Student"]
-    S1["Orienteren (op opleidingsspecificatie + gepland aanbod)"]
-    S2["Aanmelden op gepland aanbod"]
+  subgraph studentOrientatie["Student"]
+    orienteerOpGeplandAanbod["Orienteren (op opleidingsspecificatie + gepland aanbod)"]
+    meldAanOpGeplandAanbod["Aanmelden op gepland aanbod"]
   end
 
-  subgraph SLB["StudieLoopbaanBegeleider + Student"]
-    S3["Intake"]
-    S4["Opleiding en bijbehorend opleidingsprogramma kiezen"]
-    S5["Keuzedelen kiezen en vastleggen (persoonlijk opleidingsprogramma)"]
+  subgraph slbEnStudent["StudieLoopbaanBegeleider + Student"]
+    voerIntakeUit["Intake"]
+    kiesOpleidingEnProgramma["Opleiding en bijbehorend opleidingsprogramma kiezen"]
+    legKeuzedelenVast["Keuzedelen kiezen en vastleggen (persoonlijk opleidingsprogramma)"]
   end
 
-  subgraph R["Roosteraar"]
-    S7["Roosteren"]
-    E(("Geroosterd Aanbod"))
-    S19["Inschrijven student en docent op geroosterd aanbod"]
-    F(("Inschrijving student en docent op geroosterd onderwijsaanbod (waaronder examengelegenheid)"))
+  subgraph roosteraar["Roosteraar"]
+    roosterAanbod["Roosteren"]
+    geroosterdAanbod(("Geroosterd Aanbod - Leergelegenheid (reeks aan lessen)"))
+    schrijfInOpGeroosterdAanbod["Inschrijven student en docent op geroosterd aanbod"]
+    inschrijvingGeroosterdAanbod(("Inschrijving student en docent op geroosterd onderwijsaanbod (waaronder examengelegenheid)"))
   end
 
-  subgraph Do["Docent"]
-    S8["Onderwijs Uitvoeren"]
-    S21["Toetsgelegenheid plannen tijdens geroosterde lessen"]
-    S9["Toetsen"]
-    S22["Formatieve voortgang student bijhouden"]
+  subgraph docent["Docent"]
+    voerOnderwijsUit["Onderwijs Uitvoeren"]
+    planToetsgelegenheidTijdensLes["Toetsgelegenheid plannen tijdens geroosterde lessen"]
+    toetsStudent["Toetsen"]
+    houdFormatieveVoortgangBij["Formatieve voortgang student bijhouden"]
   end
 
-  subgraph Stu2["Student"]
-    S10["Onderwijs volgen"]
-    S11["Toetsgelegenheid volgen"]
-    S20["Examengelegenheid volgen"]
+  subgraph studentUitvoering["Student"]
+    volgOnderwijs["Onderwijs volgen"]
+    volgToetsgelegenheid["Toetsgelegenheid volgen"]
+    volgExamengelegenheid["Examengelegenheid volgen"]
   end
 
-  subgraph exm["Examinator"]
-    S23["Geplande examengelegenheid voorbereiden"]
-    S24["Examengelegenheid uitvoeren/begeleiden"]
+  subgraph examinator["Examinator"]
+    bereidExamengelegenheidVoor["Geplande examengelegenheid voorbereiden"]
+    voerExamengelegenheidUit["Examengelegenheid uitvoeren/begeleiden"]
   end
 
-  subgraph exmb["Examenbeoordelaar"]
-    S25["Door student gemaakt examen beoordelen"]
+  subgraph examenbeoordelaar["Examenbeoordelaar"]
+    beoordeelGemaaktExamen["Door student gemaakt examen beoordelen"]
   end
 
-  subgraph ex2["Examencomissie"]
-    S26["Examen beoordeling vaststellen"]
-    S27["Kwalificeren en Diplomeren"]
-    H(("Kwalificering en diplomering"))
+  subgraph examencommissieVaststelling["Examencomissie"]
+    stelExamenbeoordelingVast["Examen beoordeling vaststellen"]
+    kwalificeerEnDiplomeer["Kwalificeren en Diplomeren"]
+    kwalificeringEnDiplomering(("Kwalificering en diplomering"))
   end
 
-  subgraph ex["Examencommissie"]
-    A0(("Examenplan"))
-    A1(("Examenspecificatie(s)"))
-    A2(("Examen Instrument(en)"))
-    S12["Opstellen Examenplan en examen specificaties"]
-    S13["Bepalen benodigde examen instrumenten"]
-    S14["Bepalen Benodigd Examen materiaal"]
-    S15["Besluiten inkopen of construeren"]
-    S16["Inkopen Examen instrumenten"]
-    S17["Construeren Examen instrumenten"]
-    S18["Vaststellen examen specificatie en instrumenten"]
+  subgraph examencommissieOntwerp["Examencommissie"]
+    examenplan(("Examenplan"))
+    examenspecificaties(("Examenspecificatie(s)"))
+    examenInstrumenten(("Examen Instrument(en)"))
+    stelExamenplanEnSpecificatiesOp["Opstellen Examenplan en examen specificaties"]
+    bepaalBenodigdeExamenInstrumenten["Bepalen benodigde examen instrumenten"]
+    bepaalBenodigdExamenMateriaal["Bepalen Benodigd Examen materiaal"]
+    besluitInkopenOfConstrueren["Besluiten inkopen of construeren"]
+    koopExamenInstrumentenIn["Inkopen Examen instrumenten"]
+    construeerExamenInstrumenten["Construeren Examen instrumenten"]
+    stelExamenspecificatieEnInstrumentenVast["Vaststellen examen specificatie en instrumenten"]
   end
 
-  A(("Grofmazige Opleidings- / onderwijs- en examenspecificaties"))
-  B(("Planbaar Onderwijsaanbod (incl. examengelegenheid)"))
-  C(("Aanmelding voor Opleiding en gepland aanbod"))
-  D(("Inschrijving op geplande opleidings- en opleidingsprogramma aanbod"))
-  G(("Onderwijsresultaat"))
+  grofmazigeSpecificaties(("Grofmazige Opleidings- / onderwijs- en examenspecificaties"))
+  planbaarOnderwijsaanbod(("Planbaar Onderwijsaanbod (incl. examengelegenheid)"))
+  aanmeldingGeplandAanbod(("Aanmelding voor Opleiding en gepland aanbod"))
+  inschrijvingGeplandAanbod(("Inschrijving op geplande opleidings- en opleidingsprogramma aanbod"))
+  onderwijsresultaat(("Onderwijsresultaat"))
 
 
-  O0 --> S12 
-  S12 --> A0
-  S12 --> A1
-  A1 --> S13
-  S13 --> S14 --> S15
-  S15 --> S16
-  S15 --> S17
-  S16 --> A2
-  S17 --> A2
-  A2 --> S18
-  S18 --> A
+  analyseerKwalificatiekader --> stelExamenplanEnSpecificatiesOp
+  stelExamenplanEnSpecificatiesOp --> examenplan
+  stelExamenplanEnSpecificatiesOp --> examenspecificaties
+  examenspecificaties --> bepaalBenodigdeExamenInstrumenten
+  bepaalBenodigdeExamenInstrumenten --> bepaalBenodigdExamenMateriaal --> besluitInkopenOfConstrueren
+  besluitInkopenOfConstrueren --> koopExamenInstrumentenIn
+  besluitInkopenOfConstrueren --> construeerExamenInstrumenten
+  koopExamenInstrumentenIn --> examenInstrumenten
+  construeerExamenInstrumenten --> examenInstrumenten
+  examenInstrumenten --> stelExamenspecificatieEnInstrumentenVast
+  stelExamenspecificatieEnInstrumentenVast --> grofmazigeSpecificaties
 
-  A0 --> PL1
-  O0 --> O1 --> O2 --> O3 --> O4 --> A
-  A --> PL1 --> PL2 --> B
-  B --> O5 --> O6 --> O7 --> D
-  B --> S1 --> S2 --> C 
-  C --> S3 --> S4 --> S5 
-  S5 --> D --> S7 --> E --> S19 --> F 
-  F --> S8
-  S8 --> S21 --> S9 --> S22
-  F --> S10 --> S11 --> S20
-  S11 --> G
-  S9 --> G
-  PL2 --> S20 --> S24
-  PL2 --> S23 --> S24
-  S24 --> S25 --> S26 --> G --> S27 --> H
+  examenplan --> bepaalHaalbaarheid
+  analyseerKwalificatiekader --> beschrijfOpleidingsspecificatie --> instantieerOnderwijsspecificaties --> publiceerOpleidingsspecificatie --> beschrijfToetsvormen --> grofmazigeSpecificaties
+  grofmazigeSpecificaties --> bepaalHaalbaarheid --> maakPlanbaarAanbod --> planbaarOnderwijsaanbod
+  planbaarOnderwijsaanbod --> detailleerOnderwijsspecificaties --> detailleerLeergelegenheid --> beschrijfToetsspecificatie --> inschrijvingGeplandAanbod
+  planbaarOnderwijsaanbod --> orienteerOpGeplandAanbod --> meldAanOpGeplandAanbod --> aanmeldingGeplandAanbod
+  aanmeldingGeplandAanbod --> voerIntakeUit --> kiesOpleidingEnProgramma --> legKeuzedelenVast
+  legKeuzedelenVast --> inschrijvingGeplandAanbod --> roosterAanbod --> geroosterdAanbod --> schrijfInOpGeroosterdAanbod --> inschrijvingGeroosterdAanbod
+  inschrijvingGeroosterdAanbod --> voerOnderwijsUit
+  voerOnderwijsUit --> planToetsgelegenheidTijdensLes --> toetsStudent --> houdFormatieveVoortgangBij --> voerOnderwijsUit
+  inschrijvingGeroosterdAanbod --> volgOnderwijs --> volgToetsgelegenheid --> volgExamengelegenheid --> volgOnderwijs
+  volgToetsgelegenheid --> onderwijsresultaat
+  toetsStudent --> onderwijsresultaat
+  maakPlanbaarAanbod --> volgExamengelegenheid --> voerExamengelegenheidUit
+  maakPlanbaarAanbod --> bereidExamengelegenheidVoor --> voerExamengelegenheidUit
+  voerExamengelegenheidUit --> beoordeelGemaaktExamen --> stelExamenbeoordelingVast --> onderwijsresultaat --> kwalificeerEnDiplomeer --> kwalificeringEnDiplomering
 
   classDef freeze fill:#fff3cd,stroke:#b38f00,stroke-width:2px,color:#111;
-  class S4 freeze;
+  class kiesOpleidingEnProgramma freeze;
 ```
 
 ![BPMN — actoren en swimlanes (regulier)](../img/regulier-actoren-bpmn.svg)
