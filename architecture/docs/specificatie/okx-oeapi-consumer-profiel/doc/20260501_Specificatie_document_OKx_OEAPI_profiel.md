@@ -107,7 +107,7 @@ In deze paragraaf werken we de 9 leerroutes uit als **kaderstellende scenario’
 Npuls beschrijft de leerroutes primair vanuit het (eerste) studentenperspectief. Voor implementatie binnen het onderwijskundige en onderwijslogistieke domein is dat niet voldoende: om een leerroute te realiseren zijn ook onderwijskundige beschrijvingen, toetsing en onderwijslogistiek nodig. Daarom koppelen we per leerroute expliciet:
 
 - **Wat** wordt geleerd (kwalificatiekader / beoogde leeruitkomsten)
-- **Hoe** het wordt aangeleerd (leervorm, begeleiding, studielast BOT/OOT, onderwijsspecificaties op werkproces- en lesniveau)
+- **Hoe** het wordt aangeleerd: (leervorm, begeleiding, studielast i.d.v. Studie Belastingsuren (SBU) Begeleidde onderwijstijd (BOT), Onbegeleidde onderwijstijd (OOT) en Flexibele uren, onderwijsspecificaties op werkproces- en lesniveau)
 - **Hoe** toetsing en bewijsvoering werken (toets-/examenvorm en scope)
 
 Deze zaken referen aan **Onderwijsspecificatie**.
@@ -138,30 +138,137 @@ De 9 leerroutes zijn:
 #### 3.2.1.1 Wat betekent “regulier studeren”?
 
 ##### 3.2.1.1 De student beleving - De Student Journey
-Vanuit studentperspectief lijkt regulier studeren eenvoudig: een student orienteerd zich op basis van gepubliceerd onderwijsaanbod van instellingen. Ziet hij of zij iets wat passend voelt? Dan meld de student zich aan voor een door de instelling voorgeschreven en aangeboden opleiding. Daarna volgt de onderwijs intake. Zijn de verwachtingen en de vaardigheden van de student een match met de verwachtingen van de instelling? Dan wordt de student ingeschreven op de aangeboden opleiding. Waarna het de intentie voor de student is om de route die de instelling vooraf ontworpen heeft in zijn totaliteit te volgen.  Op keuzedelen na wordt de route niet individueel samengesteld, maar institutioneel voorbereid. Die route is voorspelbaar. Het onderwijs is al uitgewerkt als samenhangend programma, is al gepland voor aanvang van de opleiding (periodes, capaciteit, groepen) en daarna, wanneer het geplande moment dichterbij komt, wordt het onderwijs geroosterd (tijdsloten en toewijzingen).
+Vanuit studentperspectief lijkt regulier studeren eenvoudig: een student orienteerd zich op basis van gepubliceerd onderwijsaanbod van instellingen. Ziet hij of zij iets wat passend voelt? Dan meld de student zich aan voor een door de instelling voorgeschreven en aangeboden opleiding. Daarna volgt de onderwijs intake. Zijn de verwachtingen en de vaardigheden van de student een match met de verwachtingen van de instelling? Dan wordt de student ingeschreven op de aangeboden opleiding. Waarna het de intentie voor de student is om de route die de instelling vooraf ontworpen heeft in zijn totaliteit te volgen. Op keuzedelen na wordt de route niet individueel samengesteld, maar institutioneel voorbereid.
+
+##### Keuzedelen
+
+De keuzedelen worden van te voren als beschikbaar aanbod gepubliceerd en getoond aan de student tijdens zijn/haar aanbod oriëntatie. Daarna volgen 2 opties, afhankelijk van beleidskeuzes van de instelling:
+
+Naarmate de student zijn route aflegt, wordt de voortgang van de student gemonitord en de keuze van keuzedelen gefaciliteerd. Zodra de geplande **keuzedeelruimte** dichterbij komt, mag een student zijn/haar geprioriteerde keuzedeel-voorkeurslijst samenstellen. Hierin staat op nummer 1 het keuzedeel met de hoogste voorkeur van de student, en op een hoger volgnummer $x$ (waarbij $x>1$), de keuzedelen met lagere prioriteit.
+
+De student **meldt** zich vervolgens aan op een keuzedeel. Bij deze aanmelding legt de student *per keuzedeelprioriteit* de voorkeur(s) voor de periode in zijn of haar **onderwijsprogramma** vast.
+
+**Voorbeeld keuzedeel prioriteitenlijst:**
+
+| Voorkeur  | Keuzedeel                            | Onderwijsperiode   | Onderwijslocatie         |
+|-----------|--------------------------------------|--------------------|--------------------------|
+| 1         | Ondernemerschap in de zorg           | Semester 2         | Locatie A                |
+| 2         | Duurzame technologie                 | Semester 1         | Locatie B                |
+| 3         | Digitale vaardigheden                | Semester 2 of 3    | Locatie A of Locatie C   |
+
+
+In deze lijst geeft de student aan dat 'Ondernemerschap in de zorg' het meest gewenste keuzedeel is, gevolgd door 'Duurzame technologie', enzovoorts. Per keuzedeel kan optioneel ook de gewenste volgorde van periodes aangegeven worden, zodat de planning hiermee rekening kan houden. De **onderwijslocatie** kan ook een praktijklocatie, *hub* of private- of publieke instelling zijn.
+
+Wanneer de student **niet** het gewenste keuzedeel op de voorkeurs **onderwijslocatie** en/of voorkeurs **onderwijsperiode**, dan **moet** de student op een andere onderwijslocatie kunnen oriënteren op meer passende keuzedelen.
+
+Als er geen passend aanbod (combinatie keuzedeel en/of onderwijsperiode en/of onderwijslocatie) is voor de student, dan blijft de geplande keuzedeelruimte oningevuld.
+
+In essentie betekent dit dat de student **studievertraging** oploopt, aangezien afgeronde keuzedelen onderdeel zijn van het kwalificatiekader binnen het MBO.
+
+Wanneer een passende combinatie van keuzedeel en/of onderwijsperiode en/of onderwijslocatie, voor de student gevonden kan worden. Wordt de keuzedeel aanmelding, omgezet in een inschrijving. Aan een keuzedeel zijn kosten verbonden. Hierbij wordt een contractuele **betalingsverplichting** aangegaan tussen de onderwijsinstelling en de student. Schrijft de student zich uit voor het keuzedeel, dan blijft de betalingsvertplichting voor de student in stand. De kosten van een keuzedeel zijn vaak gerelateerd aan voor de student benodigde leermiddelen voor deelname aan het keuzedeel.
+
+Er kan ten alle tijden maar één keuzedeel gevolgd worden binnen geplande keuzedeelruimte, en daarmee dus precies één actieve inschrijving bestaan voor keuzedelen.
+
+Inactieve inschrijvingen, zoals geannuleerd keuzedeel aanbod van een keuzedeel (dankzij de aanbieder), zijn wel mogelijk.
+
+##### Wanneer kiest een student keuzedelen?
+
+De **aanmelding** voor keuzedelen wordt vast gelegd naarmate de in het **onderwijsprogramma** geplande *keuzdeelruimte* dichterbij komt. De keuze van de student wordt uiterlijk een vast gestelde periode $t$ van te voren vastgelegd.
+
+OF
+
+- De **aanmelding** voor de keuzedelen van de student worden tijdens de onderwijsintake vast gelegd en **niet** meer gewijzigd.
+
+OF
+
+- De **aanmelding** voor de keuzedelen van de student worden tijdens de onderwijsintake vast gelegd als voorlopige keuze, maar naarmate de ontwikkeling van de student vordert, gewijzigd.
+
+Samenvattend:
+De door Jochem te volgen route, zoals vastgelegd in het **onderwijsprogramma** is voorspelbaar. Het onderwijs is al uitgewerkt als samenhangend programma, is al gepland voor aanvang van de opleiding (periodes, capaciteit, groepen) en daarna, wanneer het geplande moment dichterbij komt, wordt het onderwijs geroosterd (tijdsloten en toewijzingen). 
 
 *Figuur - Student Journey Regulier - Proces studentbeleving regulier studeren*
 
+**Leeswijzer diagram.** Rechthoeken zijn **processtappen**; ruiten zijn **beslismomenten**; **gele ronde bollen** zijn vastgelegde **informatie-objecten** op het moment dat een **aanmelding** formeel is vastgelegd of is omgezet naar een **inschrijving** (contractuele plaatsing). Voor keuzedelen geldt: maximaal **één actieve inschrijving** per geplande **keuzedeelruimte** in het **onderwijsprogramma**. Bij instellingsbeleid *voorlopige keuze bij intake* (stap 8e) volgt gate **8f**: zolang de prioritering niet meer past, heroriënteert de student en past hij de **keuzedeel-aanmelding** aan (gele bol wordt bijgewerkt) voordat het proces via gate 9 verdergaat.
+
 ```mermaid
-flowchart LR
-  gepubliceerdAanbod(("Gepubliceerd onderwijsaanbod"))
-  orienteren["1. Orienteren op passend aanbod"]
-  aanmelden["2. Aanmelden voor opleiding"]
+flowchart TB
+  subgraph publicatie["Aanbod zichtbaar"]
+    gepubliceerdAanbod(("Gepubliceerd onderwijsaanbod"))
+    gepubliceerdKeuzedeelAanbod(("Gepubliceerd keuzedeelaanbod"))
+  end
+
+  orienteren["1. Oriënteren op opleiding en keuzedeelaanbod"]
+  aanmeldenOpleiding["2. Aanmelden voor opleiding"]
+  aanmeldingOpleiding(("Aanmelding opleiding"))
   intake["3. Onderwijsintake"]
-  matchBesluit{"4. Match tussen student en opleiding?"}
-  inschrijven["5. Inschrijven op opleiding en programma"]
-  roosterOntvangen["6. Rooster en leeromgeving ontvangen"]
-  onderwijsVolgen["7. Onderwijs volgen"]
-  voortgang["8. Voortgang en begeleiding"]
-  toetsen["9. Toetsen en examengelegenheden volgen"]
-  kwalificeren["10. Kwalificeren en diplomeren"]
+  matchOpleiding{"4. Match student en opleiding?"}
+  inschrijvingOpleiding(("Inschrijving opleiding en opleidingsprogramma"))
   geenMatch["Geen inschrijving / heroriëntatie"]
 
-  gepubliceerdAanbod --> orienteren --> aanmelden --> intake --> matchBesluit
-  matchBesluit -->|Ja| inschrijven --> roosterOntvangen --> onderwijsVolgen --> voortgang --> toetsen --> kwalificeren
-  matchBesluit -->|Nee| geenMatch
-  voortgang -.kan leiden tot begeleiding of bijsturing.- onderwijsVolgen
+  roosterOntvangen["5. Rooster en leeromgeving ontvangen"]
+  onderwijsVolgen["6. Onderwijs volgen"]
+  voortgang["7. Voortgang en begeleiding"]
+
+  subgraph keuzedeelProces["Keuzedeel: aanmelding en inschrijving"]
+    momentKeuzedeel{"8. Instellingsbeleid: wanneer keuzedeel-aanmelding?"}
+    keuzedeelruimteNadert["8a. Keuzedeelruimte in onderwijsprogramma nadert"]
+    samenstellenVoorkeurslijst["8b. Geprioriteerde keuzedeel-voorkeurslijst samenstellen"]
+    aanmeldenKeuzedeel["8c. Aanmelden keuzedeel (per prioriteit: periode en onderwijslocatie)"]
+    aanmeldingKeuzedeelIntakeVast["8d. Aanmelding keuzedeel vastleggen bij intake (definitief)"]
+    aanmeldingKeuzedeelIntakeVoorlopig["8e. Aanmelding keuzedeel vastleggen bij intake (voorlopig)"]
+    prioriteringNogGoed{"8f. Staat deze keuzedeel-prioritering nog goed?"}
+    herprioriterenKeuzedeel["8f-a. Heroriënteren en keuzedeel-aanmelding aanpassen"]
+    aanmeldingKeuzedeel(("Aanmelding keuzedeel"))
+    voorkeurHaalbaar{"9. Gewenst keuzedeel op voorkeurs-onderwijsperiode en -locatie?"}
+    herorienterenLocatie["9a. Oriënteren op keuzedeelaanbod op andere onderwijslocatie"]
+    passendAanbod{"10. Passende combinatie keuzedeel, periode en locatie?"}
+    keuzedeelruimteLeeg["10a. Keuzedeelruimte oningevuld (studievertraging)"]
+    inschrijvingKeuzedeel(("Inschrijving keuzedeel incl. betalingsverplichting"))
+  end
+
+  toetsen["11. Toetsen en examengelegenheden volgen"]
+  kwalificatieAfgerond{"11a. Kwalificatiekader-onderdeel voldoende afgerond?"}
+  kwalificeren["12. Kwalificeren en diplomeren"]
+
+  gepubliceerdAanbod --> orienteren
+  gepubliceerdKeuzedeelAanbod --> orienteren
+  orienteren --> aanmeldenOpleiding --> aanmeldingOpleiding --> intake --> matchOpleiding
+  matchOpleiding -->|Ja| inschrijvingOpleiding
+  matchOpleiding -->|Nee| geenMatch
+  inschrijvingOpleiding --> roosterOntvangen --> onderwijsVolgen --> voortgang
+
+  voortgang --> momentKeuzedeel
+  momentKeuzedeel -->|Uiterlijk periode t vóór keuzedeelruimte| keuzedeelruimteNadert
+  keuzedeelruimteNadert --> samenstellenVoorkeurslijst --> aanmeldenKeuzedeel --> aanmeldingKeuzedeel
+  momentKeuzedeel -->|Bij intake, niet wijzigbaar| aanmeldingKeuzedeelIntakeVast --> aanmeldingKeuzedeel
+  momentKeuzedeel -->|Bij intake, voorlopig| aanmeldingKeuzedeelIntakeVoorlopig --> prioriteringNogGoed
+  prioriteringNogGoed -->|Ja| aanmeldingKeuzedeel
+  prioriteringNogGoed -->|Nee| herprioriterenKeuzedeel --> aanmeldingKeuzedeel --> prioriteringNogGoed
+
+  aanmeldingKeuzedeel --> voorkeurHaalbaar
+  voorkeurHaalbaar -->|Nee| herorienterenLocatie --> passendAanbod
+  voorkeurHaalbaar -->|Ja| passendAanbod
+  passendAanbod -->|Nee| keuzedeelruimteLeeg
+  passendAanbod -->|Ja| inschrijvingKeuzedeel
+  keuzedeelruimteLeeg --> voortgang
+
+  voortgang --> toetsen --> kwalificatieAfgerond
+  kwalificatieAfgerond -->|Ja| kwalificeren
+  kwalificatieAfgerond -->|Nee| onderwijsVolgen
+  onderwijsVolgen --> voortgang
+  voortgang -.begeleiding of bijsturing.- onderwijsVolgen
+  inschrijvingKeuzedeel --> onderwijsVolgen
+
+  classDef infoObject fill:#fffbe6,stroke:#efd600,stroke-width:2px,color:#333;
+  class aanmeldingOpleiding,inschrijvingOpleiding,aanmeldingKeuzedeel,inschrijvingKeuzedeel,gepubliceerdAanbod,gepubliceerdKeuzedeelAanbod infoObject;
 ```
+
+**Wanneer wordt aanmelding inschrijving?**
+
+| Moment | Van (aanmelding) | Naar (inschrijving) | Voorwaarde |
+| --- | --- | --- | --- |
+| **Opleiding** | `Aanmelding opleiding` (geel) na stap 2 | `Inschrijving opleiding en opleidingsprogramma` (geel) na positieve intake-match | Match tussen student en instelling op opleiding/programma |
+| **Keuzedeel** | `Aanmelding keuzedeel` (geel) na vastlegging voorkeuren | `Inschrijving keuzedeel` (geel) na gate 10 | Passende combinatie van keuzedeel, **onderwijsperiode** en **onderwijslocatie**; daarna contractuele **betalingsverplichting**. Bij geen passend aanbod blijft de **keuzedeelruimte** leeg (mogelijke studievertraging). Maximaal **één actieve** keuzedeel-inschrijving per keuzedeelruimte; geannuleerd aanbod kan leiden tot **inactieve** inschrijving. |
 
 ##### 3.3.1.2 De Instellingsbeleving - De Instellingsjourney
 
@@ -198,9 +305,11 @@ flowchart TB
     docenten["Docenten"]
     onderwijsontwerpers["Onderwijsontwerpers"]
     onderwijsontwikkelaars["Onderwijsontwikkelaars"]
+    onderwijslogistiekExpertTeam["Onderwijslogistiek expert (per onderwijsteam)"]
   end
 
-  subgraph teamOnderwijslogistiek["Team Onderwijslogistiek"]
+  subgraph strategischOnderwijsLogistiekTeam["Strategische bedrijfsvoering"]
+    onderwijslogistiekExpertCentraal["Onderwijslogistiek expert (centraal)"]
     planners["Planners"]
     roosteraars["Roosteraars"]
   end
@@ -223,7 +332,7 @@ flowchart TB
   end
 
   instelling --> onderwijsdomeinen
-  instelling --> teamOnderwijslogistiek
+  instelling --> strategischOnderwijsLogistiekTeam
   instelling --> teamOnderwijsbegeleiding
   instelling --> teamOnderwijsondersteuning
   instelling --> examencommissie
@@ -243,8 +352,12 @@ flowchart TB
   teamleider --> docenten
   teamleider --> onderwijsontwerpers
   teamleider --> onderwijsontwikkelaars
+  teamleider --> onderwijslogistiekExpertTeam
 
+  onderwijslogistiekExpertCentraal --> planners
+  onderwijslogistiekExpertCentraal --> roosteraars
   planners --- roosteraars
+  onderwijslogistiekExpertTeam -.afstemming met centrale logistiek.-> onderwijslogistiekExpertCentraal
   coaches --- slbers
   bpvBegeleiders --- examinatoren
   examinatoren --- surveillanten
@@ -276,7 +389,7 @@ Procesketen 6, onderwijsontwikkeling:
 
 
 **De Instellingsjourney**
-De MORA beschrijft dus betrokken procesketens, maar het complete proces vergt integratie van de losse ketens. De integratie van deze procesketens in de context van verschillende  **Student Journey**, heet  binnen deze specificatie de **"Instelling Journeys"**.
+De MORA beschrijft dus betrokken procesketens, maar het complete proces vergt integratie van de losse ketens. De integratie van deze procesketens in de context van verschillende  **Student Journeys**, heet  binnen deze specificatie de **"Instellings Journey"**.
 
 In verhalende vorm ziet die instellingsjourney er als volgt uit. Wanneer een instelling besloten heeft vanuit strategische kaders om een opleiding te geven, gaat de instelling over tot onderwijsontwerp. Een instelling maakt het volgen van een reguliere opleiding mogelijk door het kwalificatiekader te analyseren en te vertalen naar een grofmazig onderwijs- en examenontwerp. Dat ontwerp wordt gepubliceerd en door planning omgezet naar planbaar aanbod: er wordt bepaald of het onderwijs met beschikbare mensen en middelen uitvoerbaar is, in welke perioden het kan plaatsvinden, voor hoeveel studenten, en onder welke condities. Pas daarna kan de student zich op dat aanbod oriënteren, zich aanmelden, intake doorlopen en op een opleiding en opleidingsprogramma geplaatst worden.
 
@@ -290,7 +403,7 @@ Vanaf dat moment verschuift de aandacht van ontwerp naar uitvoering. De instelli
 5. **Onderwijs uitvoeren en voortgang begeleiden**: de student volgt het geroosterde onderwijs, de docent verzorgt het onderwijs, plant toetsmomenten in de uitvoering en houdt de formatieve voortgang bij.
 6. **Examineren, vaststellen en diplomeren**: examengelegenheden worden voorbereid en uitgevoerd, examens beoordeeld, resultaten vastgesteld door de examencommissie en uiteindelijk vertaald naar kwalificering en diplomering.
 
-Onderstaand figuur is een *conceptuele* model weergave van de door OKx geobserveerde IST situatie van dit proces.
+Onderstaand figuur is een *conceptuele* model weergave van de door OKx geobserveerde IST situatie van dit proces. **Gele ronde bollen** zijn informatie-objecten (o.a. **aanmelding** en **inschrijving**); keuzedeel-aanmelding wordt **inschrijving keuzedeel** zodra een passende combinatie van keuzedeel, onderwijsperiode en onderwijslocatie is gevonden (zie §3.2.1.1).
 
 ```mermaid
 flowchart TB
@@ -315,14 +428,21 @@ flowchart TB
   end
 
   subgraph studentOrientatie["Student"]
-    orienteerOpGeplandAanbod["Orienteren (op opleidingsspecificatie + gepland aanbod)"]
+    orienteerOpGeplandAanbod["Orienteren (op opleidingsspecificatie + gepland aanbod + keuzedeelaanbod)"]
     meldAanOpGeplandAanbod["Aanmelden op gepland aanbod"]
   end
 
   subgraph slbEnStudent["StudieLoopbaanBegeleider + Student"]
     voerIntakeUit["Intake"]
-    kiesOpleidingEnProgramma["Opleiding en bijbehorend opleidingsprogramma kiezen"]
-    legKeuzedelenVast["Keuzedelen kiezen en vastleggen (persoonlijk opleidingsprogramma)"]
+    kiesOpleidingEnProgramma["Opleiding en opleidingsprogramma kiezen"]
+    momentKeuzedeelBeleid{"Instellingsbeleid: moment keuzedeel-aanmelding?"}
+    legKeuzedeelVoorkeurslijst["Geprioriteerde keuzedeel-voorkeurslijst samenstellen"]
+    meldAanKeuzedeel["Aanmelden keuzedeel (periode en onderwijslocatie per prioriteit)"]
+    legKeuzedeelAanmeldingIntake["Keuzedeel-aanmelding bij intake vastleggen (definitief)"]
+    legKeuzedeelAanmeldingVoorlopig["Keuzedeel-aanmelding bij intake vastleggen (voorlopig)"]
+    aanmeldingKeuzedeel(("Aanmelding keuzedeel"))
+    passendKeuzedeelAanbod{"Passende combinatie keuzedeel, periode en locatie?"}
+    inschrijvingKeuzedeel(("Inschrijving keuzedeel"))
   end
 
   subgraph roosteraar["Roosteraar"]
@@ -397,8 +517,15 @@ flowchart TB
   grofmazigeSpecificaties --> bepaalHaalbaarheid --> maakPlanbaarAanbod --> planbaarOnderwijsaanbod
   planbaarOnderwijsaanbod --> detailleerOnderwijsspecificaties --> detailleerLeergelegenheid --> beschrijfToetsspecificatie --> inschrijvingGeplandAanbod
   planbaarOnderwijsaanbod --> orienteerOpGeplandAanbod --> meldAanOpGeplandAanbod --> aanmeldingGeplandAanbod
-  aanmeldingGeplandAanbod --> voerIntakeUit --> kiesOpleidingEnProgramma --> legKeuzedelenVast
-  legKeuzedelenVast --> inschrijvingGeplandAanbod --> roosterAanbod --> geroosterdAanbod --> schrijfInOpGeroosterdAanbod --> inschrijvingGeroosterdAanbod
+  aanmeldingGeplandAanbod --> voerIntakeUit --> kiesOpleidingEnProgramma --> momentKeuzedeelBeleid
+  momentKeuzedeelBeleid -->|Keuzedeelruimte nadert| legKeuzedeelVoorkeurslijst --> meldAanKeuzedeel --> aanmeldingKeuzedeel
+  momentKeuzedeelBeleid -->|Bij intake, definitief| legKeuzedeelAanmeldingIntake --> aanmeldingKeuzedeel
+  momentKeuzedeelBeleid -->|Bij intake, voorlopig| legKeuzedeelAanmeldingVoorlopig --> aanmeldingKeuzedeel
+  aanmeldingKeuzedeel --> passendKeuzedeelAanbod
+  passendKeuzedeelAanbod -->|Ja| inschrijvingKeuzedeel --> inschrijvingGeplandAanbod
+  passendKeuzedeelAanbod -->|Nee: keuzedeelruimte oningevuld| inschrijvingGeplandAanbod
+  kiesOpleidingEnProgramma --> inschrijvingGeplandAanbod
+  inschrijvingGeplandAanbod --> roosterAanbod --> geroosterdAanbod --> schrijfInOpGeroosterdAanbod --> inschrijvingGeroosterdAanbod
   inschrijvingGeroosterdAanbod --> voerOnderwijsUit
   voerOnderwijsUit --> planToetsgelegenheidTijdensLes --> toetsStudent --> houdFormatieveVoortgangBij --> voerOnderwijsUit
   inschrijvingGeroosterdAanbod --> volgOnderwijs --> volgToetsgelegenheid --> volgExamengelegenheid --> volgOnderwijs
@@ -416,7 +543,7 @@ flowchart TB
   class beschrijfToetsvormen,bescrijfToetsspecificatie,planToetsgelegenheidTijdensLes,toetsStudent,volgToetsgelegenheid,volgExamengelegenheid,bereidExamengelegenheidVoor,voerExamengelegenheidUit,beoordeelGemaaktExamen,stelExamenbeoordelingVast,examenplan,examenspecificaties,examenInstrumenten,stelExamenplanEnSpecificatiesOp,bepaalBenodigdeExamenInstrumenten,bepaalBenodigdExamenMateriaal,besluitInkopenOfConstrueren,koopExamenInstrumentenIn,construeerExamenInstrumenten,stelExamenspecificatieEnInstrumentenVast,kwalificeerEnDiplomeer,kwalificeringEnDiplomering purpleStep;
 
   %% Alle bollen geel
-  class kwalificatieKader,geroosterdAanbod,inschrijvingGeroosterdAanbod,grofmazigeSpecificaties,planbaarOnderwijsaanbod,aanmeldingGeplandAanbod,inschrijvingGeplandAanbod,onderwijsresultaat,examenplan,examenspecificaties,examenInstrumenten,kwalificeringEnDiplomering yellowNode;
+  class kwalificatieKader,geroosterdAanbod,inschrijvingGeroosterdAanbod,grofmazigeSpecificaties,planbaarOnderwijsaanbod,aanmeldingGeplandAanbod,inschrijvingGeplandAanbod,aanmeldingKeuzedeel,inschrijvingKeuzedeel,onderwijsresultaat,examenplan,examenspecificaties,examenInstrumenten,kwalificeringEnDiplomering yellowNode;
 
   %% Ook stappen die instantiëren als bol worden getekend zoals geroosterdAanbod
   %% Mogelijk andere bollen buiten de subgraphs
@@ -603,6 +730,44 @@ flowchart TB
   verify -->|conflicten| rHitl
   verify --> pubOC
 ```
+
+###### 3.3.1.2.3.6 Persoon, groep en constraint — informatie-overzicht
+
+Het procesdiagram in §3.3.1.2.3.5 groepeert keteninvoer in vier blokken. Onderstaande **informatietabel** zegt per blok **welk inzicht** nodig is in **personen** (`Persoon`: student of medewerker), **groepen** (clusters, cohorten, kandidatenlijsten, pools) en **constraints** (harde en zachte grenzen) voordat een CSP-model betrouwbaar kan draaien.
+
+| **Bron-blok (diagram §3.3.1.2.3.5)** | **Primair inzicht** | **`Persoon` (student / medewerker)** | **Groep / cluster / populatie** | **Constraintdimensie (voorbeelden)** |
+| --- | --- | --- | --- | --- |
+| **OCspec** (onderwijs- en toetsspecificatie) | welke leer- en toetsmomenten bestaan en in welke volgorde of samenhang ze georganiseerd worden | welke uitvoerende rollen (docent, afnemer, …) inhoudelijk nodig zijn; welke voorzieningen per moment | welke cohorten dezelfde route of parallel delen | harde: examen- en opleidingsregels, verplichte contacttijd, volgorde-eisen; zacht: didactische spreiding |
+| **groep** (inschrijvingen, verbintenissen) | *wie* aanbod volgt en met welke omvang en samenstelling | student-`Persoon` met status, begeleidings- of examenflags | klas / cohort, werkgroep, kandidatenlijst; geaggregeerde **skill-vraag** van de populatie | harde: max. groepsgrootte, lock op cohort, minimale bezetting; zacht: homogene werkgroep |
+| **cap** (mensen, middelen, ruimtes) | *waarmee* en *waar* uitvoering mogelijk is binnen fysieke en contractuele grenzen | medewerker-`Persoon` met contract, bevoegdheid, roosterbare uren, reistijd | team-, docenten- of surveillant-pool; piek rond examens | harde: dubbele docent/lokaal verboden, capaciteit zaal/middel; zacht: voorkeurslokaal, workload-spreiding |
+| **beleid** (examenregels, didactiek, voorkeuren) | *welke randvoorwaarden* buiten het “puur inhoudelijke” model vallen of als kosten/weging in het CSP gaan | individuele ontheffingen, voorkeuren begeleider; beleidsrollen | instroom- en kwaliteitsdoelen, inclusie-afspraken, werkveldafspraken | harde: wettelijke en examencommissie-kaders; zacht: strategische spreiding, voorkeurteams |
+
+**Denkraam: persoon, rollen en skills.** Naast de onderwijsdata die elders in dit document wordt gemodelleerd, is voor **planning en roostering** een **complementair denkpatroon** nodig dat direct met **mensen** en **wat zij kunnen en willen** werkt. In dat denkpatroon is elke **`Persoon`** — **student** of **medewerker** — iemand met **skills**: een samenstel van **vaardigheden**, **kennis** en **inzichten** (inclusief formele bevoegdheden waar dat speelt). Bij **instroom** heeft een student typisch al een skill-profiel en een **leerwens**: welke skills hij of zij verder wil **ontwikkelen** binnen de gekozen **leerroute** en de scenario's die daarbij horen. Een **medewerker** heeft evenzo een skill-profiel, uitgedrukt via **functie en titel** (docent, SLB'er, praktijkbegeleider, examinator, …): die titels zijn **koppelvlakken** naar HR en contract, maar **inhoudelijk** gaat het om **welk skill-pakket** iemand kan **aanbieden** in onderwijs, begeleiding, praktijk of examen.
+
+**Skill-vraag en skill-aanbod.** Groepen zijn in dit denkpatroon **clusters van personen** die qua skill-vector op elkaar lijken of dezelfde **aan te bieden** onderwijs- of begeleidingsbehoefte delen. Tegelijk zoekt de instelling naar het **snijpunt** van (a) **skill-vraag** — wat moet deze populatie **kunnen** na het traject — en (b) **skill-aanbod** — welke medewerkers en welke leer- en praktijkomgeving kunnen dat **leveren**. Dat snijpunt is direct te vertalen naar **harde en zachte constraints** in een CSP: harde grenzen (bevoegdheid ontbreekt, geen docent beschikbaar, zaal te klein) en zachte voorkeuren (vaste teamdag, voorkeurdocent, spreiding SLB).
+
+**Reële wereld en strategie.** Daarbovenop liggen constraints die niet “in het hoofd” van één persoon zitten maar de **realiteit van de instelling** vormen: **beperkte tijd** (roosteruren, openingstijden, BPV-vensters), **beperkt geld en capaciteit** (FTE, vervanging, materiaal, collegegeld- of bekostigingskaders), **facilitaire grenzen** (aantal werkplaatsen, labtypes, reisafstand), en **strategische doelen** (doorstroom, inclusie, werkveldafspraken). Die vlakken bepalen **wat er überhaupt in het model mag** voordat een planner of roosteraar een CSP draait.
+
+**Planning en roostering.** Binnen die totale constraintset voeren **planning** en **roostering** het zoeken naar haalbare toewijzingen uit (CSP: §3.3.1.2.3.1; complexiteit en beheer: §3.3.1.2.3.3–§3.3.1.2.3.4; procesdiagram: §3.3.1.2.3.5): variabelen en domeinen komen uit **tijd en ruimte**, **skill-match**, en **populatie-clusters**; de **human-in-the-loop** stappen wegen zachte constraints en beleidsafwegingen. Het procesdiagram in §3.3.1.2.3.5 blijft geldig: *groep* leest hier vooral als **skill-groepering en inschrijf-/cohortrealiteit**, *cap* als **tijd/middelen/facilitair**, *beleid* als **strategie en regels**.
+
+| **Hoofdtype `Persoon`** | **Rol of functietitel (voorbeelden; koppelbaar aan HR)** | **Skills-profiel** (vaardigheden, kennis, inzichten; bevoegdheden waar van toepassing) | **Als constraint geformuleerd** (skill-vraag / skill-aanbod; typisch plan vs rooster) |
+| --- | --- | --- | --- |
+| **Student** | student / deelnemer aan programma | **Startsituatie** bij instroom; **leerdoelen** als gewenste skill-ontwikkeling binnen leerroute en scenario | **Skill-vraag:** welke skills moeten in het traject **worden opgebouwd**; groeperen in cohort of werkgroep met vergelijkbare vraagvector; harde grenzen uit examen- en opleidingsregels (**Plan**); max. belasting per dag/week (**Rooster**) |
+| **Medewerker** | docent (theorie/praktijk), teamcoördinator | vakinhoud, didactiek, toets- en beoordelingsbekwaamheid | **Skill-aanbod:** welke onderwijs- en toetsmomenten kunnen worden bemand; matching met gevraagde leeruitkomst-skills; **beschikbaarheid** en max. uren (**Rooster**); teamspreiding (**Plan**, zacht) |
+| **Medewerker** | SLB'er, studiecoach | coachende vaardigheden, route-inzicht, signalering, verwijzen | **Skill-aanbod:** begeleidingscapaciteit (caseload); **zacht:** voorkeurskoppeling met studentgroep; tijdvensters naast lesrooster (**Rooster**) |
+| **Medewerker** | praktijkbegeleider, BPV-begeleider | werkveldkennis, praktijkassessment, veiligheid, werkpleknorm | **Skill-aanbod:** uren en trips naar werkveld; **reële wereld:** reis- en clusterafspraken met bedrijven; beperkte parallelle BPV-plaatsen (**Plan** + **Rooster**) |
+| **Medewerker** | examinator, surveillant, afnemer, tweede corrector | examenbekwaamheid, integriteit, correctie-inzicht | **Skill-aanbod:** piek rond examenperiodes; verhouding surveillanten/kandidaten; geen belangenverstrengeling (**Rooster**, deels harde regel) |
+| **Medewerker** | onderwijsondersteuning, facilitair, ICT-ondersteuning | operationele skills (materiaal, digitaal, logistiek) | **Skill-aanbod:** beschikbaarheid voor opbouw en ondersteuning; koppeling aan zaal- en middelen-constraints (**Plan** / **Rooster**) |
+| **Cluster (aggregaat)** | cohort, werkgroep, team, “pool” | **geaggregeerde** skill-vraag of -aanbod over meerdere personen | **Constraint:** doorsnede van populatie-vraag en beschikbaar aanbod; klassen- of werkgroepsgrootte; minimale teamdekking (**Plan**); conflictvrije slottoewijzing (**Rooster**) |
+
+| **Reële-wereldvlak** | **Voorbeelden van constraints** | **Meest zichtbaar in** |
+| --- | --- | --- |
+| **Tijd en beschikbaarheid** | lesdagen, vakanties, examenweken, cao-uren, nacht- of weekendbeperkingen, reistijd | **Rooster** (slots); kaders en blokken in **Plan** |
+| **Middelen, geld en capaciteit** | FTE-plafonds, vervangingsbudget, materiaal- en licentiebudget, onderhoudsvensters werkplaats | vooral **Plan**; harde grenzen in **Rooster** zodra concreet |
+| **Facilitair en materieel** | zaaltypes, werkplaats-capaciteit, veiligheid, AV, inventaris per vak | **Plan** (wat is organiseerbaar) en **Rooster** (concrete toewijzing) |
+| **Strategie en beleid** | instroomdoelen, inclusie, werkveldafspraken, kwaliteitsagenda, examenregeling | **beleid**-input in het diagram; vertaalt naar zachte en harde constraints in beide fasen |
+
+**Leeswijzer.** De eerste tabel koppelt **diagramblokken** aan **informatie-inzicht** over personen, groepen en constraints. De verdiepingstabel met rollen en skills beschrijft **hoe planners en roosteraars redeneren**; zij **vervangt geen** gegevensmodel uit §3.3.1.2.5. Technische koppeling naar registers: **student-`Persoon`** en inschrijfcontext typisch in **KRS**; **medewerker-`Persoon`**, contract en basisrol in **HR / identiteit**; skills als **uitbreiding op het profiel** in die bronnen of in een **competentie- / skillservice** — zolang er **één waarheid per feit** blijft.
 
 ###### 3.3.1.2.6 Betrokken systemen bij gegevensuitwisseling
 
@@ -808,6 +973,8 @@ sequenceDiagram
 SOLL situatie:
 Delta: leeruitkomsten sectoroversteigend gestandaardiseerd. Basis voor alle onderwijsspecificaties.
 
+`TO-DO: Rapport van Hans Kok op ontsluiten onderwijs aanbod rapportage benoemen en meenemen en principes mappen op ons document en voorgestelde aanpak`. 
+
 ```mermaid
 flowchart TB
   subgraph onderwijsontwerperVooraf["Onderwijsontwerper (vooraf)"]
@@ -833,14 +1000,21 @@ flowchart TB
   end
 
   subgraph studentOrientatie["Student"]
-    orienteerOpGeplandAanbod["Orienteren (op opleidingsspecificatie + gepland aanbod)"]
+    orienteerOpGeplandAanbod["Orienteren (op opleidingsspecificatie + gepland aanbod + keuzedeelaanbod)"]
     meldAanOpGeplandAanbod["Aanmelden op gepland aanbod"]
   end
 
   subgraph slbEnStudent["StudieLoopbaanBegeleider + Student"]
     voerIntakeUit["Intake"]
-    kiesOpleidingEnProgramma["Opleiding en bijbehorend opleidingsprogramma kiezen"]
-    legKeuzedelenVast["Keuzedelen kiezen en vastleggen (persoonlijk opleidingsprogramma)"]
+    kiesOpleidingEnProgramma["Opleiding en opleidingsprogramma kiezen"]
+    momentKeuzedeelBeleid{"Instellingsbeleid: moment keuzedeel-aanmelding?"}
+    legKeuzedeelVoorkeurslijst["Geprioriteerde keuzedeel-voorkeurslijst samenstellen"]
+    meldAanKeuzedeel["Aanmelden keuzedeel (periode en onderwijslocatie per prioriteit)"]
+    legKeuzedeelAanmeldingIntake["Keuzedeel-aanmelding bij intake vastleggen (definitief)"]
+    legKeuzedeelAanmeldingVoorlopig["Keuzedeel-aanmelding bij intake vastleggen (voorlopig)"]
+    aanmeldingKeuzedeel(("Aanmelding keuzedeel"))
+    passendKeuzedeelAanbod{"Passende combinatie keuzedeel, periode en locatie?"}
+    inschrijvingKeuzedeel(("Inschrijving keuzedeel"))
   end
 
   subgraph roosteraar["Roosteraar"]
@@ -914,8 +1088,15 @@ flowchart TB
   grofmazigeSpecificaties --> bepaalHaalbaarheid --> maakPlanbaarAanbod --> planbaarOnderwijsaanbod
   planbaarOnderwijsaanbod --> detailleerOnderwijsspecificaties --> detailleerLeergelegenheid --> beschrijfToetsspecificatie --> inschrijvingGeplandAanbod
   planbaarOnderwijsaanbod --> orienteerOpGeplandAanbod --> meldAanOpGeplandAanbod --> aanmeldingGeplandAanbod
-  aanmeldingGeplandAanbod --> voerIntakeUit --> kiesOpleidingEnProgramma --> legKeuzedelenVast
-  legKeuzedelenVast --> inschrijvingGeplandAanbod --> roosterAanbod --> geroosterdAanbod --> schrijfInOpGeroosterdAanbod --> inschrijvingGeroosterdAanbod
+  aanmeldingGeplandAanbod --> voerIntakeUit --> kiesOpleidingEnProgramma --> momentKeuzedeelBeleid
+  momentKeuzedeelBeleid -->|Keuzedeelruimte nadert| legKeuzedeelVoorkeurslijst --> meldAanKeuzedeel --> aanmeldingKeuzedeel
+  momentKeuzedeelBeleid -->|Bij intake, definitief| legKeuzedeelAanmeldingIntake --> aanmeldingKeuzedeel
+  momentKeuzedeelBeleid -->|Bij intake, voorlopig| legKeuzedeelAanmeldingVoorlopig --> aanmeldingKeuzedeel
+  aanmeldingKeuzedeel --> passendKeuzedeelAanbod
+  passendKeuzedeelAanbod -->|Ja| inschrijvingKeuzedeel --> inschrijvingGeplandAanbod
+  passendKeuzedeelAanbod -->|Nee: keuzedeelruimte oningevuld| inschrijvingGeplandAanbod
+  kiesOpleidingEnProgramma --> inschrijvingGeplandAanbod
+  inschrijvingGeplandAanbod --> roosterAanbod --> geroosterdAanbod --> schrijfInOpGeroosterdAanbod --> inschrijvingGeroosterdAanbod
   inschrijvingGeroosterdAanbod --> voerOnderwijsUit
   voerOnderwijsUit --> planToetsgelegenheidTijdensLes --> toetsStudent --> houdFormatieveVoortgangBij --> voerOnderwijsUit
   inschrijvingGeroosterdAanbod --> volgOnderwijs --> volgToetsgelegenheid --> volgExamengelegenheid --> volgOnderwijs
@@ -924,6 +1105,8 @@ flowchart TB
   maakPlanbaarAanbod --> volgExamengelegenheid --> voerExamengelegenheidUit
   maakPlanbaarAanbod --> bereidExamengelegenheidVoor --> voerExamengelegenheidUit
   voerExamengelegenheidUit --> beoordeelGemaaktExamen --> stelExamenbeoordelingVast --> onderwijsresultaat --> kwalificeerEnDiplomeer --> kwalificeringEnDiplomering
+
+  class kwalificatieKader,geroosterdAanbod,inschrijvingGeroosterdAanbod,grofmazigeSpecificaties,planbaarOnderwijsaanbod,aanmeldingGeplandAanbod,inschrijvingGeplandAanbod,aanmeldingKeuzedeel,inschrijvingKeuzedeel,onderwijsresultaat,examenplan,examenspecificaties,examenInstrumenten,kwalificeringEnDiplomering yellowNode;
 
   classDef freeze fill:#fff3cd,stroke:#b38f00,stroke-width:2px,color:#111;
   class kiesOpleidingEnProgramma freeze;
